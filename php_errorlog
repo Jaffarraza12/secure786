@@ -1,0 +1,997 @@
+[24-Mar-2018 01:15:07 CST6CDT] PHP Fatal error:  require_once(): Failed opening required '/home/bargain/public_html/system/startup.php' (include_path='.:/usr/local/php70/pear') in /home/bargain/test/admin/index.php on line 17
+[27-Apr-2018 10:14:39 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'Error: Duplicate entry '749-203' for key 'PRIMARY'<br />Error No: 1062<br />INSERT INTO oc_product_to_category SET product_id = '749', category_id = '203'' in /home/bargain/test/system/library/db/mysqli.php:40
+Stack trace:
+#0 /home/bargain/test/system/library/db.php(45): DB\MySQLi->query('INSERT INTO oc_...')
+#1 /home/bargain/test/admin/model/catalog/operation.php(235): DB->query('INSERT INTO oc_...')
+#2 [internal function]: ModelCatalogOperation->perform()
+#3 /home/bargain/storage/modification/system/engine/loader.php(248): call_user_func_array(Array, Array)
+#4 [internal function]: Loader->{closure}(Array, Array)
+#5 /home/bargain/test/system/engine/proxy.php(47): call_user_func_array(Object(Closure), Array)
+#6 /home/bargain/test/admin/controller/catalog/productcsv.php(197): Proxy->__call('perform', Array)
+#7 /home/bargain/test/admin/controller/catalog/productcsv.php(197): Proxy->perform()
+#8 [internal function]: ControllerCatalogProductcsv->operation()
+#9 /home/ba in /home/bargain/test/system/library/db/mysqli.php on line 40
+[27-Apr-2018 10:15:10 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'Error: Duplicate entry '85-126' for key 'PRIMARY'<br />Error No: 1062<br />INSERT INTO oc_product_to_category SET product_id = '85', category_id = '126'' in /home/bargain/test/system/library/db/mysqli.php:40
+Stack trace:
+#0 /home/bargain/test/system/library/db.php(45): DB\MySQLi->query('INSERT INTO oc_...')
+#1 /home/bargain/test/admin/model/catalog/operation.php(235): DB->query('INSERT INTO oc_...')
+#2 [internal function]: ModelCatalogOperation->perform()
+#3 /home/bargain/storage/modification/system/engine/loader.php(248): call_user_func_array(Array, Array)
+#4 [internal function]: Loader->{closure}(Array, Array)
+#5 /home/bargain/test/system/engine/proxy.php(47): call_user_func_array(Object(Closure), Array)
+#6 /home/bargain/test/admin/controller/catalog/productcsv.php(197): Proxy->__call('perform', Array)
+#7 /home/bargain/test/admin/controller/catalog/productcsv.php(197): Proxy->perform()
+#8 [internal function]: ControllerCatalogProductcsv->operation()
+#9 /home/barg in /home/bargain/test/system/library/db/mysqli.php on line 40
+[27-Apr-2018 10:15:23 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'Error: Duplicate entry '93-126' for key 'PRIMARY'<br />Error No: 1062<br />INSERT INTO oc_product_to_category SET product_id = '93', category_id = '126'' in /home/bargain/test/system/library/db/mysqli.php:40
+Stack trace:
+#0 /home/bargain/test/system/library/db.php(45): DB\MySQLi->query('INSERT INTO oc_...')
+#1 /home/bargain/test/admin/model/catalog/operation.php(235): DB->query('INSERT INTO oc_...')
+#2 [internal function]: ModelCatalogOperation->perform()
+#3 /home/bargain/storage/modification/system/engine/loader.php(248): call_user_func_array(Array, Array)
+#4 [internal function]: Loader->{closure}(Array, Array)
+#5 /home/bargain/test/system/engine/proxy.php(47): call_user_func_array(Object(Closure), Array)
+#6 /home/bargain/test/admin/controller/catalog/productcsv.php(197): Proxy->__call('perform', Array)
+#7 /home/bargain/test/admin/controller/catalog/productcsv.php(197): Proxy->perform()
+#8 [internal function]: ControllerCatalogProductcsv->operation()
+#9 /home/barg in /home/bargain/test/system/library/db/mysqli.php on line 40
+[27-Apr-2018 10:15:32 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'Error: Duplicate entry '93-126' for key 'PRIMARY'<br />Error No: 1062<br />INSERT INTO oc_product_to_category SET product_id = '93', category_id = '126'' in /home/bargain/test/system/library/db/mysqli.php:40
+Stack trace:
+#0 /home/bargain/test/system/library/db.php(45): DB\MySQLi->query('INSERT INTO oc_...')
+#1 /home/bargain/test/admin/model/catalog/operation.php(235): DB->query('INSERT INTO oc_...')
+#2 [internal function]: ModelCatalogOperation->perform()
+#3 /home/bargain/storage/modification/system/engine/loader.php(248): call_user_func_array(Array, Array)
+#4 [internal function]: Loader->{closure}(Array, Array)
+#5 /home/bargain/test/system/engine/proxy.php(47): call_user_func_array(Object(Closure), Array)
+#6 /home/bargain/test/admin/controller/catalog/productcsv.php(197): Proxy->__call('perform', Array)
+#7 /home/bargain/test/admin/controller/catalog/productcsv.php(197): Proxy->perform()
+#8 [internal function]: ControllerCatalogProductcsv->operation()
+#9 /home/barg in /home/bargain/test/system/library/db/mysqli.php on line 40
+[27-Apr-2018 10:15:37 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'Error: Duplicate entry '93-126' for key 'PRIMARY'<br />Error No: 1062<br />INSERT INTO oc_product_to_category SET product_id = '93', category_id = '126'' in /home/bargain/test/system/library/db/mysqli.php:40
+Stack trace:
+#0 /home/bargain/test/system/library/db.php(45): DB\MySQLi->query('INSERT INTO oc_...')
+#1 /home/bargain/test/admin/model/catalog/operation.php(235): DB->query('INSERT INTO oc_...')
+#2 [internal function]: ModelCatalogOperation->perform()
+#3 /home/bargain/storage/modification/system/engine/loader.php(248): call_user_func_array(Array, Array)
+#4 [internal function]: Loader->{closure}(Array, Array)
+#5 /home/bargain/test/system/engine/proxy.php(47): call_user_func_array(Object(Closure), Array)
+#6 /home/bargain/test/admin/controller/catalog/productcsv.php(197): Proxy->__call('perform', Array)
+#7 /home/bargain/test/admin/controller/catalog/productcsv.php(197): Proxy->perform()
+#8 [internal function]: ControllerCatalogProductcsv->operation()
+#9 /home/barg in /home/bargain/test/system/library/db/mysqli.php on line 40
+[27-Apr-2018 10:16:06 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'Error: Duplicate entry '99-126' for key 'PRIMARY'<br />Error No: 1062<br />INSERT INTO oc_product_to_category SET product_id = '99', category_id = '126'' in /home/bargain/test/system/library/db/mysqli.php:40
+Stack trace:
+#0 /home/bargain/test/system/library/db.php(45): DB\MySQLi->query('INSERT INTO oc_...')
+#1 /home/bargain/test/admin/model/catalog/operation.php(235): DB->query('INSERT INTO oc_...')
+#2 [internal function]: ModelCatalogOperation->perform()
+#3 /home/bargain/storage/modification/system/engine/loader.php(248): call_user_func_array(Array, Array)
+#4 [internal function]: Loader->{closure}(Array, Array)
+#5 /home/bargain/test/system/engine/proxy.php(47): call_user_func_array(Object(Closure), Array)
+#6 /home/bargain/test/admin/controller/catalog/productcsv.php(197): Proxy->__call('perform', Array)
+#7 /home/bargain/test/admin/controller/catalog/productcsv.php(197): Proxy->perform()
+#8 [internal function]: ControllerCatalogProductcsv->operation()
+#9 /home/barg in /home/bargain/test/system/library/db/mysqli.php on line 40
+[27-Apr-2018 10:16:18 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'Error: Duplicate entry '103-126' for key 'PRIMARY'<br />Error No: 1062<br />INSERT INTO oc_product_to_category SET product_id = '103', category_id = '126'' in /home/bargain/test/system/library/db/mysqli.php:40
+Stack trace:
+#0 /home/bargain/test/system/library/db.php(45): DB\MySQLi->query('INSERT INTO oc_...')
+#1 /home/bargain/test/admin/model/catalog/operation.php(235): DB->query('INSERT INTO oc_...')
+#2 [internal function]: ModelCatalogOperation->perform()
+#3 /home/bargain/storage/modification/system/engine/loader.php(248): call_user_func_array(Array, Array)
+#4 [internal function]: Loader->{closure}(Array, Array)
+#5 /home/bargain/test/system/engine/proxy.php(47): call_user_func_array(Object(Closure), Array)
+#6 /home/bargain/test/admin/controller/catalog/productcsv.php(197): Proxy->__call('perform', Array)
+#7 /home/bargain/test/admin/controller/catalog/productcsv.php(197): Proxy->perform()
+#8 [internal function]: ControllerCatalogProductcsv->operation()
+#9 /home/ba in /home/bargain/test/system/library/db/mysqli.php on line 40
+[27-Apr-2018 10:16:28 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'Error: Duplicate entry '344-126' for key 'PRIMARY'<br />Error No: 1062<br />INSERT INTO oc_product_to_category SET product_id = '344', category_id = '126'' in /home/bargain/test/system/library/db/mysqli.php:40
+Stack trace:
+#0 /home/bargain/test/system/library/db.php(45): DB\MySQLi->query('INSERT INTO oc_...')
+#1 /home/bargain/test/admin/model/catalog/operation.php(235): DB->query('INSERT INTO oc_...')
+#2 [internal function]: ModelCatalogOperation->perform()
+#3 /home/bargain/storage/modification/system/engine/loader.php(248): call_user_func_array(Array, Array)
+#4 [internal function]: Loader->{closure}(Array, Array)
+#5 /home/bargain/test/system/engine/proxy.php(47): call_user_func_array(Object(Closure), Array)
+#6 /home/bargain/test/admin/controller/catalog/productcsv.php(197): Proxy->__call('perform', Array)
+#7 /home/bargain/test/admin/controller/catalog/productcsv.php(197): Proxy->perform()
+#8 [internal function]: ControllerCatalogProductcsv->operation()
+#9 /home/ba in /home/bargain/test/system/library/db/mysqli.php on line 40
+[27-Apr-2018 10:16:37 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'Error: Duplicate entry '344-126' for key 'PRIMARY'<br />Error No: 1062<br />INSERT INTO oc_product_to_category SET product_id = '344', category_id = '126'' in /home/bargain/test/system/library/db/mysqli.php:40
+Stack trace:
+#0 /home/bargain/test/system/library/db.php(45): DB\MySQLi->query('INSERT INTO oc_...')
+#1 /home/bargain/test/admin/model/catalog/operation.php(235): DB->query('INSERT INTO oc_...')
+#2 [internal function]: ModelCatalogOperation->perform()
+#3 /home/bargain/storage/modification/system/engine/loader.php(248): call_user_func_array(Array, Array)
+#4 [internal function]: Loader->{closure}(Array, Array)
+#5 /home/bargain/test/system/engine/proxy.php(47): call_user_func_array(Object(Closure), Array)
+#6 /home/bargain/test/admin/controller/catalog/productcsv.php(197): Proxy->__call('perform', Array)
+#7 /home/bargain/test/admin/controller/catalog/productcsv.php(197): Proxy->perform()
+#8 [internal function]: ControllerCatalogProductcsv->operation()
+#9 /home/ba in /home/bargain/test/system/library/db/mysqli.php on line 40
+[27-Apr-2018 10:16:42 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'Error: Duplicate entry '345-126' for key 'PRIMARY'<br />Error No: 1062<br />INSERT INTO oc_product_to_category SET product_id = '345', category_id = '126'' in /home/bargain/test/system/library/db/mysqli.php:40
+Stack trace:
+#0 /home/bargain/test/system/library/db.php(45): DB\MySQLi->query('INSERT INTO oc_...')
+#1 /home/bargain/test/admin/model/catalog/operation.php(235): DB->query('INSERT INTO oc_...')
+#2 [internal function]: ModelCatalogOperation->perform()
+#3 /home/bargain/storage/modification/system/engine/loader.php(248): call_user_func_array(Array, Array)
+#4 [internal function]: Loader->{closure}(Array, Array)
+#5 /home/bargain/test/system/engine/proxy.php(47): call_user_func_array(Object(Closure), Array)
+#6 /home/bargain/test/admin/controller/catalog/productcsv.php(197): Proxy->__call('perform', Array)
+#7 /home/bargain/test/admin/controller/catalog/productcsv.php(197): Proxy->perform()
+#8 [internal function]: ControllerCatalogProductcsv->operation()
+#9 /home/ba in /home/bargain/test/system/library/db/mysqli.php on line 40
+[27-Apr-2018 10:16:51 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'Error: Duplicate entry '354-126' for key 'PRIMARY'<br />Error No: 1062<br />INSERT INTO oc_product_to_category SET product_id = '354', category_id = '126'' in /home/bargain/test/system/library/db/mysqli.php:40
+Stack trace:
+#0 /home/bargain/test/system/library/db.php(45): DB\MySQLi->query('INSERT INTO oc_...')
+#1 /home/bargain/test/admin/model/catalog/operation.php(235): DB->query('INSERT INTO oc_...')
+#2 [internal function]: ModelCatalogOperation->perform()
+#3 /home/bargain/storage/modification/system/engine/loader.php(248): call_user_func_array(Array, Array)
+#4 [internal function]: Loader->{closure}(Array, Array)
+#5 /home/bargain/test/system/engine/proxy.php(47): call_user_func_array(Object(Closure), Array)
+#6 /home/bargain/test/admin/controller/catalog/productcsv.php(197): Proxy->__call('perform', Array)
+#7 /home/bargain/test/admin/controller/catalog/productcsv.php(197): Proxy->perform()
+#8 [internal function]: ControllerCatalogProductcsv->operation()
+#9 /home/ba in /home/bargain/test/system/library/db/mysqli.php on line 40
+[27-Apr-2018 10:16:59 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'Error: Duplicate entry '356-126' for key 'PRIMARY'<br />Error No: 1062<br />INSERT INTO oc_product_to_category SET product_id = '356', category_id = '126'' in /home/bargain/test/system/library/db/mysqli.php:40
+Stack trace:
+#0 /home/bargain/test/system/library/db.php(45): DB\MySQLi->query('INSERT INTO oc_...')
+#1 /home/bargain/test/admin/model/catalog/operation.php(235): DB->query('INSERT INTO oc_...')
+#2 [internal function]: ModelCatalogOperation->perform()
+#3 /home/bargain/storage/modification/system/engine/loader.php(248): call_user_func_array(Array, Array)
+#4 [internal function]: Loader->{closure}(Array, Array)
+#5 /home/bargain/test/system/engine/proxy.php(47): call_user_func_array(Object(Closure), Array)
+#6 /home/bargain/test/admin/controller/catalog/productcsv.php(197): Proxy->__call('perform', Array)
+#7 /home/bargain/test/admin/controller/catalog/productcsv.php(197): Proxy->perform()
+#8 [internal function]: ControllerCatalogProductcsv->operation()
+#9 /home/ba in /home/bargain/test/system/library/db/mysqli.php on line 40
+[27-Apr-2018 10:17:09 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'Error: Duplicate entry '358-126' for key 'PRIMARY'<br />Error No: 1062<br />INSERT INTO oc_product_to_category SET product_id = '358', category_id = '126'' in /home/bargain/test/system/library/db/mysqli.php:40
+Stack trace:
+#0 /home/bargain/test/system/library/db.php(45): DB\MySQLi->query('INSERT INTO oc_...')
+#1 /home/bargain/test/admin/model/catalog/operation.php(235): DB->query('INSERT INTO oc_...')
+#2 [internal function]: ModelCatalogOperation->perform()
+#3 /home/bargain/storage/modification/system/engine/loader.php(248): call_user_func_array(Array, Array)
+#4 [internal function]: Loader->{closure}(Array, Array)
+#5 /home/bargain/test/system/engine/proxy.php(47): call_user_func_array(Object(Closure), Array)
+#6 /home/bargain/test/admin/controller/catalog/productcsv.php(197): Proxy->__call('perform', Array)
+#7 /home/bargain/test/admin/controller/catalog/productcsv.php(197): Proxy->perform()
+#8 [internal function]: ControllerCatalogProductcsv->operation()
+#9 /home/ba in /home/bargain/test/system/library/db/mysqli.php on line 40
+[27-Apr-2018 10:17:16 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'Error: Duplicate entry '359-126' for key 'PRIMARY'<br />Error No: 1062<br />INSERT INTO oc_product_to_category SET product_id = '359', category_id = '126'' in /home/bargain/test/system/library/db/mysqli.php:40
+Stack trace:
+#0 /home/bargain/test/system/library/db.php(45): DB\MySQLi->query('INSERT INTO oc_...')
+#1 /home/bargain/test/admin/model/catalog/operation.php(235): DB->query('INSERT INTO oc_...')
+#2 [internal function]: ModelCatalogOperation->perform()
+#3 /home/bargain/storage/modification/system/engine/loader.php(248): call_user_func_array(Array, Array)
+#4 [internal function]: Loader->{closure}(Array, Array)
+#5 /home/bargain/test/system/engine/proxy.php(47): call_user_func_array(Object(Closure), Array)
+#6 /home/bargain/test/admin/controller/catalog/productcsv.php(197): Proxy->__call('perform', Array)
+#7 /home/bargain/test/admin/controller/catalog/productcsv.php(197): Proxy->perform()
+#8 [internal function]: ControllerCatalogProductcsv->operation()
+#9 /home/ba in /home/bargain/test/system/library/db/mysqli.php on line 40
+[27-Apr-2018 10:17:25 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'Error: Duplicate entry '360-126' for key 'PRIMARY'<br />Error No: 1062<br />INSERT INTO oc_product_to_category SET product_id = '360', category_id = '126'' in /home/bargain/test/system/library/db/mysqli.php:40
+Stack trace:
+#0 /home/bargain/test/system/library/db.php(45): DB\MySQLi->query('INSERT INTO oc_...')
+#1 /home/bargain/test/admin/model/catalog/operation.php(235): DB->query('INSERT INTO oc_...')
+#2 [internal function]: ModelCatalogOperation->perform()
+#3 /home/bargain/storage/modification/system/engine/loader.php(248): call_user_func_array(Array, Array)
+#4 [internal function]: Loader->{closure}(Array, Array)
+#5 /home/bargain/test/system/engine/proxy.php(47): call_user_func_array(Object(Closure), Array)
+#6 /home/bargain/test/admin/controller/catalog/productcsv.php(197): Proxy->__call('perform', Array)
+#7 /home/bargain/test/admin/controller/catalog/productcsv.php(197): Proxy->perform()
+#8 [internal function]: ControllerCatalogProductcsv->operation()
+#9 /home/ba in /home/bargain/test/system/library/db/mysqli.php on line 40
+[27-Apr-2018 10:17:35 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'Error: Duplicate entry '361-126' for key 'PRIMARY'<br />Error No: 1062<br />INSERT INTO oc_product_to_category SET product_id = '361', category_id = '126'' in /home/bargain/test/system/library/db/mysqli.php:40
+Stack trace:
+#0 /home/bargain/test/system/library/db.php(45): DB\MySQLi->query('INSERT INTO oc_...')
+#1 /home/bargain/test/admin/model/catalog/operation.php(235): DB->query('INSERT INTO oc_...')
+#2 [internal function]: ModelCatalogOperation->perform()
+#3 /home/bargain/storage/modification/system/engine/loader.php(248): call_user_func_array(Array, Array)
+#4 [internal function]: Loader->{closure}(Array, Array)
+#5 /home/bargain/test/system/engine/proxy.php(47): call_user_func_array(Object(Closure), Array)
+#6 /home/bargain/test/admin/controller/catalog/productcsv.php(197): Proxy->__call('perform', Array)
+#7 /home/bargain/test/admin/controller/catalog/productcsv.php(197): Proxy->perform()
+#8 [internal function]: ControllerCatalogProductcsv->operation()
+#9 /home/ba in /home/bargain/test/system/library/db/mysqli.php on line 40
+[27-Apr-2018 10:17:51 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'Error: Duplicate entry '362-126' for key 'PRIMARY'<br />Error No: 1062<br />INSERT INTO oc_product_to_category SET product_id = '362', category_id = '126'' in /home/bargain/test/system/library/db/mysqli.php:40
+Stack trace:
+#0 /home/bargain/test/system/library/db.php(45): DB\MySQLi->query('INSERT INTO oc_...')
+#1 /home/bargain/test/admin/model/catalog/operation.php(235): DB->query('INSERT INTO oc_...')
+#2 [internal function]: ModelCatalogOperation->perform()
+#3 /home/bargain/storage/modification/system/engine/loader.php(248): call_user_func_array(Array, Array)
+#4 [internal function]: Loader->{closure}(Array, Array)
+#5 /home/bargain/test/system/engine/proxy.php(47): call_user_func_array(Object(Closure), Array)
+#6 /home/bargain/test/admin/controller/catalog/productcsv.php(197): Proxy->__call('perform', Array)
+#7 /home/bargain/test/admin/controller/catalog/productcsv.php(197): Proxy->perform()
+#8 [internal function]: ControllerCatalogProductcsv->operation()
+#9 /home/ba in /home/bargain/test/system/library/db/mysqli.php on line 40
+[01-May-2018 07:56:35 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'Error: Unknown column 'return_policy' in 'field list'<br />Error No: 1054<br />INSERT INTO oc_product_description SET product_id = '888', language_id = '1', name = 'GNC Evening Primrose Oil 1300 Dietary Supplement', short_description = '&lt;p&gt;A Natural Source Of GLA, An Important Omega-6 Fatty Acid&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Provides 500 mg of high quality evening primrose oil&lt;/li&gt;&lt;li&gt;Supports hormonal balance&lt;/li&gt;&lt;li&gt;Helps maintain smooth, healthy looking skin&lt;/li&gt;&lt;/ul&gt;', description = '&lt;p&gt;&lt;b&gt;Warnings&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Keep out of reach of children.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Other Ingredients&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Gelatin, Glycerin, Typical fatty acid profile per 2 capsule serving:&lt;/p&gt;&lt;p&gt;&lt;b&gt;Storage&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Store in a cool dry place.&lt;/p&gt;', tag = '', meta_title = 'GNC Evening Primrose Oil 1300 Dietary Supplement', meta_description = '', meta_keyword = '' in /home/bargain/test/system/library/db/mysqli.php on line 40
+[01-May-2018 07:56:41 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'Error: Unknown column 'return_policy' in 'field list'<br />Error No: 1054<br />INSERT INTO oc_product_description SET product_id = '888', language_id = '1', name = 'GNC Evening Primrose Oil 1300 Dietary Supplement', short_description = '&lt;p&gt;A Natural Source Of GLA, An Important Omega-6 Fatty Acid&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Provides 500 mg of high quality evening primrose oil&lt;/li&gt;&lt;li&gt;Supports hormonal balance&lt;/li&gt;&lt;li&gt;Helps maintain smooth, healthy looking skin&lt;/li&gt;&lt;/ul&gt;', description = '&lt;p&gt;&lt;b&gt;Warnings&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Keep out of reach of children.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Other Ingredients&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Gelatin, Glycerin, Typical fatty acid profile per 2 capsule serving:&lt;/p&gt;&lt;p&gt;&lt;b&gt;Storage&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Store in a cool dry place.&lt;/p&gt;', tag = '', meta_title = 'GNC Evening Primrose Oil 1300 Dietary Supplement', meta_description = '', meta_keyword = '' in /home/bargain/test/system/library/db/mysqli.php on line 40
+[01-May-2018 08:00:39 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'Error: Unknown column 'return_policy' in 'field list'<br />Error No: 1054<br />INSERT INTO oc_product_description SET product_id = '846', language_id = '1', name = 'GNC Calcimate Plus 800 with Magnesium &amp; Vitamin D-3', short_description = '&lt;ul&gt;&lt;li&gt;500 Caplets&lt;/li&gt;&lt;li&gt;Serving Size&amp;nbsp; 4 Caplet(s)&lt;/li&gt;&lt;li&gt;Servings Per Container&amp;nbsp; 125&lt;/li&gt;&lt;li&gt;&lt;li&gt;Magnesium (as Magnesium Oxide)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;100mg&lt;span style=&quot;white-space:pre&quot;&gt;	&lt;/span&gt;&amp;nbsp;&lt;/li&gt;&lt;li&gt;Vitamin D (as Cholecalciferol D-3)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; 2000IU&lt;span style=&quot;white-space:pre&quot;&gt;	&lt;/span&gt;&amp;nbsp;&lt;/li&gt;&lt;li&gt;Calcium (as Calcium Citrate Malate)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;800mg&lt;/li&gt;&lt;/li&gt;&lt;/ul&gt;', description = '&lt;p&gt;Supports bone density &amp;amp; strong, healthy bones with calcium citrate malate,  in /home/bargain/test/system/library/db/mysqli.php on line 40
+[01-May-2018 08:01:50 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'Error: Unknown column 'return_policy' in 'field list'<br />Error No: 1054<br />INSERT INTO oc_product_description SET product_id = '846', language_id = '1', name = 'GNC Calcimate Plus 800 with Magnesium &amp; Vitamin D-3', short_description = '&lt;ul&gt;&lt;li&gt;500 Caplets&lt;/li&gt;&lt;li&gt;Serving Size&amp;nbsp; 4 Caplet(s)&lt;/li&gt;&lt;li&gt;Servings Per Container&amp;nbsp; 125&lt;/li&gt;&lt;li&gt;&lt;li&gt;Magnesium (as Magnesium Oxide)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;100mg&lt;span style=&quot;white-space:pre&quot;&gt;	&lt;/span&gt;&amp;nbsp;&lt;/li&gt;&lt;li&gt;Vitamin D (as Cholecalciferol D-3)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; 2000IU&lt;span style=&quot;white-space:pre&quot;&gt;	&lt;/span&gt;&amp;nbsp;&lt;/li&gt;&lt;li&gt;Calcium (as Calcium Citrate Malate)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;800mg&lt;/li&gt;&lt;/li&gt;&lt;/ul&gt;', description = '&lt;p&gt;Supports bone density &amp;amp; strong, healthy bones with calcium citrate malate,  in /home/bargain/test/system/library/db/mysqli.php on line 40
+[01-May-2018 08:19:35 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'Error: Unknown column 'return_policy' in 'field list'<br />Error No: 1054<br />INSERT INTO oc_product_description SET product_id = '890', language_id = '1', name = 'rer', short_description = '', description = '', tag = '', meta_title = 'reera', meta_description = '', meta_keyword = '', return_policy = 'You can return or exchange this item within 15 days after receiving of your order. We don`t except open box, open container and used products', delivery_time = 'Delivery time takes around 5-7 days after verification of your order. Once we ship your order we are going to email you the tracking code.', payment_method = 'We do accept Jazzcash (credit and debit card), Bank transfers and COD for this item. For COD orders, we will verify the order shipping address and contact person before processing it.This might take an extra day.'' in /home/bargain/test/system/library/db/mysqli.php:40
+Stack trace:
+#0 /home/bargain/test/system/library/db.php(45): DB\MySQLi->query('INSERT in /home/bargain/test/system/library/db/mysqli.php on line 40
+[01-May-2018 08:20:19 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'Error: Unknown column 'return_policy' in 'field list'<br />Error No: 1054<br />INSERT INTO oc_product_description SET product_id = '886', language_id = '1', name = 'GNC Fish Body Oils 1000', short_description = '&lt;p&gt;Fish Oil is a rich source of Omega-3 Essential Fatty acids, eg. DHA &amp;amp; EPA&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Serving Size: 1 softgel&lt;br&gt;&lt;/li&gt;&lt;li&gt;Servings Per Container: 90&lt;/li&gt;&lt;li&gt;GNC Fish Body Oils 1000 is derived from quality cod, mackerel, salmon and tuna&lt;br&gt;&lt;/li&gt;&lt;li&gt;All raw material is tested for heavy metals and contaminants to ensure safety compliance&lt;br&gt;&lt;/li&gt;&lt;li&gt;Great for those who don’t consume fish on a regular basis&lt;/li&gt;&lt;li&gt;EPA (Eicosapentaenoic Acid) (omega-3) &lt;span style=&quot;white-space:pre&quot;&gt;	&lt;/span&gt;180 mg&lt;/li&gt;&lt;li&gt;DHA (Docosahexaenoic Acid)(omega-3)&lt;span style=&quot;white-space:pre&quot;&gt;	&lt;/span&gt;120 mg&lt;/li&gt;& in /home/bargain/test/system/library/db/mysqli.php on line 40
+[01-May-2018 08:29:37 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'Error: Unknown column 'return_policy' in 'field list'<br />Error No: 1054<br />INSERT INTO oc_product_description SET product_id = '891', language_id = '1', name = 'asdasdasda', short_description = '', description = '', tag = '', meta_title = 'wqeqweqwe', meta_description = '', meta_keyword = '', return_policy = 'You can return or exchange this item within 15 days after receiving of your order. We don`t except open box, open container and used products', delivery_time = 'Delivery time takes around 5-7 days after verification of your order. Once we ship your order we are going to email you the tracking code.', payment_method = 'We do accept Jazzcash (credit and debit card), Bank transfers and COD for this item. For COD orders, we will verify the order shipping address and contact person before processing it.This might take an extra day.'' in /home/bargain/test/system/library/db/mysqli.php:40
+Stack trace:
+#0 /home/bargain/test/system/library/db.php(45): DB\MySQLi->qu in /home/bargain/test/system/library/db/mysqli.php on line 40
+[01-May-2018 08:32:43 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'Error: Unknown column 'return_policy' in 'field list'<br />Error No: 1054<br />INSERT INTO oc_product_description SET product_id = '892', language_id = '1', name = 'asdasdasda', short_description = '', description = '', tag = '', meta_title = 'wqeqweqwe', meta_description = '', meta_keyword = '',`return_policy` = 'You can return or exchange this item within 15 days after receiving of your order. We don`t except open box, open container and used products', delivery_time = 'Delivery time takes around 5-7 days after verification of your order. Once we ship your order we are going to email you the tracking code.', payment_method = 'We do accept Jazzcash (credit and debit card), Bank transfers and COD for this item. For COD orders, we will verify the order shipping address and contact person before processing it.This might take an extra day.'' in /home/bargain/test/system/library/db/mysqli.php:40
+Stack trace:
+#0 /home/bargain/test/system/library/db.php(45): DB\MySQLi->q in /home/bargain/test/system/library/db/mysqli.php on line 40
+[01-May-2018 08:35:00 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'Error: Unknown column 'return_policy' in 'field list'<br />Error No: 1054<br />INSERT INTO oc_product_description SET product_id = '893', language_id = '1', name = 'asdasdasda', short_description = '', description = '', tag = '', meta_title = 'wqeqweqwe', meta_description = '', meta_keyword = '',`return_policy` = 'You can return or exchange this item within 15 days after receiving of your order. We dont except open box, open container and used products', delivery_time = 'Delivery time takes around 5-7 days after verification of your order. Once we ship your order we are going to email you the tracking code.', payment_method = 'We do accept Jazzcash (credit and debit card), Bank transfers and COD for this item. For COD orders, we will verify the order shipping address and contact person before processing it.This might take an extra day.'' in /home/bargain/test/system/library/db/mysqli.php:40
+Stack trace:
+#0 /home/bargain/test/system/library/db.php(45): DB\MySQLi->qu in /home/bargain/test/system/library/db/mysqli.php on line 40
+[04-May-2018 04:47:56 CST6CDT] PHP Fatal error:  require_once(): Failed opening required '/home/bargain/test/system/startup.php' (include_path='.:/usr/local/php70/pear') in /home/bargain/test/admin/index.php on line 17
+[04-May-2018 04:49:57 CST6CDT] PHP Fatal error:  require_once(): Failed opening required '/home/bargain/test/system/startup.php' (include_path='.:/usr/local/php70/pear') in /home/bargain/test/admin/index.php on line 17
+[04-May-2018 04:52:32 CST6CDT] PHP Fatal error:  require_once(): Failed opening required '/home/bargain/test/system/startup.php' (include_path='.:/usr/local/php70/pear') in /home/bargain/test/admin/index.php on line 17
+[08-May-2018 08:24:49 UTC] PHP Fatal error:  Uncaught Exception: Error: <br />Error No:  in /home/bargain/public_html/system/library/db/mysqli.php:10
+Stack trace:
+#0 /home/bargain/public_html/system/library/db.php(31): DB\MySQLi->__construct('localhost', 'bargain_bargain', '-KWMJu3BwJ', 'bargain_bargain', '3306')
+#1 /home/bargain/public_html/system/framework.php(80): DB->__construct('mysqli', 'localhost', 'bargain_bargain', '-KWMJu3BwJ', 'bargain_bargain', '3306')
+#2 /home/bargain/public_html/system/startup.php(104): require_once('/home/bargain/p...')
+#3 /home/bargain/secure80057861109/index.php(19): start('admin')
+#4 {main}
+  thrown in /home/bargain/public_html/system/library/db/mysqli.php on line 10
+[01-Jun-2018 10:41:47 UTC] PHP Fatal error:  Cannot declare class ControllerCatalogCategory, because the name is already in use in /home/bargain/secure80057861109/model/catalog/category.php on line 0
+[01-Jun-2018 10:44:01 UTC] PHP Fatal error:  Cannot declare class ControllerCatalogCategory, because the name is already in use in /home/bargain/secure80057861109/model/catalog/category.php on line 0
+[01-Jun-2018 10:44:38 UTC] PHP Fatal error:  Cannot declare class ControllerCatalogCategory, because the name is already in use in /home/bargain/secure80057861109/model/catalog/category.php on line 0
+[01-Jun-2018 10:45:01 UTC] PHP Fatal error:  Cannot declare class ControllerCatalogCategory, because the name is already in use in /home/bargain/secure80057861109/model/catalog/category.php on line 0
+[01-Jun-2018 10:46:38 UTC] PHP Fatal error:  Uncaught Exception: Error: Could not load model catalog/category! in /home/bargain/storage/modification/system/engine/loader.php:89
+Stack trace:
+#0 /home/bargain/secure80057861109/controller/catalog/category.php(10): Loader->model('catalog/categor...')
+#1 /home/bargain/storage/modification/system/engine/action.php(79): ControllerCatalogCategory->index()
+#2 /home/bargain/secure80057861109/controller/startup/router.php(26): Action->execute(Object(Registry), Array)
+#3 /home/bargain/storage/modification/system/engine/action.php(79): ControllerStartupRouter->index()
+#4 /home/bargain/public_html/system/engine/router.php(67): Action->execute(Object(Registry))
+#5 /home/bargain/public_html/system/engine/router.php(56): Router->execute(Object(Action))
+#6 /home/bargain/public_html/system/framework.php(168): Router->dispatch(Object(Action), Object(Action))
+#7 /home/bargain/public_html/system/startup.php(104): require_once('/home/bargain/p...')
+#8 /home/bargain/secure80057861109/index.php(19): start('admin')
+#9 {main}
+  t in /home/bargain/storage/modification/system/engine/loader.php on line 89
+[01-Jun-2018 10:47:15 UTC] PHP Fatal error:  Uncaught Exception: Error: Table 'bargain_bargain.oc_category_content' doesn't exist<br />Error No: 1146<br />SELECT * FROM oc_category_content WHERE category_id = '121' in /home/bargain/public_html/system/library/db/mysqli.php:40
+Stack trace:
+#0 /home/bargain/public_html/system/library/db.php(45): DB\MySQLi->query('SELECT * FROM o...')
+#1 /home/bargain/secure80057861109/model/catalog/category.php(366): DB->query('SELECT * FROM o...')
+#2 /home/bargain/storage/modification/system/engine/loader.php(248): ModelCatalogCategory->getCategoryContent('121')
+#3 /home/bargain/public_html/system/engine/proxy.php(47): Loader->{closure}(Array, Array)
+#4 /home/bargain/secure80057861109/controller/catalog/category.php(513): Proxy->__call('getCategoryCont...', Array)
+#5 /home/bargain/secure80057861109/controller/catalog/category.php(76): ControllerCatalogCategory->getForm()
+#6 /home/bargain/storage/modification/system/engine/action.php(79): ControllerCatalogCategory->edit()
+#7 /home/bargain/secure80057861109/controller/start in /home/bargain/public_html/system/library/db/mysqli.php on line 40
+[01-Jun-2018 10:50:29 UTC] PHP Fatal error:  Uncaught Exception: Error: Table 'bargain_bargain.oc_category_content' doesn't exist<br />Error No: 1146<br />SELECT * FROM oc_category_content WHERE category_id = '121' in /home/bargain/public_html/system/library/db/mysqli.php:40
+Stack trace:
+#0 /home/bargain/public_html/system/library/db.php(45): DB\MySQLi->query('SELECT * FROM o...')
+#1 /home/bargain/secure80057861109/model/catalog/category.php(366): DB->query('SELECT * FROM o...')
+#2 /home/bargain/storage/modification/system/engine/loader.php(248): ModelCatalogCategory->getCategoryContent('121')
+#3 /home/bargain/public_html/system/engine/proxy.php(47): Loader->{closure}(Array, Array)
+#4 /home/bargain/secure80057861109/controller/catalog/category.php(513): Proxy->__call('getCategoryCont...', Array)
+#5 /home/bargain/secure80057861109/controller/catalog/category.php(76): ControllerCatalogCategory->getForm()
+#6 /home/bargain/storage/modification/system/engine/action.php(79): ControllerCatalogCategory->edit()
+#7 /home/bargain/secure80057861109/controller/start in /home/bargain/public_html/system/library/db/mysqli.php on line 40
+[13-Jun-2018 10:54:27 UTC] PHP Fatal error:  Uncaught Exception: Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 's advice before taking them.&lt;br&gt;&lt;/p&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt' at line 1<br />Error No: 1064<br />INSERT INTO oc_category_content SET question = 'Are fish oil capsules safe during pregnancy?',answer = '&lt;p&gt;You can consume fish oil supplements during pregnancy, provided you are not taking fatty fish like sardines or salmon once or twice in a week. Experts say that omega-3 supplements are good for the eye and brain development of your baby. Make sure you do not take more than 250 milligrams and take your doctor's advice before taking them.&lt;br&gt;&lt;/p&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;',category_id='207'  in /home/bargain/public_html/system/library/db/mysqli.php:40
+Stack trace:
+#0 /home/bargain/public_html/system/library/db.php(45): DB\MySQLi->query('INSERT INTO oc_...')
+#1 /home/bargain/secure80057861109/model/catalog/cat in /home/bargain/public_html/system/library/db/mysqli.php on line 40
+[23-Jul-2018 11:12:05 UTC] PHP Fatal error:  Cannot declare class ControllerCatalogProduct, because the name is already in use in /home/bargain/secure80057861109/model/catalog/product.php on line 0
+[23-Jul-2018 11:12:59 UTC] PHP Fatal error:  Cannot declare class ControllerCatalogProduct, because the name is already in use in /home/bargain/secure80057861109/model/catalog/product.php on line 0
+[23-Jul-2018 11:14:33 UTC] PHP Fatal error:  Uncaught Exception: Error: Duplicate entry '669' for key 'PRIMARY'<br />Error No: 1062<br />INSERT INTO oc_product_option SET product_option_id = '669', product_id = '1015', option_id = '13', required = '1' in /home/bargain/public_html/system/library/db/mysqli.php:40
+Stack trace:
+#0 /home/bargain/public_html/system/library/db.php(45): DB\MySQLi->query('INSERT INTO oc_...')
+#1 /home/bargain/secure80057861109/model/catalog/product.php(199): DB->query('INSERT INTO oc_...')
+#2 /home/bargain/storage/modification/system/engine/loader.php(248): ModelCatalogProduct->editProduct('1015', Array)
+#3 /home/bargain/public_html/system/engine/proxy.php(47): Loader->{closure}(Array, Array)
+#4 /home/bargain/secure80057861109/controller/catalog/product.php(76): Proxy->__call('editProduct', Array)
+#5 /home/bargain/storage/modification/system/engine/action.php(79): ControllerCatalogProduct->edit()
+#6 /home/bargain/secure80057861109/controller/startup/router.php(26): Action->execute(Object(Registry), Array)
+#7 /home/bargain/storag in /home/bargain/public_html/system/library/db/mysqli.php on line 40
+[23-Jul-2018 11:16:37 UTC] PHP Fatal error:  Uncaught Exception: Error: Duplicate entry '669' for key 'PRIMARY'<br />Error No: 1062<br />INSERT INTO oc_product_option SET product_option_id = '669', product_id = '1015', option_id = '13', required = '1' in /home/bargain/public_html/system/library/db/mysqli.php:40
+Stack trace:
+#0 /home/bargain/public_html/system/library/db.php(45): DB\MySQLi->query('INSERT INTO oc_...')
+#1 /home/bargain/secure80057861109/model/catalog/product.php(199): DB->query('INSERT INTO oc_...')
+#2 /home/bargain/storage/modification/system/engine/loader.php(248): ModelCatalogProduct->editProduct('1015', Array)
+#3 /home/bargain/public_html/system/engine/proxy.php(47): Loader->{closure}(Array, Array)
+#4 /home/bargain/secure80057861109/controller/catalog/product.php(76): Proxy->__call('editProduct', Array)
+#5 /home/bargain/storage/modification/system/engine/action.php(79): ControllerCatalogProduct->edit()
+#6 /home/bargain/secure80057861109/controller/startup/router.php(26): Action->execute(Object(Registry), Array)
+#7 /home/bargain/storag in /home/bargain/public_html/system/library/db/mysqli.php on line 40
+[23-Jul-2018 11:17:35 UTC] PHP Fatal error:  Uncaught Exception: Error: Duplicate entry '669' for key 'PRIMARY'<br />Error No: 1062<br />INSERT INTO oc_product_option SET product_option_id = '669', product_id = '1015', option_id = '13', required = '1' in /home/bargain/public_html/system/library/db/mysqli.php:40
+Stack trace:
+#0 /home/bargain/public_html/system/library/db.php(45): DB\MySQLi->query('INSERT INTO oc_...')
+#1 /home/bargain/secure80057861109/model/catalog/product.php(199): DB->query('INSERT INTO oc_...')
+#2 /home/bargain/storage/modification/system/engine/loader.php(248): ModelCatalogProduct->editProduct('1015', Array)
+#3 /home/bargain/public_html/system/engine/proxy.php(47): Loader->{closure}(Array, Array)
+#4 /home/bargain/secure80057861109/controller/catalog/product.php(76): Proxy->__call('editProduct', Array)
+#5 /home/bargain/storage/modification/system/engine/action.php(79): ControllerCatalogProduct->edit()
+#6 /home/bargain/secure80057861109/controller/startup/router.php(26): Action->execute(Object(Registry), Array)
+#7 /home/bargain/storag in /home/bargain/public_html/system/library/db/mysqli.php on line 40
+[23-Jul-2018 11:22:12 UTC] PHP Fatal error:  Uncaught Exception: Error: Duplicate entry '1751' for key 'PRIMARY'<br />Error No: 1062<br />INSERT INTO oc_product_option_value SET product_option_value_id = '1751', product_option_id = '667', product_id = '1014', option_id = '13', option_value_id = '50', quantity = '10', subtract = '0', price = '0',image = 'tshirt/military/airforce/BAIR00001/image/BAIR00001BL.jpg', price_prefix = '+', points = '0', points_prefix = '+', weight = '0', weight_prefix = '+' in /home/bargain/public_html/system/library/db/mysqli.php:40
+Stack trace:
+#0 /home/bargain/public_html/system/library/db.php(45): DB\MySQLi->query('INSERT INTO oc_...')
+#1 /home/bargain/secure80057861109/model/catalog/product.php(205): DB->query('INSERT INTO oc_...')
+#2 /home/bargain/storage/modification/system/engine/loader.php(248): ModelCatalogProduct->editProduct('1014', Array)
+#3 /home/bargain/public_html/system/engine/proxy.php(47): Loader->{closure}(Array, Array)
+#4 /home/bargain/secure80057861109/controller/catalog/product.php(76): Proxy->__call('edit in /home/bargain/public_html/system/library/db/mysqli.php on line 40
+[23-Jul-2018 11:25:00 UTC] PHP Fatal error:  Uncaught Exception: Error: Duplicate entry '1751' for key 'PRIMARY'<br />Error No: 1062<br />INSERT INTO oc_product_option_value SET product_option_value_id = '1751', product_option_id = '667', product_id = '1014', option_id = '13', option_value_id = '50', quantity = '10', subtract = '0', price = '0',image = 'tshirt/military/airforce/BAIR00001/image/BAIR00001BL.jpg', price_prefix = '+', points = '0', points_prefix = '+', weight = '0', weight_prefix = '+' in /home/bargain/public_html/system/library/db/mysqli.php:40
+Stack trace:
+#0 /home/bargain/public_html/system/library/db.php(45): DB\MySQLi->query('INSERT INTO oc_...')
+#1 /home/bargain/secure80057861109/model/catalog/product.php(205): DB->query('INSERT INTO oc_...')
+#2 /home/bargain/storage/modification/system/engine/loader.php(248): ModelCatalogProduct->editProduct('1014', Array)
+#3 /home/bargain/public_html/system/engine/proxy.php(47): Loader->{closure}(Array, Array)
+#4 /home/bargain/secure80057861109/controller/catalog/product.php(76): Proxy->__call('edit in /home/bargain/public_html/system/library/db/mysqli.php on line 40
+[31-Jul-2018 12:53:59 UTC] PHP Fatal error:  Uncaught Error: Class 'OneCRM\APIClient\AuthorizationFlow' not found in /home/bargain/secure80057861109/controller/catalog/productcsv.php:15
+Stack trace:
+#0 /home/bargain/storage/modification/system/engine/action.php(79): ControllerCatalogProductcsv->index()
+#1 /home/bargain/secure80057861109/controller/startup/router.php(26): Action->execute(Object(Registry), Array)
+#2 /home/bargain/storage/modification/system/engine/action.php(79): ControllerStartupRouter->index()
+#3 /home/bargain/public_html/system/engine/router.php(67): Action->execute(Object(Registry))
+#4 /home/bargain/public_html/system/engine/router.php(56): Router->execute(Object(Action))
+#5 /home/bargain/public_html/system/framework.php(168): Router->dispatch(Object(Action), Object(Action))
+#6 /home/bargain/public_html/system/startup.php(104): require_once('/home/bargain/p...')
+#7 /home/bargain/secure80057861109/index.php(19): start('admin')
+#8 {main}
+  thrown in /home/bargain/secure80057861109/controller/catalog/productcsv.php on line 15
+[31-Jul-2018 12:57:19 UTC] PHP Fatal error:  Uncaught Error: Class 'OneCRM\APIClient\AuthorizationFlow' not found in /home/bargain/secure80057861109/controller/catalog/productcsv.php:15
+Stack trace:
+#0 /home/bargain/storage/modification/system/engine/action.php(79): ControllerCatalogProductcsv->index()
+#1 /home/bargain/secure80057861109/controller/startup/router.php(26): Action->execute(Object(Registry), Array)
+#2 /home/bargain/storage/modification/system/engine/action.php(79): ControllerStartupRouter->index()
+#3 /home/bargain/public_html/system/engine/router.php(67): Action->execute(Object(Registry))
+#4 /home/bargain/public_html/system/engine/router.php(56): Router->execute(Object(Action))
+#5 /home/bargain/public_html/system/framework.php(168): Router->dispatch(Object(Action), Object(Action))
+#6 /home/bargain/public_html/system/startup.php(104): require_once('/home/bargain/p...')
+#7 /home/bargain/secure80057861109/index.php(19): start('admin')
+#8 {main}
+  thrown in /home/bargain/secure80057861109/controller/catalog/productcsv.php on line 15
+[31-Jul-2018 12:57:21 UTC] PHP Fatal error:  Uncaught Error: Class 'OneCRM\APIClient\AuthorizationFlow' not found in /home/bargain/secure80057861109/controller/catalog/productcsv.php:15
+Stack trace:
+#0 /home/bargain/storage/modification/system/engine/action.php(79): ControllerCatalogProductcsv->index()
+#1 /home/bargain/secure80057861109/controller/startup/router.php(26): Action->execute(Object(Registry), Array)
+#2 /home/bargain/storage/modification/system/engine/action.php(79): ControllerStartupRouter->index()
+#3 /home/bargain/public_html/system/engine/router.php(67): Action->execute(Object(Registry))
+#4 /home/bargain/public_html/system/engine/router.php(56): Router->execute(Object(Action))
+#5 /home/bargain/public_html/system/framework.php(168): Router->dispatch(Object(Action), Object(Action))
+#6 /home/bargain/public_html/system/startup.php(104): require_once('/home/bargain/p...')
+#7 /home/bargain/secure80057861109/index.php(19): start('admin')
+#8 {main}
+  thrown in /home/bargain/secure80057861109/controller/catalog/productcsv.php on line 15
+[31-Jul-2018 12:57:38 UTC] PHP Fatal error:  Uncaught Error: Class 'OneCRM\APIClient\AuthorizationFlow' not found in /home/bargain/secure80057861109/controller/catalog/productcsv.php:15
+Stack trace:
+#0 /home/bargain/storage/modification/system/engine/action.php(79): ControllerCatalogProductcsv->index()
+#1 /home/bargain/secure80057861109/controller/startup/router.php(26): Action->execute(Object(Registry), Array)
+#2 /home/bargain/storage/modification/system/engine/action.php(79): ControllerStartupRouter->index()
+#3 /home/bargain/public_html/system/engine/router.php(67): Action->execute(Object(Registry))
+#4 /home/bargain/public_html/system/engine/router.php(56): Router->execute(Object(Action))
+#5 /home/bargain/public_html/system/framework.php(168): Router->dispatch(Object(Action), Object(Action))
+#6 /home/bargain/public_html/system/startup.php(104): require_once('/home/bargain/p...')
+#7 /home/bargain/secure80057861109/index.php(19): start('admin')
+#8 {main}
+  thrown in /home/bargain/secure80057861109/controller/catalog/productcsv.php on line 15
+[31-Jul-2018 13:03:34 UTC] PHP Fatal error:  Uncaught OneCRM\APIClient\Error: Client authentication failed in /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Error.php:27
+Stack trace:
+#0 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Client.php(62): OneCRM\APIClient\Error::fromAPIResponse(401, Array)
+#1 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Client.php(90): OneCRM\APIClient\Client->request('POST', 'auth/user/acces...', Array)
+#2 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/AuthorizationFlow.php(161): OneCRM\APIClient\Client->post('auth/user/acces...', Array)
+#3 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/AuthorizationFlow.php(77): OneCRM\APIClient\AuthorizationFlow->initClientCredentials()
+#4 /home/bargain/secure80057861109/controller/catalog/productcsv.php(40): OneCRM\APIClient\AuthorizationFlow->init('client_credenti...')
+#5 /home/bargain/storage/modification/system/engine/action.php(79): ControllerCatalogProductcsv->dell()
+#6 /home/bargain/secure800578611 in /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Error.php on line 27
+[31-Jul-2018 13:05:40 UTC] PHP Fatal error:  Uncaught OneCRM\APIClient\Error: Client authentication failed in /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Error.php:27
+Stack trace:
+#0 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Client.php(62): OneCRM\APIClient\Error::fromAPIResponse(401, Array)
+#1 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Client.php(90): OneCRM\APIClient\Client->request('POST', 'auth/user/acces...', Array)
+#2 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/AuthorizationFlow.php(161): OneCRM\APIClient\Client->post('auth/user/acces...', Array)
+#3 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/AuthorizationFlow.php(77): OneCRM\APIClient\AuthorizationFlow->initClientCredentials()
+#4 /home/bargain/secure80057861109/controller/catalog/productcsv.php(40): OneCRM\APIClient\AuthorizationFlow->init('client_credenti...')
+#5 /home/bargain/storage/modification/system/engine/action.php(79): ControllerCatalogProductcsv->dell()
+#6 /home/bargain/secure800578611 in /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Error.php on line 27
+[31-Jul-2018 13:10:27 UTC] PHP Fatal error:  Uncaught OneCRM\APIClient\Error: Client authentication failed in /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Error.php:27
+Stack trace:
+#0 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Client.php(62): OneCRM\APIClient\Error::fromAPIResponse(401, Array)
+#1 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Client.php(90): OneCRM\APIClient\Client->request('POST', 'auth/user/acces...', Array)
+#2 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/AuthorizationFlow.php(161): OneCRM\APIClient\Client->post('auth/user/acces...', Array)
+#3 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/AuthorizationFlow.php(77): OneCRM\APIClient\AuthorizationFlow->initClientCredentials()
+#4 /home/bargain/secure80057861109/controller/catalog/productcsv.php(40): OneCRM\APIClient\AuthorizationFlow->init('client_credenti...')
+#5 /home/bargain/storage/modification/system/engine/action.php(79): ControllerCatalogProductcsv->dell()
+#6 /home/bargain/secure800578611 in /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Error.php on line 27
+[31-Jul-2018 13:16:53 UTC] PHP Fatal error:  Uncaught OneCRM\APIClient\Error: Client authentication failed in /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Error.php:27
+Stack trace:
+#0 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Client.php(62): OneCRM\APIClient\Error::fromAPIResponse(401, Array)
+#1 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Client.php(90): OneCRM\APIClient\Client->request('POST', 'auth/user/acces...', Array)
+#2 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/AuthorizationFlow.php(161): OneCRM\APIClient\Client->post('auth/user/acces...', Array)
+#3 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/AuthorizationFlow.php(77): OneCRM\APIClient\AuthorizationFlow->initClientCredentials()
+#4 /home/bargain/secure80057861109/controller/catalog/productcsv.php(40): OneCRM\APIClient\AuthorizationFlow->init('client_credenti...')
+#5 /home/bargain/storage/modification/system/engine/action.php(79): ControllerCatalogProductcsv->dell()
+#6 /home/bargain/secure800578611 in /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Error.php on line 27
+[31-Jul-2018 13:20:34 UTC] PHP Fatal error:  Uncaught OneCRM\APIClient\Error: Client authentication failed in /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Error.php:27
+Stack trace:
+#0 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Client.php(62): OneCRM\APIClient\Error::fromAPIResponse(401, Array)
+#1 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Client.php(90): OneCRM\APIClient\Client->request('POST', 'auth/user/acces...', Array)
+#2 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/AuthorizationFlow.php(133): OneCRM\APIClient\Client->post('auth/user/acces...', Array)
+#3 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/AuthorizationFlow.php(98): OneCRM\APIClient\AuthorizationFlow->finalAuthCode(Array)
+#4 /home/bargain/secure80057861109/controller/catalog/productcsv.php(41): OneCRM\APIClient\AuthorizationFlow->finalize()
+#5 /home/bargain/storage/modification/system/engine/action.php(79): ControllerCatalogProductcsv->step1()
+#6 /home/bargain/secure80057861109/controller/star in /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Error.php on line 27
+[31-Jul-2018 13:23:48 UTC] PHP Fatal error:  Uncaught OneCRM\APIClient\Error: Client authentication failed in /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Error.php:27
+Stack trace:
+#0 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Client.php(62): OneCRM\APIClient\Error::fromAPIResponse(401, Array)
+#1 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Client.php(90): OneCRM\APIClient\Client->request('POST', 'auth/user/acces...', Array)
+#2 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/AuthorizationFlow.php(133): OneCRM\APIClient\Client->post('auth/user/acces...', Array)
+#3 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/AuthorizationFlow.php(98): OneCRM\APIClient\AuthorizationFlow->finalAuthCode(Array)
+#4 /home/bargain/secure80057861109/controller/catalog/productcsv.php(41): OneCRM\APIClient\AuthorizationFlow->finalize()
+#5 /home/bargain/storage/modification/system/engine/action.php(79): ControllerCatalogProductcsv->step1()
+#6 /home/bargain/secure80057861109/controller/star in /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Error.php on line 27
+[31-Jul-2018 13:24:46 UTC] PHP Fatal error:  Uncaught OneCRM\APIClient\Error: The request is missing a required parameter, includes an invalid parameter value, includes a parameter more than once, or is otherwise malformed. in /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Error.php:27
+Stack trace:
+#0 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Client.php(62): OneCRM\APIClient\Error::fromAPIResponse(400, Array)
+#1 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Client.php(90): OneCRM\APIClient\Client->request('POST', 'auth/user/acces...', Array)
+#2 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/AuthorizationFlow.php(133): OneCRM\APIClient\Client->post('auth/user/acces...', Array)
+#3 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/AuthorizationFlow.php(98): OneCRM\APIClient\AuthorizationFlow->finalAuthCode(Array)
+#4 /home/bargain/secure80057861109/controller/catalog/productcsv.php(41): OneCRM\APIClient\AuthorizationFlow->finalize()
+#5 /home/bargain/storage/modification/ in /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Error.php on line 27
+[31-Jul-2018 13:38:36 UTC] PHP Fatal error:  Uncaught OneCRM\APIClient\Error: Invalid state passed in /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/AuthorizationFlow.php:117
+Stack trace:
+#0 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/AuthorizationFlow.php(122): OneCRM\APIClient\AuthorizationFlow->validateResponseState(Array)
+#1 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/AuthorizationFlow.php(98): OneCRM\APIClient\AuthorizationFlow->finalAuthCode(Array)
+#2 /home/bargain/secure80057861109/controller/catalog/productcsv.php(41): OneCRM\APIClient\AuthorizationFlow->finalize()
+#3 /home/bargain/storage/modification/system/engine/action.php(79): ControllerCatalogProductcsv->step1()
+#4 /home/bargain/secure80057861109/controller/startup/router.php(26): Action->execute(Object(Registry), Array)
+#5 /home/bargain/storage/modification/system/engine/action.php(79): ControllerStartupRouter->index()
+#6 /home/bargain/public_html/system/engine/router.php(67): Action->execute(Object(Registry))
+#7 /home/bargain/publi in /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/AuthorizationFlow.php on line 117
+[31-Jul-2018 13:42:24 UTC] PHP Fatal error:  Uncaught OneCRM\APIClient\Error: The request is missing a required parameter, includes an invalid parameter value, includes a parameter more than once, or is otherwise malformed. in /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Error.php:27
+Stack trace:
+#0 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Client.php(62): OneCRM\APIClient\Error::fromAPIResponse(400, Array)
+#1 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Client.php(90): OneCRM\APIClient\Client->request('POST', 'auth/user/acces...', Array)
+#2 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/AuthorizationFlow.php(133): OneCRM\APIClient\Client->post('auth/user/acces...', Array)
+#3 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/AuthorizationFlow.php(98): OneCRM\APIClient\AuthorizationFlow->finalAuthCode(Array)
+#4 /home/bargain/secure80057861109/controller/catalog/productcsv.php(40): OneCRM\APIClient\AuthorizationFlow->finalize()
+#5 /home/bargain/storage/modification/ in /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Error.php on line 27
+[31-Jul-2018 13:44:56 UTC] PHP Fatal error:  Uncaught OneCRM\APIClient\Error: Invalid state passed in /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/AuthorizationFlow.php:117
+Stack trace:
+#0 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/AuthorizationFlow.php(122): OneCRM\APIClient\AuthorizationFlow->validateResponseState(Array)
+#1 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/AuthorizationFlow.php(98): OneCRM\APIClient\AuthorizationFlow->finalAuthCode(Array)
+#2 /home/bargain/secure80057861109/controller/catalog/productcsv.php(17): OneCRM\APIClient\AuthorizationFlow->finalize()
+#3 /home/bargain/storage/modification/system/engine/action.php(79): ControllerCatalogProductcsv->index()
+#4 /home/bargain/secure80057861109/controller/startup/router.php(26): Action->execute(Object(Registry), Array)
+#5 /home/bargain/storage/modification/system/engine/action.php(79): ControllerStartupRouter->index()
+#6 /home/bargain/public_html/system/engine/router.php(67): Action->execute(Object(Registry))
+#7 /home/bargain/publi in /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/AuthorizationFlow.php on line 117
+[31-Jul-2018 13:45:19 UTC] PHP Fatal error:  Uncaught OneCRM\APIClient\Error: Invalid state passed in /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/AuthorizationFlow.php:117
+Stack trace:
+#0 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/AuthorizationFlow.php(122): OneCRM\APIClient\AuthorizationFlow->validateResponseState(Array)
+#1 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/AuthorizationFlow.php(98): OneCRM\APIClient\AuthorizationFlow->finalAuthCode(Array)
+#2 /home/bargain/secure80057861109/controller/catalog/productcsv.php(17): OneCRM\APIClient\AuthorizationFlow->finalize()
+#3 /home/bargain/storage/modification/system/engine/action.php(79): ControllerCatalogProductcsv->index()
+#4 /home/bargain/secure80057861109/controller/startup/router.php(26): Action->execute(Object(Registry), Array)
+#5 /home/bargain/storage/modification/system/engine/action.php(79): ControllerStartupRouter->index()
+#6 /home/bargain/public_html/system/engine/router.php(67): Action->execute(Object(Registry))
+#7 /home/bargain/publi in /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/AuthorizationFlow.php on line 117
+[31-Jul-2018 13:46:18 UTC] PHP Fatal error:  Uncaught OneCRM\APIClient\Error: Invalid state passed in /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/AuthorizationFlow.php:117
+Stack trace:
+#0 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/AuthorizationFlow.php(122): OneCRM\APIClient\AuthorizationFlow->validateResponseState(Array)
+#1 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/AuthorizationFlow.php(98): OneCRM\APIClient\AuthorizationFlow->finalAuthCode(Array)
+#2 /home/bargain/secure80057861109/controller/catalog/productcsv.php(17): OneCRM\APIClient\AuthorizationFlow->finalize()
+#3 /home/bargain/storage/modification/system/engine/action.php(79): ControllerCatalogProductcsv->index()
+#4 /home/bargain/secure80057861109/controller/startup/router.php(26): Action->execute(Object(Registry), Array)
+#5 /home/bargain/storage/modification/system/engine/action.php(79): ControllerStartupRouter->index()
+#6 /home/bargain/public_html/system/engine/router.php(67): Action->execute(Object(Registry))
+#7 /home/bargain/publi in /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/AuthorizationFlow.php on line 117
+[31-Jul-2018 13:49:02 UTC] PHP Fatal error:  Uncaught OneCRM\APIClient\Error: Invalid state passed in /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/AuthorizationFlow.php:117
+Stack trace:
+#0 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/AuthorizationFlow.php(122): OneCRM\APIClient\AuthorizationFlow->validateResponseState(Array)
+#1 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/AuthorizationFlow.php(98): OneCRM\APIClient\AuthorizationFlow->finalAuthCode(Array)
+#2 /home/bargain/secure80057861109/controller/catalog/productcsv.php(18): OneCRM\APIClient\AuthorizationFlow->finalize()
+#3 /home/bargain/storage/modification/system/engine/action.php(79): ControllerCatalogProductcsv->index()
+#4 /home/bargain/secure80057861109/controller/startup/router.php(26): Action->execute(Object(Registry), Array)
+#5 /home/bargain/storage/modification/system/engine/action.php(79): ControllerStartupRouter->index()
+#6 /home/bargain/public_html/system/engine/router.php(67): Action->execute(Object(Registry))
+#7 /home/bargain/publi in /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/AuthorizationFlow.php on line 117
+[31-Jul-2018 13:49:54 UTC] PHP Fatal error:  Uncaught OneCRM\APIClient\Error: Invalid state passed in /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/AuthorizationFlow.php:117
+Stack trace:
+#0 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/AuthorizationFlow.php(122): OneCRM\APIClient\AuthorizationFlow->validateResponseState(Array)
+#1 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/AuthorizationFlow.php(98): OneCRM\APIClient\AuthorizationFlow->finalAuthCode(Array)
+#2 /home/bargain/secure80057861109/controller/catalog/productcsv.php(18): OneCRM\APIClient\AuthorizationFlow->finalize()
+#3 /home/bargain/storage/modification/system/engine/action.php(79): ControllerCatalogProductcsv->index()
+#4 /home/bargain/secure80057861109/controller/startup/router.php(26): Action->execute(Object(Registry), Array)
+#5 /home/bargain/storage/modification/system/engine/action.php(79): ControllerStartupRouter->index()
+#6 /home/bargain/public_html/system/engine/router.php(67): Action->execute(Object(Registry))
+#7 /home/bargain/publi in /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/AuthorizationFlow.php on line 117
+[31-Jul-2018 13:51:08 UTC] PHP Fatal error:  Uncaught OneCRM\APIClient\Error: Invalid state passed in /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/AuthorizationFlow.php:117
+Stack trace:
+#0 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/AuthorizationFlow.php(122): OneCRM\APIClient\AuthorizationFlow->validateResponseState(Array)
+#1 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/AuthorizationFlow.php(98): OneCRM\APIClient\AuthorizationFlow->finalAuthCode(Array)
+#2 /home/bargain/secure80057861109/controller/catalog/productcsv.php(18): OneCRM\APIClient\AuthorizationFlow->finalize()
+#3 /home/bargain/storage/modification/system/engine/action.php(79): ControllerCatalogProductcsv->index()
+#4 /home/bargain/secure80057861109/controller/startup/router.php(26): Action->execute(Object(Registry), Array)
+#5 /home/bargain/storage/modification/system/engine/action.php(79): ControllerStartupRouter->index()
+#6 /home/bargain/public_html/system/engine/router.php(67): Action->execute(Object(Registry))
+#7 /home/bargain/publi in /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/AuthorizationFlow.php on line 117
+[31-Jul-2018 13:51:23 UTC] PHP Fatal error:  Uncaught OneCRM\APIClient\Error: Invalid state passed in /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/AuthorizationFlow.php:117
+Stack trace:
+#0 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/AuthorizationFlow.php(122): OneCRM\APIClient\AuthorizationFlow->validateResponseState(Array)
+#1 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/AuthorizationFlow.php(98): OneCRM\APIClient\AuthorizationFlow->finalAuthCode(Array)
+#2 /home/bargain/secure80057861109/controller/catalog/productcsv.php(18): OneCRM\APIClient\AuthorizationFlow->finalize()
+#3 /home/bargain/storage/modification/system/engine/action.php(79): ControllerCatalogProductcsv->index()
+#4 /home/bargain/secure80057861109/controller/startup/router.php(26): Action->execute(Object(Registry), Array)
+#5 /home/bargain/storage/modification/system/engine/action.php(79): ControllerStartupRouter->index()
+#6 /home/bargain/public_html/system/engine/router.php(67): Action->execute(Object(Registry))
+#7 /home/bargain/publi in /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/AuthorizationFlow.php on line 117
+[31-Jul-2018 14:00:26 UTC] PHP Fatal error:  Uncaught OneCRM\APIClient\Error: Invalid state passed in /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/AuthorizationFlow.php:117
+Stack trace:
+#0 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/AuthorizationFlow.php(122): OneCRM\APIClient\AuthorizationFlow->validateResponseState(Array)
+#1 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/AuthorizationFlow.php(98): OneCRM\APIClient\AuthorizationFlow->finalAuthCode(Array)
+#2 /home/bargain/secure80057861109/controller/catalog/productcsv.php(19): OneCRM\APIClient\AuthorizationFlow->finalize()
+#3 /home/bargain/storage/modification/system/engine/action.php(79): ControllerCatalogProductcsv->index()
+#4 /home/bargain/secure80057861109/controller/startup/router.php(26): Action->execute(Object(Registry), Array)
+#5 /home/bargain/storage/modification/system/engine/action.php(79): ControllerStartupRouter->index()
+#6 /home/bargain/public_html/system/engine/router.php(67): Action->execute(Object(Registry))
+#7 /home/bargain/publi in /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/AuthorizationFlow.php on line 117
+[31-Jul-2018 14:03:10 UTC] PHP Fatal error:  Uncaught OneCRM\APIClient\Error: Invalid state passed in /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/AuthorizationFlow.php:117
+Stack trace:
+#0 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/AuthorizationFlow.php(122): OneCRM\APIClient\AuthorizationFlow->validateResponseState(Array)
+#1 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/AuthorizationFlow.php(98): OneCRM\APIClient\AuthorizationFlow->finalAuthCode(Array)
+#2 /home/bargain/secure80057861109/controller/catalog/productcsv.php(19): OneCRM\APIClient\AuthorizationFlow->finalize()
+#3 /home/bargain/storage/modification/system/engine/action.php(79): ControllerCatalogProductcsv->index()
+#4 /home/bargain/secure80057861109/controller/startup/router.php(26): Action->execute(Object(Registry), Array)
+#5 /home/bargain/storage/modification/system/engine/action.php(79): ControllerStartupRouter->index()
+#6 /home/bargain/public_html/system/engine/router.php(67): Action->execute(Object(Registry))
+#7 /home/bargain/publi in /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/AuthorizationFlow.php on line 117
+[31-Jul-2018 14:03:15 UTC] PHP Fatal error:  Uncaught OneCRM\APIClient\Error: The user credentials were incorrect. in /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Error.php:27
+Stack trace:
+#0 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Client.php(62): OneCRM\APIClient\Error::fromAPIResponse(401, Array)
+#1 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Client.php(90): OneCRM\APIClient\Client->request('POST', 'auth/user/acces...', Array)
+#2 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/AuthorizationFlow.php(148): OneCRM\APIClient\Client->post('auth/user/acces...', Array)
+#3 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/AuthorizationFlow.php(74): OneCRM\APIClient\AuthorizationFlow->initResourceOwner()
+#4 /home/bargain/secure80057861109/controller/catalog/productcsv.php(46): OneCRM\APIClient\AuthorizationFlow->init('password')
+#5 /home/bargain/storage/modification/system/engine/action.php(79): ControllerCatalogProductcsv->step2()
+#6 /home/bargain/secure80057861109/co in /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Error.php on line 27
+[31-Jul-2018 14:04:25 UTC] PHP Fatal error:  Uncaught OneCRM\APIClient\Error: Invalid state passed in /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/AuthorizationFlow.php:117
+Stack trace:
+#0 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/AuthorizationFlow.php(122): OneCRM\APIClient\AuthorizationFlow->validateResponseState(Array)
+#1 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/AuthorizationFlow.php(98): OneCRM\APIClient\AuthorizationFlow->finalAuthCode(Array)
+#2 /home/bargain/secure80057861109/controller/catalog/productcsv.php(19): OneCRM\APIClient\AuthorizationFlow->finalize()
+#3 /home/bargain/storage/modification/system/engine/action.php(79): ControllerCatalogProductcsv->index()
+#4 /home/bargain/secure80057861109/controller/startup/router.php(26): Action->execute(Object(Registry), Array)
+#5 /home/bargain/storage/modification/system/engine/action.php(79): ControllerStartupRouter->index()
+#6 /home/bargain/public_html/system/engine/router.php(67): Action->execute(Object(Registry))
+#7 /home/bargain/publi in /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/AuthorizationFlow.php on line 117
+[01-Aug-2018 08:00:21 UTC] PHP Fatal error:  Uncaught OneCRM\APIClient\Error: Invalid state passed in /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/AuthorizationFlow.php:117
+Stack trace:
+#0 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/AuthorizationFlow.php(122): OneCRM\APIClient\AuthorizationFlow->validateResponseState(Array)
+#1 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/AuthorizationFlow.php(98): OneCRM\APIClient\AuthorizationFlow->finalAuthCode(Array)
+#2 /home/bargain/secure80057861109/controller/catalog/productcsv.php(19): OneCRM\APIClient\AuthorizationFlow->finalize()
+#3 /home/bargain/storage/modification/system/engine/action.php(79): ControllerCatalogProductcsv->index()
+#4 /home/bargain/secure80057861109/controller/startup/router.php(26): Action->execute(Object(Registry), Array)
+#5 /home/bargain/storage/modification/system/engine/action.php(79): ControllerStartupRouter->index()
+#6 /home/bargain/public_html/system/engine/router.php(67): Action->execute(Object(Registry))
+#7 /home/bargain/publi in /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/AuthorizationFlow.php on line 117
+[01-Aug-2018 08:04:54 UTC] PHP Parse error:  syntax error, unexpected 'token' (T_STRING), expecting variable (T_VARIABLE) in /home/bargain/secure80057861109/controller/catalog/productcsv.php on line 6
+[01-Aug-2018 08:05:21 UTC] PHP Fatal error:  Uncaught OneCRM\APIClient\Error: Invalid state passed in /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/AuthorizationFlow.php:117
+Stack trace:
+#0 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/AuthorizationFlow.php(122): OneCRM\APIClient\AuthorizationFlow->validateResponseState(Array)
+#1 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/AuthorizationFlow.php(98): OneCRM\APIClient\AuthorizationFlow->finalAuthCode(Array)
+#2 /home/bargain/secure80057861109/controller/catalog/productcsv.php(20): OneCRM\APIClient\AuthorizationFlow->finalize()
+#3 /home/bargain/storage/modification/system/engine/action.php(79): ControllerCatalogProductcsv->index()
+#4 /home/bargain/secure80057861109/controller/startup/router.php(26): Action->execute(Object(Registry), Array)
+#5 /home/bargain/storage/modification/system/engine/action.php(79): ControllerStartupRouter->index()
+#6 /home/bargain/public_html/system/engine/router.php(67): Action->execute(Object(Registry))
+#7 /home/bargain/publi in /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/AuthorizationFlow.php on line 117
+[01-Aug-2018 08:14:04 UTC] PHP Fatal error:  Uncaught OneCRM\APIClient\Error: Model Leads not found in /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Error.php:27
+Stack trace:
+#0 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Client.php(62): OneCRM\APIClient\Error::fromAPIResponse(404, Array)
+#1 /home/bargain/secure80057861109/controller/catalog/productcsv.php(65): OneCRM\APIClient\Client->request('GET', 'data/Leads', Array)
+#2 /home/bargain/secure80057861109/controller/catalog/productcsv.php(50): ControllerCatalogProductcsv->contacts()
+#3 /home/bargain/storage/modification/system/engine/action.php(79): ControllerCatalogProductcsv->step2()
+#4 /home/bargain/secure80057861109/controller/startup/router.php(26): Action->execute(Object(Registry), Array)
+#5 /home/bargain/storage/modification/system/engine/action.php(79): ControllerStartupRouter->index()
+#6 /home/bargain/public_html/system/engine/router.php(67): Action->execute(Object(Registry))
+#7 /home/bargain/public_html/system/engine/router.php(56): Router->execute(Object( in /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Error.php on line 27
+[01-Aug-2018 08:18:38 UTC] PHP Fatal error:  Uncaught Error: Call to a member function model() on null in /home/bargain/secure80057861109/controller/catalog/productcsv.php:63
+Stack trace:
+#0 /home/bargain/secure80057861109/controller/catalog/productcsv.php(50): ControllerCatalogProductcsv->contacts()
+#1 /home/bargain/storage/modification/system/engine/action.php(79): ControllerCatalogProductcsv->step2()
+#2 /home/bargain/secure80057861109/controller/startup/router.php(26): Action->execute(Object(Registry), Array)
+#3 /home/bargain/storage/modification/system/engine/action.php(79): ControllerStartupRouter->index()
+#4 /home/bargain/public_html/system/engine/router.php(67): Action->execute(Object(Registry))
+#5 /home/bargain/public_html/system/engine/router.php(56): Router->execute(Object(Action))
+#6 /home/bargain/public_html/system/framework.php(168): Router->dispatch(Object(Action), Object(Action))
+#7 /home/bargain/public_html/system/startup.php(104): require_once('/home/bargain/p...')
+#8 /home/bargain/secure80057861109/index.php(20): start('admin')
+#9 {mai in /home/bargain/secure80057861109/controller/catalog/productcsv.php on line 63
+[07-Aug-2018 06:49:49 UTC] PHP Fatal error:  Uncaught Exception: Error: Duplicate entry '100' for key 'PRIMARY'<br />Error No: 1062<br />INSERT INTO oc_product_option_value SET product_option_value_id = '100', product_option_id = '1369', product_id = '1374', option_id = '17', option_value_id = '109', quantity = '0', subtract = '1', price = '0',image = '', price_prefix = '+', points = '0', points_prefix = '+', weight = '0', weight_prefix = '+' in /home/bargain/public_html/system/library/db/mysqli.php:40
+Stack trace:
+#0 /home/bargain/public_html/system/library/db.php(45): DB\MySQLi->query('INSERT INTO oc_...')
+#1 /home/bargain/secure80057861109/model/catalog/product.php(208): DB->query('INSERT INTO oc_...')
+#2 /home/bargain/storage/modification/system/engine/loader.php(248): ModelCatalogProduct->editProduct('1374', Array)
+#3 /home/bargain/public_html/system/engine/proxy.php(47): Loader->{closure}(Array, Array)
+#4 /home/bargain/secure80057861109/controller/catalog/product.php(76): Proxy->__call('editProduct', Array)
+#5 /home/bargain/storage/modification/sy in /home/bargain/public_html/system/library/db/mysqli.php on line 40
+[09-Aug-2018 10:13:54 UTC] PHP Fatal error:  Uncaught Exception: Error: Table 'bargain_bargain.oc_information_product' doesn't exist<br />Error No: 1146<br />SELECT * FROM oc_information_product WHERE information_id = '3' in /home/bargain/public_html/system/library/db/mysqli.php:40
+Stack trace:
+#0 /home/bargain/public_html/system/library/db.php(45): DB\MySQLi->query('SELECT * FROM o...')
+#1 /home/bargain/secure80057861109/model/catalog/information.php(230): DB->query('SELECT * FROM o...')
+#2 /home/bargain/storage/modification/system/engine/loader.php(248): ModelCatalogInformation->getInformationProducts('3')
+#3 /home/bargain/public_html/system/engine/proxy.php(47): Loader->{closure}(Array, Array)
+#4 /home/bargain/secure80057861109/controller/catalog/information.php(357): Proxy->__call('getInformationP...', Array)
+#5 /home/bargain/secure80057861109/controller/catalog/information.php(79): ControllerCatalogInformation->getForm()
+#6 /home/bargain/storage/modification/system/engine/action.php(79): ControllerCatalogInformation->edit()
+#7 /home/bargain/secure8 in /home/bargain/public_html/system/library/db/mysqli.php on line 40
+[09-Aug-2018 10:14:02 UTC] PHP Fatal error:  Uncaught Exception: Error: Table 'bargain_bargain.oc_information_product' doesn't exist<br />Error No: 1146<br />SELECT * FROM oc_information_product WHERE information_id = '4' in /home/bargain/public_html/system/library/db/mysqli.php:40
+Stack trace:
+#0 /home/bargain/public_html/system/library/db.php(45): DB\MySQLi->query('SELECT * FROM o...')
+#1 /home/bargain/secure80057861109/model/catalog/information.php(230): DB->query('SELECT * FROM o...')
+#2 /home/bargain/storage/modification/system/engine/loader.php(248): ModelCatalogInformation->getInformationProducts('4')
+#3 /home/bargain/public_html/system/engine/proxy.php(47): Loader->{closure}(Array, Array)
+#4 /home/bargain/secure80057861109/controller/catalog/information.php(357): Proxy->__call('getInformationP...', Array)
+#5 /home/bargain/secure80057861109/controller/catalog/information.php(79): ControllerCatalogInformation->getForm()
+#6 /home/bargain/storage/modification/system/engine/action.php(79): ControllerCatalogInformation->edit()
+#7 /home/bargain/secure8 in /home/bargain/public_html/system/library/db/mysqli.php on line 40
+[10-Aug-2018 11:13:58 UTC] PHP Fatal error:  Uncaught OneCRM\APIClient\Error: Invalid state passed in /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/AuthorizationFlow.php:117
+Stack trace:
+#0 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/AuthorizationFlow.php(122): OneCRM\APIClient\AuthorizationFlow->validateResponseState(Array)
+#1 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/AuthorizationFlow.php(98): OneCRM\APIClient\AuthorizationFlow->finalAuthCode(Array)
+#2 /home/bargain/secure80057861109/controller/catalog/productcsv.php(20): OneCRM\APIClient\AuthorizationFlow->finalize()
+#3 /home/bargain/storage/modification/system/engine/action.php(79): ControllerCatalogProductcsv->index()
+#4 /home/bargain/secure80057861109/controller/startup/router.php(26): Action->execute(Object(Registry), Array)
+#5 /home/bargain/storage/modification/system/engine/action.php(79): ControllerStartupRouter->index()
+#6 /home/bargain/public_html/system/engine/router.php(67): Action->execute(Object(Registry))
+#7 /home/bargain/publi in /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/AuthorizationFlow.php on line 117
+[10-Aug-2018 11:14:07 UTC] PHP Fatal error:  Uncaught OneCRM\APIClient\Error: Invalid state passed in /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/AuthorizationFlow.php:117
+Stack trace:
+#0 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/AuthorizationFlow.php(122): OneCRM\APIClient\AuthorizationFlow->validateResponseState(Array)
+#1 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/AuthorizationFlow.php(98): OneCRM\APIClient\AuthorizationFlow->finalAuthCode(Array)
+#2 /home/bargain/secure80057861109/controller/catalog/productcsv.php(20): OneCRM\APIClient\AuthorizationFlow->finalize()
+#3 /home/bargain/storage/modification/system/engine/action.php(79): ControllerCatalogProductcsv->index()
+#4 /home/bargain/secure80057861109/controller/startup/router.php(26): Action->execute(Object(Registry), Array)
+#5 /home/bargain/storage/modification/system/engine/action.php(79): ControllerStartupRouter->index()
+#6 /home/bargain/public_html/system/engine/router.php(67): Action->execute(Object(Registry))
+#7 /home/bargain/publi in /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/AuthorizationFlow.php on line 117
+[10-Aug-2018 11:31:58 UTC] PHP Fatal error:  Uncaught OneCRM\APIClient\Error: Model Orders not found in /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Error.php:27
+Stack trace:
+#0 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Client.php(62): OneCRM\APIClient\Error::fromAPIResponse(404, Array)
+#1 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Client.php(137): OneCRM\APIClient\Client->request('GET', 'data/Orders', Array)
+#2 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Model.php(47): OneCRM\APIClient\Client->get('/data/Orders', Array)
+#3 /home/bargain/secure80057861109/controller/catalog/productcsv.php(67): OneCRM\APIClient\Model->getList(Array, 0, 3)
+#4 /home/bargain/secure80057861109/controller/catalog/productcsv.php(50): ControllerCatalogProductcsv->contacts()
+#5 /home/bargain/storage/modification/system/engine/action.php(79): ControllerCatalogProductcsv->step2()
+#6 /home/bargain/secure80057861109/controller/startup/router.php(26): Action->execute(Object(Registry), Array)
+#7 /home/ba in /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Error.php on line 27
+[10-Aug-2018 11:32:19 UTC] PHP Fatal error:  Uncaught OneCRM\APIClient\Error: Model Sales Orders not found in /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Error.php:27
+Stack trace:
+#0 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Client.php(62): OneCRM\APIClient\Error::fromAPIResponse(404, Array)
+#1 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Client.php(137): OneCRM\APIClient\Client->request('GET', 'data/Sales Orde...', Array)
+#2 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Model.php(47): OneCRM\APIClient\Client->get('/data/Sales Ord...', Array)
+#3 /home/bargain/secure80057861109/controller/catalog/productcsv.php(67): OneCRM\APIClient\Model->getList(Array, 0, 3)
+#4 /home/bargain/secure80057861109/controller/catalog/productcsv.php(50): ControllerCatalogProductcsv->contacts()
+#5 /home/bargain/storage/modification/system/engine/action.php(79): ControllerCatalogProductcsv->step2()
+#6 /home/bargain/secure80057861109/controller/startup/router.php(26): Action->execute(Object(Registry), in /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Error.php on line 27
+[10-Aug-2018 11:32:34 UTC] PHP Fatal error:  Uncaught OneCRM\APIClient\Error: Model Sales-Orders not found in /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Error.php:27
+Stack trace:
+#0 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Client.php(62): OneCRM\APIClient\Error::fromAPIResponse(404, Array)
+#1 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Client.php(137): OneCRM\APIClient\Client->request('GET', 'data/Sales-Orde...', Array)
+#2 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Model.php(47): OneCRM\APIClient\Client->get('/data/Sales-Ord...', Array)
+#3 /home/bargain/secure80057861109/controller/catalog/productcsv.php(67): OneCRM\APIClient\Model->getList(Array, 0, 3)
+#4 /home/bargain/secure80057861109/controller/catalog/productcsv.php(50): ControllerCatalogProductcsv->contacts()
+#5 /home/bargain/storage/modification/system/engine/action.php(79): ControllerCatalogProductcsv->step2()
+#6 /home/bargain/secure80057861109/controller/startup/router.php(26): Action->execute(Object(Registry), in /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Error.php on line 27
+[10-Aug-2018 11:38:42 UTC] PHP Fatal error:  Uncaught OneCRM\APIClient\Error: Model Sales not found in /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Error.php:27
+Stack trace:
+#0 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Client.php(62): OneCRM\APIClient\Error::fromAPIResponse(404, Array)
+#1 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Client.php(137): OneCRM\APIClient\Client->request('GET', 'data/Sales', Array)
+#2 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Model.php(47): OneCRM\APIClient\Client->get('/data/Sales', Array)
+#3 /home/bargain/secure80057861109/controller/catalog/productcsv.php(67): OneCRM\APIClient\Model->getList(Array, 0, 3)
+#4 /home/bargain/secure80057861109/controller/catalog/productcsv.php(50): ControllerCatalogProductcsv->contacts()
+#5 /home/bargain/storage/modification/system/engine/action.php(79): ControllerCatalogProductcsv->step2()
+#6 /home/bargain/secure80057861109/controller/startup/router.php(26): Action->execute(Object(Registry), Array)
+#7 /home/barga in /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Error.php on line 27
+[10-Aug-2018 11:45:30 UTC] PHP Fatal error:  Uncaught OneCRM\APIClient\Error: Invalid state passed in /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/AuthorizationFlow.php:117
+Stack trace:
+#0 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/AuthorizationFlow.php(122): OneCRM\APIClient\AuthorizationFlow->validateResponseState(Array)
+#1 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/AuthorizationFlow.php(98): OneCRM\APIClient\AuthorizationFlow->finalAuthCode(Array)
+#2 /home/bargain/secure80057861109/controller/catalog/productcsv.php(20): OneCRM\APIClient\AuthorizationFlow->finalize()
+#3 /home/bargain/storage/modification/system/engine/action.php(79): ControllerCatalogProductcsv->index()
+#4 /home/bargain/secure80057861109/controller/startup/router.php(26): Action->execute(Object(Registry), Array)
+#5 /home/bargain/storage/modification/system/engine/action.php(79): ControllerStartupRouter->index()
+#6 /home/bargain/public_html/system/engine/router.php(67): Action->execute(Object(Registry))
+#7 /home/bargain/publi in /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/AuthorizationFlow.php on line 117
+[10-Aug-2018 11:45:43 UTC] PHP Fatal error:  Uncaught OneCRM\APIClient\Error: Model SalesOrders not found in /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Error.php:27
+Stack trace:
+#0 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Client.php(62): OneCRM\APIClient\Error::fromAPIResponse(404, Array)
+#1 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Client.php(137): OneCRM\APIClient\Client->request('GET', 'data/SalesOrder...', Array)
+#2 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Model.php(47): OneCRM\APIClient\Client->get('/data/SalesOrde...', Array)
+#3 /home/bargain/secure80057861109/controller/catalog/productcsv.php(67): OneCRM\APIClient\Model->getList(Array, 0, 3)
+#4 /home/bargain/secure80057861109/controller/catalog/productcsv.php(50): ControllerCatalogProductcsv->contacts()
+#5 /home/bargain/storage/modification/system/engine/action.php(79): ControllerCatalogProductcsv->step2()
+#6 /home/bargain/secure80057861109/controller/startup/router.php(26): Action->execute(Object(Registry),  in /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Error.php on line 27
+[10-Aug-2018 11:45:48 UTC] PHP Fatal error:  Uncaught OneCRM\APIClient\Error: Model SalesOrders not found in /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Error.php:27
+Stack trace:
+#0 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Client.php(62): OneCRM\APIClient\Error::fromAPIResponse(404, Array)
+#1 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Client.php(137): OneCRM\APIClient\Client->request('GET', 'data/SalesOrder...', Array)
+#2 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Model.php(47): OneCRM\APIClient\Client->get('/data/SalesOrde...', Array)
+#3 /home/bargain/secure80057861109/controller/catalog/productcsv.php(67): OneCRM\APIClient\Model->getList(Array, 0, 3)
+#4 /home/bargain/secure80057861109/controller/catalog/productcsv.php(50): ControllerCatalogProductcsv->contacts()
+#5 /home/bargain/storage/modification/system/engine/action.php(79): ControllerCatalogProductcsv->step2()
+#6 /home/bargain/secure80057861109/controller/startup/router.php(26): Action->execute(Object(Registry),  in /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Error.php on line 27
+[10-Aug-2018 11:46:52 UTC] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to OneCRM\APIClient\Authentication\OAuth::__construct() must be of the type array, string given, called in /home/bargain/secure80057861109/controller/catalog/productcsv.php on line 63 and defined in /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Authentication/OAuth.php:17
+Stack trace:
+#0 /home/bargain/secure80057861109/controller/catalog/productcsv.php(63): OneCRM\APIClient\Authentication\OAuth->__construct('')
+#1 /home/bargain/storage/modification/system/engine/action.php(79): ControllerCatalogProductcsv->contacts()
+#2 /home/bargain/secure80057861109/controller/startup/router.php(26): Action->execute(Object(Registry), Array)
+#3 /home/bargain/storage/modification/system/engine/action.php(79): ControllerStartupRouter->index()
+#4 /home/bargain/public_html/system/engine/router.php(67): Action->execute(Object(Registry))
+#5 /home/bargain/public_html/system/engine/router.php(56): Router->execute(Object(Action))
+#6 /home/bargain/public_html/system/framework.php in /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Authentication/OAuth.php on line 17
+[10-Aug-2018 11:47:06 UTC] PHP Fatal error:  Uncaught OneCRM\APIClient\Error: Model SalesOrders not found in /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Error.php:27
+Stack trace:
+#0 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Client.php(62): OneCRM\APIClient\Error::fromAPIResponse(404, Array)
+#1 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Client.php(137): OneCRM\APIClient\Client->request('GET', 'data/SalesOrder...', Array)
+#2 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Model.php(47): OneCRM\APIClient\Client->get('/data/SalesOrde...', Array)
+#3 /home/bargain/secure80057861109/controller/catalog/productcsv.php(67): OneCRM\APIClient\Model->getList(Array, 0, 3)
+#4 /home/bargain/secure80057861109/controller/catalog/productcsv.php(50): ControllerCatalogProductcsv->contacts()
+#5 /home/bargain/storage/modification/system/engine/action.php(79): ControllerCatalogProductcsv->step2()
+#6 /home/bargain/secure80057861109/controller/startup/router.php(26): Action->execute(Object(Registry),  in /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Error.php on line 27
+[10-Aug-2018 11:48:06 UTC] PHP Fatal error:  Uncaught OneCRM\APIClient\Error: Model SalesOrders not found in /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Error.php:27
+Stack trace:
+#0 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Client.php(62): OneCRM\APIClient\Error::fromAPIResponse(404, Array)
+#1 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Client.php(137): OneCRM\APIClient\Client->request('GET', 'data/SalesOrder...', Array)
+#2 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Model.php(47): OneCRM\APIClient\Client->get('/data/SalesOrde...', Array)
+#3 /home/bargain/secure80057861109/controller/catalog/productcsv.php(67): OneCRM\APIClient\Model->getList(Array, 0, 3)
+#4 /home/bargain/secure80057861109/controller/catalog/productcsv.php(50): ControllerCatalogProductcsv->contacts()
+#5 /home/bargain/storage/modification/system/engine/action.php(79): ControllerCatalogProductcsv->step2()
+#6 /home/bargain/secure80057861109/controller/startup/router.php(26): Action->execute(Object(Registry),  in /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Error.php on line 27
+[10-Aug-2018 11:48:43 UTC] PHP Fatal error:  Uncaught OneCRM\APIClient\Error: Model Contacts not found in /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Error.php:27
+Stack trace:
+#0 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Client.php(62): OneCRM\APIClient\Error::fromAPIResponse(404, Array)
+#1 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Client.php(137): OneCRM\APIClient\Client->request('GET', 'data/Contacts', Array)
+#2 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Model.php(47): OneCRM\APIClient\Client->get('/data/Contacts', Array)
+#3 /home/bargain/secure80057861109/controller/catalog/productcsv.php(67): OneCRM\APIClient\Model->getList(Array, 0, 3)
+#4 /home/bargain/secure80057861109/controller/catalog/productcsv.php(50): ControllerCatalogProductcsv->contacts()
+#5 /home/bargain/storage/modification/system/engine/action.php(79): ControllerCatalogProductcsv->step2()
+#6 /home/bargain/secure80057861109/controller/startup/router.php(26): Action->execute(Object(Registry), Array)
+#7 /h in /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Error.php on line 27
+[10-Aug-2018 11:48:50 UTC] PHP Fatal error:  Uncaught OneCRM\APIClient\Error: Model Contacts not found in /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Error.php:27
+Stack trace:
+#0 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Client.php(62): OneCRM\APIClient\Error::fromAPIResponse(404, Array)
+#1 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Client.php(137): OneCRM\APIClient\Client->request('GET', 'data/Contacts', Array)
+#2 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Model.php(47): OneCRM\APIClient\Client->get('/data/Contacts', Array)
+#3 /home/bargain/secure80057861109/controller/catalog/productcsv.php(67): OneCRM\APIClient\Model->getList(Array, 0, 3)
+#4 /home/bargain/secure80057861109/controller/catalog/productcsv.php(50): ControllerCatalogProductcsv->contacts()
+#5 /home/bargain/storage/modification/system/engine/action.php(79): ControllerCatalogProductcsv->step2()
+#6 /home/bargain/secure80057861109/controller/startup/router.php(26): Action->execute(Object(Registry), Array)
+#7 /h in /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Error.php on line 27
+[10-Aug-2018 11:49:22 UTC] PHP Fatal error:  Uncaught OneCRM\APIClient\Error: Model Leads not found in /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Error.php:27
+Stack trace:
+#0 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Client.php(62): OneCRM\APIClient\Error::fromAPIResponse(404, Array)
+#1 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Client.php(137): OneCRM\APIClient\Client->request('GET', 'data/Leads', Array)
+#2 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Model.php(47): OneCRM\APIClient\Client->get('/data/Leads', Array)
+#3 /home/bargain/secure80057861109/controller/catalog/productcsv.php(67): OneCRM\APIClient\Model->getList(Array, 0, 3)
+#4 /home/bargain/secure80057861109/controller/catalog/productcsv.php(50): ControllerCatalogProductcsv->contacts()
+#5 /home/bargain/storage/modification/system/engine/action.php(79): ControllerCatalogProductcsv->step2()
+#6 /home/bargain/secure80057861109/controller/startup/router.php(26): Action->execute(Object(Registry), Array)
+#7 /home/barga in /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Error.php on line 27
+[10-Aug-2018 11:50:14 UTC] PHP Fatal error:  Uncaught OneCRM\APIClient\Error: Model Salesorder not found in /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Error.php:27
+Stack trace:
+#0 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Client.php(62): OneCRM\APIClient\Error::fromAPIResponse(404, Array)
+#1 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Client.php(137): OneCRM\APIClient\Client->request('GET', 'data/Salesorder', Array)
+#2 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Model.php(47): OneCRM\APIClient\Client->get('/data/Salesorde...', Array)
+#3 /home/bargain/secure80057861109/controller/catalog/productcsv.php(67): OneCRM\APIClient\Model->getList(Array, 0, 3)
+#4 /home/bargain/secure80057861109/controller/catalog/productcsv.php(50): ControllerCatalogProductcsv->contacts()
+#5 /home/bargain/storage/modification/system/engine/action.php(79): ControllerCatalogProductcsv->step2()
+#6 /home/bargain/secure80057861109/controller/startup/router.php(26): Action->execute(Object(Registry), Arra in /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Error.php on line 27
+[10-Aug-2018 11:51:23 UTC] PHP Fatal error:  Uncaught OneCRM\APIClient\Error: Model Leads not found in /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Error.php:27
+Stack trace:
+#0 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Client.php(62): OneCRM\APIClient\Error::fromAPIResponse(404, Array)
+#1 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Client.php(137): OneCRM\APIClient\Client->request('GET', 'data/Leads', Array)
+#2 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Model.php(47): OneCRM\APIClient\Client->get('/data/Leads', Array)
+#3 /home/bargain/secure80057861109/controller/catalog/productcsv.php(67): OneCRM\APIClient\Model->getList(Array, 0, 3)
+#4 /home/bargain/secure80057861109/controller/catalog/productcsv.php(50): ControllerCatalogProductcsv->contacts()
+#5 /home/bargain/storage/modification/system/engine/action.php(79): ControllerCatalogProductcsv->step2()
+#6 /home/bargain/secure80057861109/controller/startup/router.php(26): Action->execute(Object(Registry), Array)
+#7 /home/barga in /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Error.php on line 27
+[10-Aug-2018 11:51:51 UTC] PHP Fatal error:  Uncaught OneCRM\APIClient\Error: Model Order not found in /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Error.php:27
+Stack trace:
+#0 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Client.php(62): OneCRM\APIClient\Error::fromAPIResponse(404, Array)
+#1 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Client.php(137): OneCRM\APIClient\Client->request('GET', 'data/Order', Array)
+#2 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Model.php(47): OneCRM\APIClient\Client->get('/data/Order', Array)
+#3 /home/bargain/secure80057861109/controller/catalog/productcsv.php(67): OneCRM\APIClient\Model->getList(Array, 0, 3)
+#4 /home/bargain/secure80057861109/controller/catalog/productcsv.php(50): ControllerCatalogProductcsv->contacts()
+#5 /home/bargain/storage/modification/system/engine/action.php(79): ControllerCatalogProductcsv->step2()
+#6 /home/bargain/secure80057861109/controller/startup/router.php(26): Action->execute(Object(Registry), Array)
+#7 /home/barga in /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Error.php on line 27
+[10-Aug-2018 11:52:07 UTC] PHP Fatal error:  Uncaught OneCRM\APIClient\Error: Model Sale not found in /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Error.php:27
+Stack trace:
+#0 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Client.php(62): OneCRM\APIClient\Error::fromAPIResponse(404, Array)
+#1 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Client.php(137): OneCRM\APIClient\Client->request('GET', 'data/Sale', Array)
+#2 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Model.php(47): OneCRM\APIClient\Client->get('/data/Sale', Array)
+#3 /home/bargain/secure80057861109/controller/catalog/productcsv.php(67): OneCRM\APIClient\Model->getList(Array, 0, 3)
+#4 /home/bargain/secure80057861109/controller/catalog/productcsv.php(50): ControllerCatalogProductcsv->contacts()
+#5 /home/bargain/storage/modification/system/engine/action.php(79): ControllerCatalogProductcsv->step2()
+#6 /home/bargain/secure80057861109/controller/startup/router.php(26): Action->execute(Object(Registry), Array)
+#7 /home/bargain/ in /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Error.php on line 27
+[10-Aug-2018 11:58:01 UTC] PHP Parse error:  syntax error, unexpected 'metadata' (T_STRING), expecting variable (T_VARIABLE) or '$' in /home/bargain/secure80057861109/controller/catalog/productcsv.php on line 66
+[10-Aug-2018 11:58:19 UTC] PHP Parse error:  syntax error, unexpected '->' (T_OBJECT_OPERATOR) in /home/bargain/secure80057861109/controller/catalog/productcsv.php on line 66
+[10-Aug-2018 11:58:56 UTC] PHP Parse error:  syntax error, unexpected 'metadata' (T_STRING), expecting variable (T_VARIABLE) or '$' in /home/bargain/secure80057861109/controller/catalog/productcsv.php on line 66
+[10-Aug-2018 11:59:13 UTC] PHP Parse error:  syntax error, unexpected 'metadata' (T_STRING), expecting variable (T_VARIABLE) or '$' in /home/bargain/secure80057861109/controller/catalog/productcsv.php on line 66
+[10-Aug-2018 12:24:15 UTC] PHP Parse error:  syntax error, unexpected '=' in /home/bargain/secure80057861109/controller/catalog/productcsv.php on line 66
+[10-Aug-2018 12:25:29 UTC] PHP Fatal error:  Uncaught OneCRM\APIClient\Error: Model Order not found in /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Error.php:27
+Stack trace:
+#0 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Client.php(62): OneCRM\APIClient\Error::fromAPIResponse(404, Array)
+#1 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Client.php(137): OneCRM\APIClient\Client->request('GET', 'data/Order', Array)
+#2 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Model.php(47): OneCRM\APIClient\Client->get('/data/Order', Array)
+#3 /home/bargain/secure80057861109/controller/catalog/productcsv.php(67): OneCRM\APIClient\Model->getList(Array, 0, 3)
+#4 /home/bargain/secure80057861109/controller/catalog/productcsv.php(50): ControllerCatalogProductcsv->contacts()
+#5 /home/bargain/storage/modification/system/engine/action.php(79): ControllerCatalogProductcsv->step2()
+#6 /home/bargain/secure80057861109/controller/startup/router.php(26): Action->execute(Object(Registry), Array)
+#7 /home/barga in /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Error.php on line 27
+[10-Aug-2018 12:58:20 UTC] PHP Fatal error:  Uncaught Error: Call to a member function totalResults() on array in /home/bargain/secure80057861109/controller/catalog/productcsv.php:68
+Stack trace:
+#0 /home/bargain/secure80057861109/controller/catalog/productcsv.php(50): ControllerCatalogProductcsv->contacts()
+#1 /home/bargain/storage/modification/system/engine/action.php(79): ControllerCatalogProductcsv->step2()
+#2 /home/bargain/secure80057861109/controller/startup/router.php(26): Action->execute(Object(Registry), Array)
+#3 /home/bargain/storage/modification/system/engine/action.php(79): ControllerStartupRouter->index()
+#4 /home/bargain/public_html/system/engine/router.php(67): Action->execute(Object(Registry))
+#5 /home/bargain/public_html/system/engine/router.php(56): Router->execute(Object(Action))
+#6 /home/bargain/public_html/system/framework.php(168): Router->dispatch(Object(Action), Object(Action))
+#7 /home/bargain/public_html/system/startup.php(104): require_once('/home/bargain/p...')
+#8 /home/bargain/secure80057861109/index.php(20): start('admin') in /home/bargain/secure80057861109/controller/catalog/productcsv.php on line 68
+[10-Aug-2018 12:58:58 UTC] PHP Fatal error:  Uncaught Error: Call to a member function totalResults() on array in /home/bargain/secure80057861109/controller/catalog/productcsv.php:68
+Stack trace:
+#0 /home/bargain/secure80057861109/controller/catalog/productcsv.php(50): ControllerCatalogProductcsv->contacts()
+#1 /home/bargain/storage/modification/system/engine/action.php(79): ControllerCatalogProductcsv->step2()
+#2 /home/bargain/secure80057861109/controller/startup/router.php(26): Action->execute(Object(Registry), Array)
+#3 /home/bargain/storage/modification/system/engine/action.php(79): ControllerStartupRouter->index()
+#4 /home/bargain/public_html/system/engine/router.php(67): Action->execute(Object(Registry))
+#5 /home/bargain/public_html/system/engine/router.php(56): Router->execute(Object(Action))
+#6 /home/bargain/public_html/system/framework.php(168): Router->dispatch(Object(Action), Object(Action))
+#7 /home/bargain/public_html/system/startup.php(104): require_once('/home/bargain/p...')
+#8 /home/bargain/secure80057861109/index.php(20): start('admin') in /home/bargain/secure80057861109/controller/catalog/productcsv.php on line 68
+[10-Aug-2018 13:24:49 UTC] PHP Fatal error:  Uncaught OneCRM\APIClient\Error: Param data is required in /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Error.php:27
+Stack trace:
+#0 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Client.php(62): OneCRM\APIClient\Error::fromAPIResponse(400, Array)
+#1 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Client.php(90): OneCRM\APIClient\Client->request('POST', 'data/Quote', Array)
+#2 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Model.php(149): OneCRM\APIClient\Client->post('/data/Quote', Array)
+#3 /home/bargain/secure80057861109/controller/catalog/productcsv.php(83): OneCRM\APIClient\Model->create()
+#4 /home/bargain/secure80057861109/controller/catalog/productcsv.php(50): ControllerCatalogProductcsv->contacts()
+#5 /home/bargain/storage/modification/system/engine/action.php(79): ControllerCatalogProductcsv->step2()
+#6 /home/bargain/secure80057861109/controller/startup/router.php(26): Action->execute(Object(Registry), Array)
+#7 /home/bargain/storag in /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Error.php on line 27
+[10-Aug-2018 13:25:09 UTC] PHP Fatal error:  Uncaught OneCRM\APIClient\Error: Param data should be of type Object in /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Error.php:27
+Stack trace:
+#0 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Client.php(62): OneCRM\APIClient\Error::fromAPIResponse(400, Array)
+#1 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Client.php(90): OneCRM\APIClient\Client->request('POST', 'data/Quote', Array)
+#2 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Model.php(149): OneCRM\APIClient\Client->post('/data/Quote', Array)
+#3 /home/bargain/secure80057861109/controller/catalog/productcsv.php(83): OneCRM\APIClient\Model->create('"full_number": ...')
+#4 /home/bargain/secure80057861109/controller/catalog/productcsv.php(50): ControllerCatalogProductcsv->contacts()
+#5 /home/bargain/storage/modification/system/engine/action.php(79): ControllerCatalogProductcsv->step2()
+#6 /home/bargain/secure80057861109/controller/startup/router.php(26): Action->execute(Object(Registry in /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Error.php on line 27
+[10-Aug-2018 13:25:38 UTC] PHP Parse error:  syntax error, unexpected ':' in /home/bargain/secure80057861109/controller/catalog/productcsv.php on line 67
+[10-Aug-2018 13:32:45 UTC] PHP Parse error:  syntax error, unexpected ':', expecting ']' in /home/bargain/secure80057861109/controller/catalog/productcsv.php on line 72
+[10-Aug-2018 13:33:49 UTC] PHP Fatal error:  Uncaught OneCRM\APIClient\Error: Error inserting into table: Query Failed: INSERT INTO quotes (date_modified,modified_user_id,deleted,id,date_entered,created_by,currency_id,exchange_rate,quote_stage,approval,show_list_prices,show_components,subtotal,subtotal_usd,tax_exempt,budgetary_quote,discount_before_taxes,assigned_user_id,prefix,terms,valid_until,pretax,quote_number,pretax_usd,approved_user_id) VALUES ('2018-08-10 13:33:49','1','0','e9097477-f093-b6f1-ea66-5b6d94052d99','2018-08-10 13:33:49','1','-99',1,'Draft','','0','all',0,0,'0','0','0','1','2018-','COD','2018-09-09',0,2,0,null)::MySQL error 1364: Field 'name' doesn't have a default value in /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Error.php:27
+Stack trace:
+#0 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Client.php(62): OneCRM\APIClient\Error::fromAPIResponse(500, Array)
+#1 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Client.php(90): OneCRM\APIClient\Client->request('POST', 'data/Quote', Arr in /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Error.php on line 27
+[10-Aug-2018 13:35:42 UTC] PHP Fatal error:  Uncaught OneCRM\APIClient\Error: Error inserting into table: Query Failed: INSERT INTO quotes (date_modified,modified_user_id,deleted,id,date_entered,created_by,currency_id,exchange_rate,quote_stage,approval,show_list_prices,show_components,subtotal,subtotal_usd,tax_exempt,budgetary_quote,discount_before_taxes,assigned_user_id,prefix,terms,valid_until,pretax,quote_number,pretax_usd,approved_user_id) VALUES ('2018-08-10 13:35:42','1','0','21316460-3dd4-693f-9bef-5b6d94a4153e','2018-08-10 13:35:42','1','-99',1,'Draft','','0','all',0,0,'0','0','0','1','2018-','COD','2018-09-09',0,3,0,null)::MySQL error 1364: Field 'name' doesn't have a default value in /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Error.php:27
+Stack trace:
+#0 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Client.php(62): OneCRM\APIClient\Error::fromAPIResponse(500, Array)
+#1 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Client.php(90): OneCRM\APIClient\Client->request('POST', 'data/Quote', Arr in /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Error.php on line 27
+[10-Aug-2018 13:37:09 UTC] PHP Fatal error:  Uncaught OneCRM\APIClient\Error: Error inserting into table: Query Failed: INSERT INTO quotes (date_modified,modified_user_id,deleted,id,date_entered,created_by,currency_id,exchange_rate,quote_stage,approval,show_list_prices,show_components,subtotal,subtotal_usd,tax_exempt,budgetary_quote,discount_before_taxes,assigned_user_id,prefix,terms,valid_until,pretax,quote_number,pretax_usd,approved_user_id) VALUES ('2018-08-10 13:37:09','1','0','b0096525-506a-5c0f-203a-5b6d956829e4','2018-08-10 13:37:09','1','-99',1,'Draft','','0','all',0,0,'0','0','0','1','2018-','COD','2018-09-09',0,4,0,null)::MySQL error 1364: Field 'name' doesn't have a default value in /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Error.php:27
+Stack trace:
+#0 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Client.php(62): OneCRM\APIClient\Error::fromAPIResponse(500, Array)
+#1 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Client.php(90): OneCRM\APIClient\Client->request('POST', 'data/Quote', Arr in /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Error.php on line 27
+[10-Aug-2018 13:39:48 UTC] PHP Parse error:  syntax error, unexpected ';', expecting ']' in /home/bargain/secure80057861109/controller/catalog/productcsv.php on line 103
+[10-Aug-2018 13:42:02 UTC] PHP Fatal error:  Uncaught OneCRM\APIClient\Error: Error inserting into table: Query Failed: INSERT INTO quotes (date_modified,modified_user_id,deleted,id,date_entered,created_by,currency_id,exchange_rate,quote_stage,approval,show_list_prices,show_components,subtotal,subtotal_usd,tax_exempt,budgetary_quote,discount_before_taxes,assigned_user_id,prefix,terms,valid_until,pretax,quote_number,pretax_usd,approved_user_id) VALUES ('2018-08-10 13:42:02','1','0','b2de8200-cab0-3214-2d84-5b6d9656abad','2018-08-10 13:42:02','1','-99',1,'Draft','','0','all',0,0,'0','0','0','1','2018-','COD','2018-09-09',0,5,0,null)::MySQL error 1364: Field 'name' doesn't have a default value in /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Error.php:27
+Stack trace:
+#0 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Client.php(62): OneCRM\APIClient\Error::fromAPIResponse(500, Array)
+#1 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Client.php(90): OneCRM\APIClient\Client->request('POST', 'data/Quote', Arr in /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Error.php on line 27
+[10-Aug-2018 13:42:29 UTC] PHP Fatal error:  Uncaught OneCRM\APIClient\Error: Error inserting into table: Query Failed: INSERT INTO quotes (date_modified,modified_user_id,deleted,id,date_entered,created_by,currency_id,exchange_rate,quote_stage,approval,show_list_prices,show_components,subtotal,subtotal_usd,tax_exempt,budgetary_quote,discount_before_taxes,assigned_user_id,prefix,terms,valid_until,pretax,quote_number,pretax_usd,approved_user_id) VALUES ('2018-08-10 13:42:29','1','0','6b1a1028-a358-74c0-67ee-5b6d96eecbb2','2018-08-10 13:42:29','1','-99',1,'Draft','','0','all',0,0,'0','0','0','1','2018-','COD','2018-09-09',0,6,0,null)::MySQL error 1364: Field 'name' doesn't have a default value in /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Error.php:27
+Stack trace:
+#0 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Client.php(62): OneCRM\APIClient\Error::fromAPIResponse(500, Array)
+#1 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Client.php(90): OneCRM\APIClient\Client->request('POST', 'data/Quote', Arr in /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Error.php on line 27
+[11-Aug-2018 06:17:30 UTC] PHP Fatal error:  Uncaught Exception: Error: Table 'bargain_bargain.oc_information_product' doesn't exist<br />Error No: 1146<br />SELECT * FROM oc_information_product WHERE information_id = '9' in /home/bargain/public_html/system/library/db/mysqli.php:40
+Stack trace:
+#0 /home/bargain/public_html/system/library/db.php(45): DB\MySQLi->query('SELECT * FROM o...')
+#1 /home/bargain/secure80057861109/model/catalog/information.php(230): DB->query('SELECT * FROM o...')
+#2 /home/bargain/storage/modification/system/engine/loader.php(248): ModelCatalogInformation->getInformationProducts('9')
+#3 /home/bargain/public_html/system/engine/proxy.php(47): Loader->{closure}(Array, Array)
+#4 /home/bargain/secure80057861109/controller/catalog/information.php(357): Proxy->__call('getInformationP...', Array)
+#5 /home/bargain/secure80057861109/controller/catalog/information.php(79): ControllerCatalogInformation->getForm()
+#6 /home/bargain/storage/modification/system/engine/action.php(79): ControllerCatalogInformation->edit()
+#7 /home/bargain/secure8 in /home/bargain/public_html/system/library/db/mysqli.php on line 40
+[11-Aug-2018 06:30:42 UTC] PHP Fatal error:  Uncaught Exception: Error: Unknown column 'category' in 'field list'<br />Error No: 1054<br />UPDATE oc_information SET sort_order = '0', bottom = '0', status = '1', type = '0', department = '0', category = '0', related_article = '', related_product = '', image = '', product_id = '0' WHERE information_id = '9' in /home/bargain/public_html/system/library/db/mysqli.php:40
+Stack trace:
+#0 /home/bargain/public_html/system/library/db.php(45): DB\MySQLi->query('UPDATE oc_infor...')
+#1 /home/bargain/secure80057861109/model/catalog/information.php(48): DB->query('UPDATE oc_infor...')
+#2 /home/bargain/storage/modification/system/engine/loader.php(248): ModelCatalogInformation->editInformation('9', Array)
+#3 /home/bargain/public_html/system/engine/proxy.php(47): Loader->{closure}(Array, Array)
+#4 /home/bargain/secure80057861109/controller/catalog/information.php(58): Proxy->__call('editInformation', Array)
+#5 /home/bargain/storage/modification/system/engine/action.php(79): ControllerCatalogInformation->edit()
+#6 /home/ in /home/bargain/public_html/system/library/db/mysqli.php on line 40
+[11-Aug-2018 06:32:30 UTC] PHP Fatal error:  Uncaught Exception: Error: Unknown column 'category' in 'field list'<br />Error No: 1054<br />UPDATE oc_information SET sort_order = '0', bottom = '0', status = '1', type = '0', department = '0', category = '0', related_article = '', related_product = '', image = '', product_id = '0' WHERE information_id = '9' in /home/bargain/public_html/system/library/db/mysqli.php:40
+Stack trace:
+#0 /home/bargain/public_html/system/library/db.php(45): DB\MySQLi->query('UPDATE oc_infor...')
+#1 /home/bargain/secure80057861109/model/catalog/information.php(48): DB->query('UPDATE oc_infor...')
+#2 /home/bargain/storage/modification/system/engine/loader.php(248): ModelCatalogInformation->editInformation('9', Array)
+#3 /home/bargain/public_html/system/engine/proxy.php(47): Loader->{closure}(Array, Array)
+#4 /home/bargain/secure80057861109/controller/catalog/information.php(58): Proxy->__call('editInformation', Array)
+#5 /home/bargain/storage/modification/system/engine/action.php(79): ControllerCatalogInformation->edit()
+#6 /home/ in /home/bargain/public_html/system/library/db/mysqli.php on line 40
+[11-Aug-2018 06:32:57 UTC] PHP Fatal error:  Uncaught Exception: Error: Unknown column 'image' in 'field list'<br />Error No: 1054<br />UPDATE oc_information SET sort_order = '0', bottom = '0', status = '1', type = '0', department = '0', category = '0', related_article = '', related_product = '', image = '', product_id = '0' WHERE information_id = '9' in /home/bargain/public_html/system/library/db/mysqli.php:40
+Stack trace:
+#0 /home/bargain/public_html/system/library/db.php(45): DB\MySQLi->query('UPDATE oc_infor...')
+#1 /home/bargain/secure80057861109/model/catalog/information.php(48): DB->query('UPDATE oc_infor...')
+#2 /home/bargain/storage/modification/system/engine/loader.php(248): ModelCatalogInformation->editInformation('9', Array)
+#3 /home/bargain/public_html/system/engine/proxy.php(47): Loader->{closure}(Array, Array)
+#4 /home/bargain/secure80057861109/controller/catalog/information.php(58): Proxy->__call('editInformation', Array)
+#5 /home/bargain/storage/modification/system/engine/action.php(79): ControllerCatalogInformation->edit()
+#6 /home/bar in /home/bargain/public_html/system/library/db/mysqli.php on line 40
+[11-Aug-2018 08:50:43 UTC] PHP Fatal error:  Uncaught OneCRM\APIClient\Error: Invalid state passed in /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/AuthorizationFlow.php:117
+Stack trace:
+#0 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/AuthorizationFlow.php(122): OneCRM\APIClient\AuthorizationFlow->validateResponseState(Array)
+#1 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/AuthorizationFlow.php(98): OneCRM\APIClient\AuthorizationFlow->finalAuthCode(Array)
+#2 /home/bargain/secure80057861109/controller/catalog/productcsv.php(20): OneCRM\APIClient\AuthorizationFlow->finalize()
+#3 /home/bargain/storage/modification/system/engine/action.php(79): ControllerCatalogProductcsv->index()
+#4 /home/bargain/secure80057861109/controller/startup/router.php(26): Action->execute(Object(Registry), Array)
+#5 /home/bargain/storage/modification/system/engine/action.php(79): ControllerStartupRouter->index()
+#6 /home/bargain/public_html/system/engine/router.php(67): Action->execute(Object(Registry))
+#7 /home/bargain/publi in /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/AuthorizationFlow.php on line 117
+[11-Aug-2018 08:51:08 UTC] PHP Fatal error:  Uncaught OneCRM\APIClient\Error: Error inserting into table: Query Failed: INSERT INTO quotes (date_modified,modified_user_id,deleted,id,date_entered,created_by,currency_id,exchange_rate,quote_stage,approval,show_list_prices,show_components,subtotal,subtotal_usd,tax_exempt,budgetary_quote,discount_before_taxes,assigned_user_id,prefix,terms,valid_until,pretax,quote_number,pretax_usd,approved_user_id) VALUES ('2018-08-11 08:51:08','1','0','3aa7242b-2309-2288-bb5a-5b6ea373570f','2018-08-11 08:51:08','1','-99',1,'Draft','','0','all',0,0,'0','0','0','1','2018-','COD','2018-09-10',0,7,0,null)::MySQL error 1364: Field 'name' doesn't have a default value in /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Error.php:27
+Stack trace:
+#0 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Client.php(62): OneCRM\APIClient\Error::fromAPIResponse(500, Array)
+#1 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Client.php(90): OneCRM\APIClient\Client->request('POST', 'data/Quote', Arr in /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Error.php on line 27
+[11-Aug-2018 09:08:28 UTC] PHP Fatal error:  Uncaught OneCRM\APIClient\Error: Error inserting into table: Query Failed: INSERT INTO quotes (date_modified,modified_user_id,deleted,id,date_entered,created_by,currency_id,exchange_rate,quote_stage,approval,show_list_prices,show_components,subtotal,subtotal_usd,tax_exempt,budgetary_quote,discount_before_taxes,assigned_user_id,prefix,terms,valid_until,pretax,quote_number,pretax_usd,approved_user_id) VALUES ('2018-08-11 09:08:28','1','0','2c2adc14-19a7-c0d4-660b-5b6ea774eeb7','2018-08-11 09:08:28','1','-99',1,'Draft','','0','all',0,0,'0','0','0','1','2018-','COD','2018-09-10',0,8,0,null)::MySQL error 1364: Field 'name' doesn't have a default value in /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Error.php:27
+Stack trace:
+#0 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Client.php(62): OneCRM\APIClient\Error::fromAPIResponse(500, Array)
+#1 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Client.php(90): OneCRM\APIClient\Client->request('POST', 'data/Quote', Arr in /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Error.php on line 27
+[11-Aug-2018 09:09:22 UTC] PHP Fatal error:  Uncaught OneCRM\APIClient\Error: Error inserting into table: Query Failed: INSERT INTO quotes (date_modified,modified_user_id,deleted,id,date_entered,created_by,currency_id,exchange_rate,quote_stage,approval,show_list_prices,show_components,subtotal,subtotal_usd,tax_exempt,budgetary_quote,discount_before_taxes,assigned_user_id,prefix,terms,valid_until,pretax,quote_number,pretax_usd,approved_user_id) VALUES ('2018-08-11 09:09:22','1','0','ab84a704-4807-5252-29f5-5b6ea762f7b3','2018-08-11 09:09:22','1','-99',1,'Draft','','0','all',0,0,'0','0','0','1','2018-','COD','2018-09-10',0,9,0,null)::MySQL error 1364: Field 'name' doesn't have a default value in /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Error.php:27
+Stack trace:
+#0 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Client.php(62): OneCRM\APIClient\Error::fromAPIResponse(500, Array)
+#1 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Client.php(90): OneCRM\APIClient\Client->request('POST', 'data/Quote', Arr in /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Error.php on line 27
+[11-Aug-2018 09:14:55 UTC] PHP Fatal error:  Uncaught OneCRM\APIClient\Error: Error inserting into table: Query Failed: INSERT INTO quotes (date_modified,modified_user_id,deleted,id,date_entered,created_by,currency_id,exchange_rate,quote_stage,approval,show_list_prices,show_components,subtotal,subtotal_usd,tax_exempt,budgetary_quote,discount_before_taxes,assigned_user_id,prefix,terms,valid_until,pretax,quote_number,pretax_usd,approved_user_id) VALUES ('2018-08-11 09:14:55','1','0','d6a3ab84-cdc2-6294-231e-5b6ea9d8ff7e','2018-08-11 09:14:55','1','-99',1,'Draft','','0','all',0,0,'0','0','0','1','2018-','COD','2018-09-10',0,10,0,null)::MySQL error 1364: Field 'name' doesn't have a default value in /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Error.php:27
+Stack trace:
+#0 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Client.php(62): OneCRM\APIClient\Error::fromAPIResponse(500, Array)
+#1 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Client.php(90): OneCRM\APIClient\Client->request('POST', 'data/Quote', Ar in /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Error.php on line 27
+[11-Aug-2018 09:16:49 UTC] PHP Parse error:  syntax error, unexpected ';', expecting ']' in /home/bargain/secure80057861109/controller/catalog/productcsv.php on line 100
+[11-Aug-2018 09:17:19 UTC] PHP Fatal error:  Uncaught OneCRM\APIClient\Error: Error inserting into table: Query Failed: INSERT INTO quotes (date_modified,modified_user_id,deleted,id,date_entered,created_by,currency_id,exchange_rate,quote_stage,approval,show_list_prices,show_components,subtotal,subtotal_usd,tax_exempt,budgetary_quote,discount_before_taxes,assigned_user_id,prefix,terms,valid_until,pretax,quote_number,pretax_usd,approved_user_id) VALUES ('2018-08-11 09:17:19','1','0','beb676bc-7a8c-7858-0ed6-5b6ea932ea42','2018-08-11 09:17:19','1','-99',1,'Draft','','0','all',0,0,'0','0','0','1','2018-','COD','2018-09-10',0,11,0,null)::MySQL error 1364: Field 'name' doesn't have a default value in /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Error.php:27
+Stack trace:
+#0 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Client.php(62): OneCRM\APIClient\Error::fromAPIResponse(500, Array)
+#1 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Client.php(90): OneCRM\APIClient\Client->request('POST', 'data/Quote', Ar in /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Error.php on line 27
+[11-Aug-2018 09:19:58 UTC] PHP Fatal error:  Uncaught OneCRM\APIClient\Error: Error inserting into table: Query Failed: INSERT INTO quotes (date_modified,modified_user_id,deleted,id,date_entered,created_by,currency_id,exchange_rate,quote_stage,approval,show_list_prices,show_components,subtotal,subtotal_usd,tax_exempt,budgetary_quote,discount_before_taxes,assigned_user_id,prefix,terms,valid_until,pretax,quote_number,pretax_usd,approved_user_id) VALUES ('2018-08-11 09:19:58','1','0','dfcc4213-d327-a403-bb2e-5b6eaac6eae4','2018-08-11 09:19:58','1','-99',1,'Draft','','0','all',0,0,'0','0','0','1','2018-','COD','2018-09-10',0,12,0,null)::MySQL error 1364: Field 'name' doesn't have a default value in /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Error.php:27
+Stack trace:
+#0 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Client.php(62): OneCRM\APIClient\Error::fromAPIResponse(500, Array)
+#1 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Client.php(90): OneCRM\APIClient\Client->request('POST', 'data/Quote', Ar in /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Error.php on line 27
+[11-Aug-2018 09:20:29 UTC] PHP Fatal error:  Uncaught OneCRM\APIClient\Error: Error inserting into table: Query Failed: INSERT INTO quotes (date_modified,modified_user_id,deleted,id,date_entered,created_by,currency_id,exchange_rate,quote_stage,approval,show_list_prices,show_components,subtotal,subtotal_usd,tax_exempt,budgetary_quote,discount_before_taxes,assigned_user_id,prefix,terms,valid_until,pretax,quote_number,pretax_usd,approved_user_id) VALUES ('2018-08-11 09:20:29','1','0','6ca70d78-88fe-3ac7-ff82-5b6eaa25dcbb','2018-08-11 09:20:29','1','-99',1,'Draft','','0','all',0,0,'0','0','0','1','2018-','COD','2018-09-10',0,13,0,null)::MySQL error 1364: Field 'name' doesn't have a default value in /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Error.php:27
+Stack trace:
+#0 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Client.php(62): OneCRM\APIClient\Error::fromAPIResponse(500, Array)
+#1 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Client.php(90): OneCRM\APIClient\Client->request('POST', 'data/Quote', Ar in /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Error.php on line 27
+[11-Aug-2018 09:37:31 UTC] PHP Fatal error:  Uncaught OneCRM\APIClient\Error: Model Leads not found in /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Error.php:27
+Stack trace:
+#0 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Client.php(62): OneCRM\APIClient\Error::fromAPIResponse(404, Array)
+#1 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Client.php(137): OneCRM\APIClient\Client->request('GET', 'meta/fields/Lea...', Array)
+#2 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Model.php(189): OneCRM\APIClient\Client->get('/meta/fields/Le...')
+#3 /home/bargain/secure80057861109/controller/catalog/productcsv.php(114): OneCRM\APIClient\Model->metadata()
+#4 /home/bargain/secure80057861109/controller/catalog/productcsv.php(50): ControllerCatalogProductcsv->contacts()
+#5 /home/bargain/storage/modification/system/engine/action.php(79): ControllerCatalogProductcsv->step2()
+#6 /home/bargain/secure80057861109/controller/startup/router.php(26): Action->execute(Object(Registry), Array)
+#7 /home/barga in /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Error.php on line 27
+[11-Aug-2018 09:41:46 UTC] PHP Parse error:  syntax error, unexpected '=', expecting ']' in /home/bargain/secure80057861109/controller/catalog/productcsv.php on line 68
+[11-Aug-2018 09:42:22 UTC] PHP Parse error:  syntax error, unexpected '=', expecting ']' in /home/bargain/secure80057861109/controller/catalog/productcsv.php on line 68
+[11-Aug-2018 09:42:55 UTC] PHP Parse error:  syntax error, unexpected '=', expecting ']' in /home/bargain/secure80057861109/controller/catalog/productcsv.php on line 68
+[11-Aug-2018 09:55:00 UTC] PHP Fatal error:  Uncaught OneCRM\APIClient\Error: Error inserting into table: Query Failed: INSERT INTO quotes (date_modified,modified_user_id,deleted,id,date_entered,created_by,currency_id,exchange_rate,quote_stage,approval,show_list_prices,show_components,subtotal,subtotal_usd,tax_exempt,budgetary_quote,discount_before_taxes,name,shipping_address_countrycode,assigned_user_id,prefix,terms,valid_until,pretax,quote_number,pretax_usd,approved_user_id) VALUES ('2018-08-11 09:55:00','1','0','a95a7b6f-9bcf-9c51-fab0-5b6eb2019dbf','2018-08-11 09:55:00','1','-99',1,'Draft','','0','all',0,0,'0','0','0','Order No . 110','PK','1','2018-','COD','2018-09-10',0,14,0,null)::MySQL error 1364: Field 'billing_account_id' doesn't have a default value in /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Error.php:27
+Stack trace:
+#0 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Client.php(62): OneCRM\APIClient\Error::fromAPIResponse(500, Array)
+#1 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Cli in /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Error.php on line 27
+[11-Aug-2018 09:59:12 UTC] PHP Fatal error:  Uncaught OneCRM\APIClient\Error: Error inserting into table: Query Failed: INSERT INTO quotes (date_modified,modified_user_id,deleted,id,date_entered,created_by,currency_id,exchange_rate,quote_stage,approval,show_list_prices,show_components,subtotal,subtotal_usd,tax_exempt,budgetary_quote,discount_before_taxes,name,billing_account_id,shipping_address_countrycode,assigned_user_id,prefix,terms,valid_until,pretax,quote_number,pretax_usd,approved_user_id) VALUES ('2018-08-11 09:59:12','1','0','eeb603b7-6f9f-9694-8907-5b6eb3dd1330','2018-08-11 09:59:12','1','-99',1,'Draft','','0','all',0,0,'0','0','0','Order No . 110','1','PK','1','2018-','COD','2018-09-10',0,15,0,null)::MySQL error 1364: Field 'amount' doesn't have a default value in /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Error.php:27
+Stack trace:
+#0 /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Client.php(62): OneCRM\APIClient\Error::fromAPIResponse(500, Array)
+#1 /home/bargain/secure80057861109/vendor/onecrm/api/src/AP in /home/bargain/secure80057861109/vendor/onecrm/api/src/APIClient/Error.php on line 27
+[11-Aug-2018 10:12:24 UTC] PHP Parse error:  syntax error, unexpected ''industry'' (T_CONSTANT_ENCAPSED_STRING), expecting ']' in /home/bargain/secure80057861109/controller/catalog/productcsv.php on line 75
+[12-Oct-2018 07:50:23 UTC] PHP Fatal error:  Cannot declare class ControllerCatalogProduct, because the name is already in use in /home/bargain/secure80057861109/model/catalog/product.php on line 0
+[12-Oct-2018 07:50:40 UTC] PHP Fatal error:  Cannot declare class ControllerCatalogProduct, because the name is already in use in /home/bargain/secure80057861109/model/catalog/product.php on line 0
+[12-Oct-2018 07:54:13 UTC] PHP Fatal error:  Cannot declare class ControllerCatalogProduct, because the name is already in use in /home/bargain/secure80057861109/model/catalog/product.php on line 0
+[12-Oct-2018 08:02:03 UTC] PHP Fatal error:  Cannot declare class ControllerCatalogProduct, because the name is already in use in /home/bargain/secure80057861109/model/catalog/product.php on line 0
+[12-Oct-2018 08:03:02 UTC] PHP Fatal error:  Cannot declare class ControllerCatalogProduct, because the name is already in use in /home/bargain/secure80057861109/model/catalog/product.php on line 0
+[12-Oct-2018 08:03:07 UTC] PHP Fatal error:  Cannot declare class ControllerCatalogProduct, because the name is already in use in /home/bargain/secure80057861109/model/catalog/product.php on line 0
+[12-Oct-2018 08:03:09 UTC] PHP Fatal error:  Cannot declare class ControllerCatalogProduct, because the name is already in use in /home/bargain/secure80057861109/model/catalog/product.php on line 0
+[12-Oct-2018 08:03:31 UTC] PHP Fatal error:  Cannot declare class ControllerCatalogProduct, because the name is already in use in /home/bargain/secure80057861109/model/catalog/product.php on line 0
+[12-Oct-2018 08:03:45 UTC] PHP Fatal error:  Cannot declare class ControllerCatalogProduct, because the name is already in use in /home/bargain/secure80057861109/model/catalog/product.php on line 0
+[12-Oct-2018 08:03:48 UTC] PHP Fatal error:  Cannot declare class ControllerCatalogProduct, because the name is already in use in /home/bargain/secure80057861109/model/catalog/product.php on line 0

@@ -1,0 +1,1935 @@
+{{ header }}
+<link type="text/css" href="view/stylesheet/onepagecheckout.css" rel="stylesheet" media="screen" />
+{{ column_left }}
+<div id="content">
+  <div class="page-header">
+    <div class="container-fluid">
+      <div class="pull-right">
+		<button onclick="$('.stay').val(1);" type="submit" form="form-order_success_page" data-toggle="tooltip" title="{{button_save}} & stay" class="btn btn-success1"><i class="fa fa-save"></i> {{button_save}} & stay </button>
+		</div>
+       <h1>{{ heading_title }}</h1>
+      <ul class="breadcrumb">
+        {% for breadcrumb in breadcrumbs %}
+        <li><a href="{{ breadcrumb.href }}">{{ breadcrumb.text }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+  <div class="container-fluid">
+     {% if error_warning %}
+    <div class="alert alert-danger"><i class="fa fa-exclamation-circle"></i> {{ error_warning }}
+      <button type="button" class="close" data-dismiss="alert">&times;</button>
+    </div>
+    {% endif %}
+	 {% if success %}
+    <div class="alert alert-success"><i class="fa fa-check-circle"></i>{{ success }}
+      <button type="button" class="close" data-dismiss="alert">&times;</button>
+    </div>
+    {% endif %}
+	<form action="{{action}}" method="post" enctype="multipart/form-data" id="form-OnePageCheackout" class="form-horizontal">
+           <input type="hidden" name="stay" class="stay" value="0"/>
+    <div class="panel panel-default" id="onepagecheackout">
+      <div class="panel-heading clearfix">
+        <h3 class="panel-title"><i class="fa fa-pencil"></i> {{ text_edit }}</h3>
+			<div class="pull-right">
+				<b>Stores : </b><select onchange="location = this.options[this.selectedIndex].value;" name="store_id">
+				<option value="{{store_action}}&store_id=0">{{ text_default }}</option>
+				{% for store in stores %}
+					{% if store.store_id==store_id %}
+					<option selected="selected" value="{{store_action}}&store_id={{store.store_id}}">{{store.name}}</option>
+					{% else %}
+					<option value="{{store_action}}&store_id={{store.store_id}}">{{store.name}}</option>
+					{% endif %}
+				{% endfor %}
+				</select>
+			</div>
+      </div>
+      <div class="panel-body">
+					<ul class="nav nav-tabs">
+						<li class="dropdown active"><a href="#" data-toggle="dropdown"><i class="fa fa-cog"></i> {{entry_general}} <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="#tab-general" data-toggle="tab"><i class="fa fa-cog"></i>  {{entry_general}}</a></li>
+							<li><a href="#tab-social_login" data-toggle="tab"><i class="fa fa-sign-in aria-hidden="true"></i> {{entry_social_login}}</a></li>
+						</ul>
+						</li>
+						<li class="dropdown"><a href="#" data-toggle="dropdown"><i class="fa fa-eye"></i> Layout Setting <span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li><a href="#tab-layout" data-toggle="tab"><i class="fa fa-eye"></i> Layout Setting</a></li>
+								<li><a href="#tab-shopping-cart-setting" data-toggle="tab"><i class="fa fa-shopping-cart"></i> {{entry_shopping_cart}}</a></li>
+								<li><a href="#tab-delivery_method-setting" data-toggle="tab"><i class="fa fa-truck" aria-hidden="true"></i> {{entry_delivery_method}} </a></li>
+								<li><a href="#tab-payment_method-setting" data-toggle="tab"><i class="fa fa-credit-card" aria-hidden="true"></i> {{entry_payment_method}} </a></li>
+								<li><a href="#tab-delivery-date-time" data-toggle="tab"><i class="fa fa-clock-o" aria-hidden="true"></i> Estimated Delivery Date</a></li>
+								<li><a href="#tab-confirm_order-setting" data-toggle="tab"><i class="fa fa-cart-plus" aria-hidden="true"></i> {{entry_confirm_order}} </a></li>
+						</ul>
+						</li>
+						<li class="dropdown"><a href="#" data-toggle="dropdown"><i class="fa fa-check-square-o"></i> {{field_manage}} <span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li><a href="#tab-personaldetails-setting" data-toggle="tab"><i class="fa fa-cogs"></i> {{entry_personaldetails}}</a></li>
+								<li><a href="#tab-payment-setting" data-toggle="tab"><i class="fa fa-cogs"></i> {{entry_paymentdetails}}</a></li>
+								<li><a href="#tab-delivery-setting" data-toggle="tab"><i class="fa fa-cogs"></i> {{entry_delivery_setting}}</a></li>
+								<li><a target="_new" href="{{customfeilds}}"><i class="fa fa-cogs"></i> OpenCart Custom Feilds Settings</a></li>
+							</ul>
+						</li>
+						<li class="dropdown"><a href="#" data-toggle="dropdown"><i class="fa fa-language"></i> {{entry_language}} <span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li><a href="#tab-general-language-setting" data-toggle="tab"><i class="fa fa-language"></i> {{entry_general}}</a></li>
+								<li><a href="#tab-personaldetails-language-setting" data-toggle="tab"><i class="fa fa-language"></i> {{entry_personaldetails}}</a></li>
+								<li><a href="#tab-paymentdetails-language-setting" data-toggle="tab"><i class="fa fa-language"></i> {{entry_paymentdetails}}</a></li>
+								<li><a href="#tab-delivery_detail-language-setting" data-toggle="tab"><i class="fa fa-language"></i> {{entry_delivery_setting}}</a></li>
+								<li><a href="#tab-login-language-setting" data-toggle="tab"><i class="fa fa-language"></i> {{entry_login}}</a></li>
+								<li><a href="#tab-delivery_method-language-setting" data-toggle="tab"><i class="fa fa-language"></i> {{entry_delivery_method}}</a></li>
+								<li><a href="#tab-payment_method-language-setting" data-toggle="tab"><i class="fa fa-language"></i> {{entry_payment_method}}</a></li>
+								<li><a href="#tab-delivery-language-date-time" data-toggle="tab"><i class="fa fa-language" aria-hidden="true"></i> Estimated Delivery Date</a></li>
+								<li><a href="#tab-shopping-cart-language-setting" data-toggle="tab"><i class="fa fa-language"></i> {{entry_shopping_cart}}</a></li>
+								<li><a href="#tab-confirm_order-language-setting" data-toggle="tab"><i class="fa fa-language"></i> {{entry_confirm_order}}</a></li>
+							</ul>
+						</li>
+						<li><a target="_blank" href="{{order_success}}"><i class="fa fa-file-o" aria-hidden="true"></i> Order Success Page</a></li>
+						<li><a href="#tab-restore" data-toggle="tab"><i class="fa fa-undo" aria-hidden="true"></i> Restore Settings</a></li>
+						<li><a href="#tab-analytics" data-toggle="tab"><i class="fa fa-line-chart"></i> Analytics</a></li>
+						<li><a href="#tab-support" data-toggle="tab"><i class="fa fa-user"></i> Support</a></li>
+					</ul>
+					<div class="tab-content">
+						<div class="tab-pane" id="tab-restore">
+							<p>If You want to Restore Module Settings to Demo Then It will use this featured.</p>
+							<a href="{{restoresetting}}" class="btn btn-primary">Click Here to Restore</a>
+						</div>
+						<div class="tab-pane" id="tab-analytics">
+						{% for row in rows %}
+						 <div class="row">
+							  {% for dashboard_1 in row %}
+							  {% set class = 'col-lg-%s %s'|format(dashboard_1.width, 'col-md-3 col-sm-6') %}
+							  {% for dashboard_2 in row %}
+							  {% if dashboard_2.width > 3 %}
+							  {% set class = 'col-lg-%s %s'|format(dashboard_1.width, 'col-md-12 col-sm-12') %}
+							  {% endif %}
+							  {% endfor %}
+							  <div class="{{ class }}">{{ dashboard_1.output }}</div>
+							  {% endfor %}
+							</div>
+						{% endfor %}
+						</div>
+						<div class="tab-pane" id="tab-layout">
+							<div class="form-group">
+								<label class="col-sm-2 control-label" for="input-status"><span  data-toggle="tooltip" title="{{help_register_account}}">{{entry_register_account}}</span></label>
+								<div class="col-sm-10">
+									<div class="btn-group" data-toggle="buttons">
+										
+										<label class="btn btn-success btn-sm button-account-type {% if onepagecheckout_manage['personaldetails']['register_status']  %} active {% endif %} ">	
+											<input type="radio"  name="onepagecheckout_manage[personaldetails][register_status]" {% if onepagecheckout_manage['personaldetails']['register_status']  %} checked="checked" {% endif %} value="1" autocomplete="off">{{text_yes}}
+										</label>											
+										<label class="btn btn-success btn-sm button-account-type {% if not onepagecheckout_manage['personaldetails']['register_status']  %} active {% endif %} ">
+											<input type="radio" name="onepagecheckout_manage[personaldetails][register_status]" {% if not onepagecheckout_manage['personaldetails']['register_status']  %} checked="checked" {% endif %}  value="0" autocomplete="off">{{text_no}}
+										</label>
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-2 control-label" for="input-status"><span  data-toggle="tooltip" title="{{help_guest_checkout}}">{{entry_guest_checkout}}</span></label>
+								<div class="col-sm-10">
+									<div class="btn-group" data-toggle="buttons">
+										
+										<label class="btn btn-success btn-sm {% if onepagecheckout_manage['personaldetails']['guest_status']  %} active {% endif %} ">	
+											<input type="radio"  name="onepagecheckout_manage[personaldetails][guest_status]" {% if onepagecheckout_manage['personaldetails']['guest_status']  %} checked="checked" {% endif %}  value="1" autocomplete="off">{{text_yes}}
+										</label>											
+										<label class="btn btn-success btn-sm {% if not onepagecheckout_manage['personaldetails']['guest_status']  %} active {% endif %}  ">
+											<input type="radio" name="onepagecheckout_manage[personaldetails][guest_status]" {% if not onepagecheckout_manage['personaldetails']['guest_status']  %} checked="checked" {% endif %} value="0" autocomplete="off">{{text_no}}
+										</label>
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-2 control-label" for="input-status"><span  data-toggle="tooltip" title="{{help_enable_login}}">{{entry_enable_login}}</span></label>
+								<div class="col-sm-10">
+							
+									<div class="btn-group" data-toggle="buttons">
+										<label class="btn btn-success btn-sm  {% if onepagecheckout_manage['login']['enable_login']  %} active {% endif %} " >	
+											<input type="radio"  name="onepagecheckout_manage[login][enable_login]" {% if onepagecheckout_manage['login']['enable_login']  %} checked="checked" {% endif %}   value="1" autocomplete="off">{{text_yes}}
+										</label>
+										
+										<label class="btn btn-success btn-sm  {% if not onepagecheckout_manage['login']['enable_login']  %} active {% endif %}">
+											<input type="radio"  name="onepagecheckout_manage[login][enable_login]" {% if not onepagecheckout_manage['login']['enable_login']  %} checked="checked" {% endif %} value="0" autocomplete="off">{{text_no}}
+										</label>
+									</div>
+								</div>
+							</div>
+							<div class="form-group">	
+								<label class="col-sm-2 control-label" for="input-account_open"><span data-toggle="tooltip" title="" data-original-title="Default select section">{{entry_account_open}}</span></label>
+								<div class="col-sm-3">
+									<div class="btn-group btn-group-justified" data-toggle="buttons">	
+										
+										<label class="btn btn-success btn-sm {% if onepagecheckout_manage.general.account_open=='register'  %} active {% endif %} ">
+										<input type="radio" name="onepagecheckout_manage[general][account_open]" {% if onepagecheckout_manage.general.account_open=='register'  %} checked="checked" {% endif %} value="register" autocomplete="off" />{{entry_register}}
+										</label>
+										<label class="btn btn-success btn-sm {% if onepagecheckout_manage.general.account_open=='guest'  %} active {% endif %} ">
+										<input type="radio" name="onepagecheckout_manage[general][account_open]" {% if onepagecheckout_manage.general.account_open=='guest'  %} checked="checked" {% endif %}  value="guest" autocomplete="off" />{{entry_guest}}
+										</label>
+										<label class="btn btn-success btn-sm  {% if onepagecheckout_manage.general.account_open=='login'  %}  active {% endif %}">
+										<input type="radio" name="onepagecheckout_manage[general][account_open]" {% if onepagecheckout_manage.general.account_open=='login'  %}  checked="checked" {% endif %} value="login" autocomplete="off" />{{entry_login}}
+										</label>		
+									</div>	 
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-md-2 control-label"><span data-toggle="tooltip" title="" data-original-title="Set the Field Layout. Row = the labels will be on one line with the input. Block style = the labels will be above the inputs.">Field Layout</span></label>
+								<div class="col-sm-3">
+									<div class="btn-group" data-toggle="buttons">
+											<label class="btn btn-success btn-sm {% if onepagecheckout_field_layout  %} active {% endif %} ">	
+												<input type="radio"  name="onepagecheckout_field_layout" {% if onepagecheckout_field_layout  %} checked="checked" {% endif %}  value="1" autocomplete="off">{{text_row}}
+											</label>
+											<label class="btn btn-success btn-sm {% if not onepagecheckout_field_layout  %} active {% endif %}">
+												<input type="radio"  name="onepagecheckout_field_layout" {% if not onepagecheckout_field_layout  %} checked="checked"  {% endif %}  value="0" autocomplete="off">{{text_block}}
+											</label>
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-md-2 control-label"><span data-toggle="tooltip" title="" data-original-title="Stop Cart Page and redirect to checkout page">Stop Cart Page</span></label>
+								<div class="col-sm-3">
+									<div class="btn-group" data-toggle="buttons">
+											<label class="btn btn-success btn-sm {% if onepagecheckout_auto_redirect  %} active {% endif %}">	
+												<input type="radio"  name="onepagecheckout_auto_redirect" {% if onepagecheckout_auto_redirect  %} checked="checked" {% endif %}  value="1" autocomplete="off">{{text_yes}}
+											</label>
+											<label class="btn btn-success btn-sm {% if not onepagecheckout_auto_redirect  %} active {% endif %}">
+												<input type="radio"  name="onepagecheckout_auto_redirect" {% if not onepagecheckout_auto_redirect  %} checked="checked" {% endif %} value="0" autocomplete="off">{{text_no}}
+											</label>
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-md-2 control-label"><span data-toggle="tooltip" title="" data-original-title="Show Countries which you want">Show Countries:</span></label>
+								<div class="col-sm-6">
+									<div class="well well-sm" style="height: 150px; overflow: auto;">
+										{% for country in  countries %}
+										<div class="checkbox">
+										  <label>
+										  {% if country.country_id in onepagecheckout_selected_countries %}
+											<input type="checkbox" name="onepagecheckout_selected_countries[]" value="{{country.country_id}}" checked="checked" />
+											{{country.name}}
+											{% else %}
+											<input type="checkbox" name="onepagecheckout_selected_countries[]" value="{{country.country_id}}" />
+											{{country.name}}
+											{% endif %}
+										  </label>
+									 	</div>
+									  {% endfor %}
+									</div>
+									<a onclick="$(this).parent().find('input[type=checkbox]').prop('checked', true );" class="btn btn-primary btn-sm">Selected All</a>
+									<a onclick="$(this).parent().find('input[type=checkbox]').prop('checked', false );" class="btn btn-danger btn-sm">Unselected All</a>
+								</div>
+							</div>
+							<div class="form-group">
+							  <label class="col-sm-2 control-label"><span data-toggle="tooltip" title="Show Customer Groups which you want">Show Customer Groups</span></label>
+							  <div class="col-sm-6">
+							   <div class="well well-sm" style="height: 150px; overflow: auto;"> 
+								
+								{% for customer_group in  customer_groups %}
+								<div class="checkbox">
+								  <label>
+									{% if customer_group.customer_group_id in onepagecheckout_customer_group_display %}
+									<input type="checkbox" name="onepagecheckout_customer_group_display[]" value="{{customer_group.customer_group_id}}" checked="checked" />
+									{{customer_group.name}}
+									{% else %}
+									<input type="checkbox" name="onepagecheckout_customer_group_display[]" value="{{customer_group.customer_group_id}}" />
+									{{customer_group.name}}
+									{% endif %}
+								  </label>
+								</div>
+								 {% endfor %}
+								</div>
+								<a onclick="$(this).parent().find('input[type=checkbox]').prop('checked', true );" class="btn btn-primary btn-sm">Selected All</a>
+								<a onclick="$(this).parent().find('input[type=checkbox]').prop('checked', false );" class="btn btn-danger btn-sm">Unselected All</a>
+							  </div>
+							</div>
+							<div class="form-group">
+							   <label class="col-sm-2 control-label"><span data-toggle="tooltip" title="Customer Groups Input Type">Display Input Type:</span></label>
+							   <div class="col-sm-6">
+									<div class="btn-group" data-toggle="buttons">
+										<label class="btn btn-success btn-sm  {% if onepagecheckout_customer_group_type  %} active {% endif %}  ">	
+											<input type="radio"  name="onepagecheckout_customer_group_type" {% if onepagecheckout_customer_group_type  %} checked="checked" {% endif %} value="1" autocomplete="off">Radio Button
+										</label>
+										<label class="btn btn-success btn-sm {% if not onepagecheckout_customer_group_type  %} active {% endif %} ">
+											<input type="radio"  name="onepagecheckout_customer_group_type" {% if not onepagecheckout_customer_group_type  %} checked="checked" {% endif %} value="0" autocomplete="off">select Box
+										</label>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="tab-pane active" id="tab-general">
+							<div class="form-group">
+								<label class="col-sm-2 control-label" for="input-status"><span data-toggle="tooltip" title="" data-original-title="Checkout status">{{entry_status}}</span></label>
+								<div class="col-sm-3">
+									<select name="onepagecheckout_status" id="input-status" class="form-control">
+										 {% if onepagecheckout_status %}
+										<option value="1" selected="selected">{{ text_enabled }}</option>
+										<option value="0">{{ text_disabled }}</option>
+										{% else %}
+										<option value="1">{{ text_enabled }}</option>
+										<option value="0" selected="selected">{{ text_disabled }}</option>
+										{% endif %}
+									</select>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-2 control-label" for="input-status"><span data-toggle="tooltip" title="" data-original-title="Opencart has so many payment extensions and every payment extension has there own way. There are no common standard for this. and some extension use different type of things to use like divs, button, input buttons as button with different IDs and clasess for payment confirm button. you need to add another trigger class or an id of the tag. List them here separating by comma , for example .content-confirm-order input[type=submit] .content-confirm-order .button, .content-confirm-order .btn, .content-confirm-order #button-confirm">Payment Tiggers</span></label>
+								<div class="col-sm-3">
+									<input class="form-control" type="text" name="onepagecheckout_payment_trigger_button" value="{{onepagecheckout_payment_trigger_button}}"/>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-2 control-label" for="input-country"><span data-toggle="tooltip" title="" data-original-title="Set Default Country"> {{entry_country}}</span></label>
+								<div class="col-sm-3">
+								  <select name="onepagecheckout_country_id" id="input-country" class="form-control">
+									{% for country in countries %}
+										{% if country.country_id == onepagecheckout_country_id %}
+										<option value="{{country.country_id}}" selected="selected">{{country.name}}</option>
+										{% else %}
+										<option value="{{country.country_id}}">{{country.name}}</option>
+										{% endif %}
+										{% endfor %}
+								  </select>
+								</div>
+							</div>
+						    <div class="form-group">
+								<label class="col-sm-2 control-label" for="input-zone"><span data-toggle="tooltip" title="" data-original-title="Set Default zone">{{entry_zone}}</span></label>
+								<div class="col-sm-3">
+								  <select name="onepagecheckout_zone_id" id="input-zone" class="form-control"></select>
+								</div>
+						   </div>
+						  <div class="form-group">
+							  <label class="col-sm-2 control-label" for="input-customer-group"><span data-toggle="tooltip" title="{{help_customer_group}}">{{entry_customer_group}}</span></label>
+							  <div class="col-sm-3">
+								<select name="onepagecheckout_customer_group_id" id="input-customer-group" class="form-control">
+								 
+									  {% for customer_group in customer_groups %}
+									{% if customer_group.customer_group_id == onepagecheckout_customer_group_id %}
+								  <option value="{{customer_group.customer_group_id}}" selected="selected">{{customer_group.name}}</option>
+								  {% else %}
+								  <option value="{{customer_group.customer_group_id}}">{{customer_group.name}}</option>
+								 {% endif %}
+								 {% endfor %}
+								</select>
+							  </div>
+						   </div>
+						   <div class="form-group">
+								<label class="col-sm-2 control-label" for="input-postal_code"><span data-toggle="tooltip" title="{{help_postal}}">{{entry_postal_code}}</span></label>
+								<div class="col-sm-3">
+									<input type="text" class="form-control" name="onepagecheckout_postal_code" value="{{onepagecheckout_postal_code}}"/>
+								</div>
+						   </div>
+						</div>
+						<div class="tab-pane" id="tab-delivery_method-setting">
+							<fieldset>
+								<legend>{{entry_delivery_method}}</legend>
+								<div class="form-group">
+									<label class="col-sm-2 control-label" for="input-customer-group"><span data-toggle="tooltip" title="Default selected Shipping Method">{{entry_delivery_method}}</span></label>
+									<div class="col-md-5">
+										<select class="form-control" name="onepagecheckout_default_shipping">
+										{% for delivery_method in  delivery_methods %}
+										
+										{% if delivery_method['code']==onepagecheckout_default_shipping  %}
+											<option selected="selected" value="{{delivery_method.code}}">{{delivery_method.title}}</option>
+										{% else %}
+											<option value="{{delivery_method.code}}">{{delivery_method.title}}</option>	
+										{% endif %}
+										{% endfor %}
+										</select>
+									</div>
+								</div>
+								
+								<!--26-01-2017-->
+								<div class="form-group">
+									<label class="col-sm-2 control-label">Icon W x H</label>
+									 <div class="col-sm-3">
+										<input class="form-control" type="text" name="onepagecheckout_delivery_method_width" value="{{onepagecheckout_delivery_method_width}}"/>
+									  </div>
+									 <div class="col-sm-3">
+										<input class="form-control" type="text" name="onepagecheckout_delivery_method_height" value="{{onepagecheckout_delivery_method_height}}"/>
+									  </div>
+								</div>
+								<!--26-01-2017-->
+								<div class="form-group">
+									<label class="col-sm-2 control-label"><span data-toggle="tooltip" title="Reload Payment Methods When customer choose shipping option">Reload Payment</span></label>
+									<div class="btn-group" data-toggle="buttons">
+										<label class="btn btn-success btn-sm {% if onepagecheckout_payment_method_load_payment_method==1  %} active {% endif %}">	
+											<input type="radio"  name="onepagecheckout_payment_method_load_payment_method" {% if onepagecheckout_payment_method_load_payment_method==1  %} checked="checked" {% endif %}  value="1" autocomplete="off">{{text_yes}}
+										</label>
+										<label class="btn btn-success btn-sm {% if onepagecheckout_payment_method_load_payment_method==0  %} active {% endif %}">
+											<input type="radio"  name="onepagecheckout_payment_method_load_payment_method" {% if onepagecheckout_payment_method_load_payment_method==0  %} checked="checked" {% endif %} value="0" autocomplete="off">{{text_no}}
+										</label>
+									</div>
+								</div>
+								{% if delivery_methods %}
+								<table class="table table-bordered">
+									<thead>
+										<tr>
+											<th class="text-left">{{entry_delivery_method}}</th>
+											<th class="text-center">{{entry_image}}</th>
+											<th class="text-right">{{entry_status}}</th>
+										</tr>
+									</thead>
+									<tbody>
+									   {% for delivery_method in delivery_methods %}
+										<tr>
+											<td class="text-left">{{delivery_method.title}}</td>
+											<td class="text-center">
+												<div class="col-sm-12"><a href="" id="thumb-logo{{delivery_method.code}}" data-toggle="image" class="img-thumbnail"><img src="{{delivery_method.thumb}}" alt="" title="" data-placeholder="{{placeholder}}" /></a>
+													<input type="hidden" name="onepagecheckout_manage[delivery_method][{{delivery_method.code}}][image]" value="{{ onepagecheckout_manage.delivery_method[delivery_method.code]['image']}}" id="input-logo{{delivery_method.code}}" />
+												</div>
+											</td>
+											<td class="text-right">
+												<div class="col-md-12">
+													<div class="form-group">
+														<div class="btn-group" data-toggle="buttons">
+															<label class="btn btn-success btn-sm {% if onepagecheckout_manage['delivery_method'][delivery_method.code]['status']==1  %} active {% endif %}">	
+																<input type="radio"  name="onepagecheckout_manage[delivery_method][{{delivery_method.code}}][status]" {% if onepagecheckout_manage['delivery_method'][delivery_method.code]['status']==1  %} checked="checked" {% endif %} value="1" autocomplete="off">{{text_yes}}
+															</label>
+															<label class="btn btn-success btn-sm {% if  onepagecheckout_manage['delivery_method'][delivery_method.code]['status']==0  %} active {% endif %}">
+																<input type="radio"  name="onepagecheckout_manage[delivery_method][{{delivery_method.code}}][status]" {% if  onepagecheckout_manage['delivery_method'][delivery_method.code]['status']==0  %} checked="checked" {% endif %} value="0" autocomplete="off">{{text_no}}
+															</label>
+														</div>
+													</div>
+												</div>
+											</td>
+										</tr>	
+										{% endfor %}
+									</tbody>
+								</table>
+								{% endif %}
+							</fieldset>
+						</div>
+						<div class="tab-pane" id="tab-payment_method-setting">
+								<fieldset>
+									<legend>{{ entry_payment_method }}</legend>
+									<div class="form-group">
+									<label class="col-sm-2 control-label" for="input-customer-group"><span data-toggle="tooltip" title="Default selected Payment Method">{{ entry_payment_method }}</span></label>
+										<div class="col-md-5">
+											<select class="form-control" name="onepagecheckout_default_payment">
+											{% for payment_method in  payment_methods %}
+										
+											{% if payment_method['code']==onepagecheckout_default_payment  %}
+												<option selected="selected" value="{{payment_method.code}}">{{payment_method.title}}</option>
+											{% else %}
+												<option value="{{payment_method.code}}">{{payment_method.title}}</option>	
+											{% endif %}
+											{% endfor %}
+										
+											</select>
+										</div>
+									</div>
+									<!--26-01-2017-->
+									<div class="form-group">
+										<label class="col-sm-2 control-label">Icon W x H</label>
+										 <div class="col-sm-3">
+											<input class="form-control" type="text" name="onepagecheckout_payment_method_width" value="{{onepagecheckout_payment_method_width}}"/>
+										  </div>
+										 <div class="col-sm-3">
+											<input class="form-control" type="text" name="onepagecheckout_payment_method_height" value="{{onepagecheckout_payment_method_height}}"/>
+										  </div>
+									</div>
+									<div class="form-group">
+										<label class="col-sm-2 control-label"><span data-toggle="tooltip" title="Reload Carts When customer choose payment option">Reload Cart</span></label>
+										<div class="btn-group" data-toggle="buttons">
+											<label class="btn btn-success btn-sm {% if onepagecheckout_payment_method_load_cart==1  %} active {% endif %}">	
+												<input type="radio"  name="onepagecheckout_payment_method_load_cart" {% if onepagecheckout_payment_method_load_cart==1  %} checked="checked" {% endif %} value="1" autocomplete="off">{{text_yes}}
+											</label>
+											<label class="btn btn-success btn-sm {% if onepagecheckout_payment_method_load_cart==0  %} active {% endif %} >">
+												<input type="radio"  name="onepagecheckout_payment_method_load_cart" {% if onepagecheckout_payment_method_load_cart==0  %} checked="checked" {% endif %} value="0" autocomplete="off">{{text_no}}
+											</label>
+										</div>
+									</div>
+									<!--26-01-2017-->
+									
+									{% if payment_methods %}
+									<table class="table table-bordered">
+										<thead>
+											<tr>
+												<th class="text-left">{{entry_payment_method}}</th>
+												<th class="text-center">{{entry_image}}</th>
+												<th class="text-right">{{entry_status}}</th>
+											</tr>
+										</thead>
+										<tbody>
+										{% for payment_method in payment_methods %}
+										<tr>
+											<td class="text-left">{{payment_method.title}}</td>
+											<td class="text-center">
+												<div class="col-sm-12"><a href="" id="thumb-logo{{payment_method.code}}" data-toggle="image" class="img-thumbnail"><img src="{{payment_method.thumb}}" alt="" title="" data-placeholder="{{placeholder}}" /></a>
+													<input type="hidden" name="onepagecheckout_manage[payment_method][{{payment_method.code}}][image]" value="{{ onepagecheckout_manage.payment_method[payment_method.code]['image']}}" id="input-logo{{payment_method.code}}" />
+												</div>
+											</td>
+											<td class="text-right">
+												<div class="col-md-12">
+													<div class="form-group">
+														<div class="btn-group" data-toggle="buttons">
+															<label class="btn btn-success btn-sm {% if onepagecheckout_manage['payment_method'][payment_method.code]['status']==1  %} active {% endif %}">	
+																<input type="radio"  name="onepagecheckout_manage[payment_method][{{payment_method.code}}][status]" {% if onepagecheckout_manage['payment_method'][payment_method.code]['status']==1  %} checked="checked" {% endif %} value="1" autocomplete="off">{{text_yes}}
+															</label>
+															<label class="btn btn-success btn-sm {% if  onepagecheckout_manage['payment_method'][payment_method.code]['status']==0  %} active {% endif %}">
+																<input type="radio"  name="onepagecheckout_manage[payment_method][{{payment_method.code}}][status]" {% if  onepagecheckout_manage['payment_method'][payment_method.code]['status']==0  %} checked="checked" {% endif %} value="0" autocomplete="off">{{text_no}}
+															</label>
+														</div>
+													</div>
+												</div>
+											</td>
+										</tr>
+										{% endfor %}
+									</tbody>
+								</table>
+								{% endif %}
+							</fieldset>
+						</div>
+						<div class="tab-pane" id="tab-delivery-date-time">
+							<div class="form-group">
+								<label class="col-sm-2 control-label"><span data-toggle="tooltip" title="Enable or Disabled Delivery Date & Time">Status</span></label>
+								<div class="btn-group" data-toggle="buttons">
+									<label class="btn btn-success btn-sm {% if onepagecheckout_delivery_status==1  %} active {% endif %}">	
+										<input type="radio"  name="onepagecheckout_delivery_status" {% if onepagecheckout_delivery_status==1  %} checked="checked" {% endif %} value="1" autocomplete="off">{{text_yes}}
+									</label>
+									<label class="btn btn-success btn-sm {% if onepagecheckout_delivery_status==0  %} active {% endif %}">
+										<input type="radio"  name="onepagecheckout_delivery_status" {% if onepagecheckout_delivery_status==0  %} checked="checked" {% endif %} value="0" autocomplete="off">{{text_no}}
+									</label>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-2 control-label"><span data-toggle="tooltip" title="Required Delivery Date & Time">Required Delivery</span></label>
+								<div class="btn-group" data-toggle="buttons">
+									<label class="btn btn-success btn-sm {% if onepagecheckout_delivery_required==1  %} active {% endif %}">	
+										<input type="radio"  name="onepagecheckout_delivery_required" {% if onepagecheckout_delivery_required==1  %} checked="checked" {% endif %} value="1" autocomplete="off">{{text_yes}}
+									</label>
+									<label class="btn btn-success btn-sm {% if onepagecheckout_delivery_required==0  %} active {% endif %}">
+										<input type="radio"  name="onepagecheckout_delivery_required" {% if onepagecheckout_delivery_required==0  %} checked="checked" {% endif %} value="0" autocomplete="off">{{text_no}}
+									</label>
+								</div>
+							</div>
+							<div class="form-group">
+							  <label class="col-sm-2 control-label"><span data-toggle="tooltip" title="Availability Days Start From Current Date to next end days">Availability Days</span></label>
+							  <div class="col-sm-10">
+								  <div class="col-sm-6">
+										<div class="input-group"><input class="form-control" type="text" name="onepagecheckout_delivery_start_days" value="{{onepagecheckout_delivery_start_days}}"/><span class="input-group-addon">Start X Days</span></div>
+								  </div>
+								  <div class="col-sm-6">
+									<div class="input-group"><input class="form-control" type="text" name="onepagecheckout_delivery_end_days" value="{{onepagecheckout_delivery_end_days}}"/><span class="input-group-addon">End X Days</span></div>
+								  </div>
+							  </div>
+							</div>
+							<div class="form-group">
+							   <label class="col-sm-2 control-label"><span data-toggle="tooltip" title="Disabled Delivery Dates <br/> Note: Date Format Should be YYYY-MM-DD,YYYY-MM-DD">Disabled Delivery Dates</span></label>
+							   <div class="col-sm-10">
+								 <textarea class="form-control" name="onepagecheckout_delivery_disable_days">{{onepagecheckout_delivery_disable_days}}</textarea>
+							   </div>
+							</div>
+							<div class="form-group">
+							   <label class="col-sm-2 control-label"><span data-toggle="tooltip" title="Select Weekend">Weekends</span></label>
+							   <div class="col-sm-10">
+								 <select multiple class="form-control" name="onepagecheckout_delivery_weekend[]">
+								   {% for key,week in weeks %}
+									{% if key in onepagecheckout_delivery_weekend %}
+									<option selected="selected" value="{{key}}">{{week}}</option>
+									{% else %}
+									<option value="{{key}}">{{week}}</option>
+									{% endif %}
+									{% endfor %}
+								 </select>
+							   </div>
+							</div>
+						</div>
+						<div class="tab-pane" id="tab-confirm_order-setting">
+							<fieldset>
+								<legend>{{entry_confirm_order}}</legend>
+								<div class="form-group">
+									<label class="col-md-2 control-label"><span data-toggle="tooltip" title="" data-original-title="Confirm Order auto trigger">Auto Trigger Confirm Button</span></label>
+									<div class="col-sm-10">
+										<div class="btn-group" data-toggle="buttons">
+											<label class="btn btn-success btn-sm {% if onepagecheckout_autotrigger  %} active {% endif %} " >    
+												<input type="radio" {% if onepagecheckout_autotrigger   %} checked="checked"  {% endif %}  name="onepagecheckout_autotrigger"  value="1" autocomplete="off">{{ text_yes }}
+											</label>
+											<label class="btn btn-success btn-sm {% if not onepagecheckout_autotrigger  %} active {% endif %}">
+												<input type="radio" {% if not onepagecheckout_autotrigger   %} checked="checked"  {% endif %}  name="onepagecheckout_autotrigger"  value="0" autocomplete="off">{{ text_no }}
+											</label>
+										</div>
+										<hr/>
+										<div style="font-size:14px;" class="alert alert-info">
+											Auto Trigger feature is very appropriate for one-page checkout extension. In Default process, Customer has to click on checkout button and then confirm it again but auto trigger undoubtedly triggers without clicking the second confirm button. The customer just needs to select the payment method and click the checkout button. Order will be placed automatically
+										</div>
+									</div>
+								</div>
+								<div class="form-group">
+								<label class="col-sm-2 control-label " for="input-autotrigger"><span data-toggle="tooltip" title="" data-original-title="Choose payment methods which you want apply auto trigger condition.">Auto Trigger Payments</span></label>
+								<div class="col-sm-9">
+									<select class="form-control" multiple name="onepagecheckout_trigger_payment_method[]">
+										{% for payment_method in payment_methods %}
+										{% if payment_method.code in onepagecheckout_trigger_payment_method %}
+										<option selected="selected" value="{{payment_method.code}}">{{payment_method.title}}</option>
+										{% else %}
+										<option value="{{payment_method.code}}">{{payment_method.title}}</option>
+										{% endif %}
+										{% endfor %}
+									</select>
+								</div>
+							  </div>
+								<div class="form-group">	
+									<label class="col-sm-2 control-label " for="input-terms">
+									<span data-toggle="tooltip" title="" data-original-title="Forces people to agree to terms before a customer can checkout.">{{entry_agree}}</span></label>
+									<div class="col-sm-3">
+										<select name="onepagecheckout_manage[confirm_order][terms]" class="form-control">
+											<option value="0">{{text_none}}</option>
+											{% for information in informations %}
+											
+											{% if information['information_id'] == onepagecheckout_manage['confirm_order']['terms'] %}
+											<option value="{{information['information_id']}}" selected="selected">{{information['title']}}</option>
+											{% else %}
+											<option value="{{information['information_id']}}">{{information['title']}}</option>
+											{% endif %}
+											{% endfor %}
+										</select>
+									</div>
+								</div>
+								<div class="form-group register_newsletter">
+									<label class="col-sm-2 control-label" for="input-checkout-term-auto"><span data-toggle="tooltip" title="" data-original-title="Auto Checked Checkout Terms">Auto Checked </span></label>
+									<div class="col-sm-10">
+										<div class="btn-group" data-toggle="buttons">
+										
+											<label class="btn btn-success btn-sm {% if onepagecheckout_manage['confirm_order']['checkout_terms']==1  %} active {% endif %}">	
+												<input type="radio"  name="onepagecheckout_manage[confirm_order][checkout_terms]" {% if onepagecheckout_manage['confirm_order']['checkout_terms']==1  %} checked="checked" {% endif %} value="1" autocomplete="off">{{text_yes}}
+											</label>											
+											<label class="btn btn-success btn-sm {% if onepagecheckout_manage['confirm_order']['checkout_terms']==0  %} active {% endif %}">
+												<input type="radio" name="onepagecheckout_manage[confirm_order][checkout_terms]" {% if onepagecheckout_manage['confirm_order']['checkout_terms']==0  %} checked="checked" {% endif %} value="0" autocomplete="off">{{text_no}}
+											</label>
+										</div>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-2 control-label" for="input-status"><span data-toggle="tooltip" title="" data-original-title="Enable Order Comment Section">{{entry_comment_status}}</span></label>
+									<div class="col-sm-10">
+										<div class="btn-group" data-toggle="buttons">
+										
+											<label class="btn btn-success btn-sm {% if onepagecheckout_manage['confirm_order']['comment_status']==1  %} active {% endif %}">	
+												<input type="radio"  name="onepagecheckout_manage[confirm_order][comment_status]" {% if onepagecheckout_manage['confirm_order']['comment_status']==1  %} checked="checked" {% endif %} value="1" autocomplete="off">{{text_yes}}
+											</label>											
+											<label class="btn btn-success btn-sm {% if onepagecheckout_manage['confirm_order']['comment_status']==0  %} active {% endif %}">
+												<input type="radio" name="onepagecheckout_manage[confirm_order][comment_status]" {% if onepagecheckout_manage['confirm_order']['comment_status']==0  %} checked="checked" {% endif %} value="0" autocomplete="off">{{text_no}}
+											</label>
+										</div>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-2 control-label" for="input-status"><span data-toggle="tooltip" title="" data-original-title="Forces people to add Order Comments">{{entry_require_comment_status}}</span></label>
+									<div class="col-sm-10">
+										<div class="btn-group" data-toggle="buttons">
+										
+											<label class="btn btn-success btn-sm {% if onepagecheckout_manage['confirm_order']['require_comment_status']==1  %} active {% endif %}">	
+												<input type="radio"  name="onepagecheckout_manage[confirm_order][require_comment_status]" {% if onepagecheckout_manage['confirm_order']['require_comment_status']==1  %} checked="checked" {% endif %} value="1" autocomplete="off">{{text_yes}}
+											</label>											
+											<label class="btn btn-success btn-sm {% if onepagecheckout_manage['confirm_order']['require_comment_status']==0  %} active {% endif %}">
+												<input type="radio" name="onepagecheckout_manage[confirm_order][require_comment_status]" {% if onepagecheckout_manage['confirm_order']['require_comment_status']==0  %} checked="checked" {% endif %} value="0" autocomplete="off">{{text_no}}
+											</label>
+										</div>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-2 control-label" for="input-shopping-button"><span data-toggle="tooltip" title="" data-original-title="Enable Continue Shopping Button in Checkout page">{{entry_shopping_button}}</span></label>
+									<div class="col-sm-10">
+										<div class="btn-group" data-toggle="buttons">
+										
+											<label class="btn btn-success btn-sm {% if onepagecheckout_manage['confirm_order']['shopping_button_status']==1  %} active {% endif %}">	
+												<input type="radio"  name="onepagecheckout_manage[confirm_order][shopping_button_status]" {% if onepagecheckout_manage['confirm_order']['shopping_button_status']==1  %} checked="checked" {% endif %} value="1" autocomplete="off">{{text_yes}}
+											</label>											
+											<label class="btn btn-success btn-sm {% if onepagecheckout_manage['confirm_order']['shopping_button_status']==0  %} active {% endif %}">
+												<input type="radio" name="onepagecheckout_manage[confirm_order][shopping_button_status]" {% if onepagecheckout_manage['confirm_order']['shopping_button_status']==0  %} checked="checked" {% endif %} value="0" autocomplete="off">{{text_no}}
+											</label>
+										</div>
+									</div>
+								</div>
+							</fieldset>
+						</div>
+						<div class="tab-pane" id="tab-social_login">
+						<fieldset>
+								<legend>{{entry_facebook_login}}</legend>
+								<div class="form-group">
+									<label class="col-sm-2 control-label" for="input-status"><span  data-toggle="tooltip" title="{{entry_shopping_cart_order}}" >{{entry_status}}</span></label>
+									<div class="col-sm-10">
+										<div class="btn-group" data-toggle="buttons">
+											<label class="btn btn-success btn-sm {% if onepagecheckout_manage['social_login']['facebook_login_status'] == 1  %} active {% endif %}   " >	
+												<input type="radio"  name="onepagecheckout_manage[social_login][facebook_login_status]" {% if onepagecheckout_manage['social_login']['facebook_login_status'] == 1  %} checked="checked" {% endif %} value="1" autocomplete="off">{{text_yes}}
+											</label>
+											
+											<label class="btn btn-success btn-sm  {% if onepagecheckout_manage['social_login']['facebook_login_status'] == 0  %} active {% endif %}">
+												<input type="radio"  name="onepagecheckout_manage[social_login][facebook_login_status]" {% if not onepagecheckout_manage['social_login']['facebook_login_status'] == 0  %} active {% endif %} value="0" autocomplete="off">{{text_no}}
+											</label>
+										</div>
+									</div>
+								</div>
+								<div class="form-group">
+								<label class="col-sm-2 control-label" for="input-status"><span data-toggle="tooltip" title="" data-original-title="Add Redirect URL">Redirect URL</span></label>
+								<div class="col-sm-7">
+								<b>{{callback}}</b>
+									<input class="form-control" type="hidden" name="onepagecheckout_facebook_callback" value="{{callback}}"/>
+									
+								</div>
+							</div>
+								<div class="form-group">
+								<label class="col-sm-2 control-label" for="input-status"><span data-toggle="tooltip" title="" data-original-title="Add Facebook App ID">APP ID</span></label>
+								<div class="col-sm-3">
+									<input class="form-control" type="text" name="onepagecheckout_facebook_appid" value="{{onepagecheckout_facebook_appid}}" placeholder="App ID"/>
+								</div>
+								<div style="float:left; margin-top:9px; margin-left:5px;"><a target="_new" href="https://developers.facebook.com/">Click Here</a> to create new facebook app. </div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-2 control-label" for="input-status"><span data-toggle="tooltip" title="" data-original-title="Add Facebook Secret ID">App Secret </span></label>
+								<div class="col-sm-3">
+									<input class="form-control" type="text" name="onepagecheckout_facebook_key" value="{{onepagecheckout_facebook_key}}" placeholder="App Secret"/>
+								</div>
+							</div>
+							<legend><?php echo $entry_google_login; ?></legend>
+							<div class="form-group">
+									<label class="col-sm-2 control-label" for="input-status"><span  data-toggle="tooltip" title="{{entry_shopping_cart_order}}" >{{entry_status}}</span></label>
+									<div class="col-sm-10">
+										<div class="btn-group" data-toggle="buttons">
+											<label class="btn btn-success btn-sm  {% if onepagecheckout_manage['social_login']['google_login_status'] == 1  %} active {% endif %} " >	
+												<input type="radio"  name="onepagecheckout_manage[social_login][google_login_status]" {% if onepagecheckout_manage['social_login']['google_login_status'] == 1  %} checked="checked" {% endif %}  value="1" autocomplete="off">{{text_yes}}
+											</label>
+											
+											<label class="btn btn-success btn-sm  {% if onepagecheckout_manage['social_login']['google_login_status'] == 0  %} active {% endif %} ">
+												<input type="radio"  name="onepagecheckout_manage[social_login][google_login_status]" {% if onepagecheckout_manage['social_login']['google_login_status'] == 0  %} checked="checked" {% endif %}   value="0" autocomplete="off">{{text_no}}
+											</label>
+										</div>
+									</div>
+								</div>
+								<div class="form-group">
+								<label class="col-sm-2 control-label" for="input-status"><span data-toggle="tooltip" title="" data-original-title="Add Redirect URL">Redirect URL</span></label>
+								<div class="col-sm-7">
+								<b>{{googlecallback}}</b>
+									<input class="form-control" type="hidden" name="onepagecheckout_google_callback" value="{{googlecallback}}"/>
+									
+								</div>
+							</div>
+								<div class="form-group">
+								<label class="col-sm-2 control-label" for="input-status"><span data-toggle="tooltip" title="" data-original-title="Add Google App ID">APP ID</span></label>
+								<div class="col-sm-3">
+									<input class="form-control" type="text" name="onepagecheckout_google_appid" value="{{onepagecheckout_google_appid}}" placeholder="App ID"/>
+								</div>
+								<div style="float:left; margin-top:9px; margin-left:5px;"><a target="_new" href="https://console.cloud.google.com/">Click Here</a> to create new Google app. </div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-2 control-label" for="input-status"><span data-toggle="tooltip" title="" data-original-title="Add Google Secret ID">App Secret </span></label>
+								<div class="col-sm-3">
+									<input class="form-control" type="text" name="onepagecheckout_google_key" value="{{onepagecheckout_google_key}}" placeholder="App Secret"/>
+								</div>
+							</div>
+							</fieldset>
+						</div>
+						<div class="tab-pane" id="tab-shopping-cart-setting">
+							<fieldset>
+								<legend>{{entry_shopping_cart}}</legend>
+								<div class="form-group">
+									<label class="col-sm-2 control-label" for="input-status"><span  data-toggle="tooltip" title="{{entry_shopping_cart_order}}" >{{entry_status}}</span></label>
+									<div class="col-sm-10">
+										
+										<div class="btn-group" data-toggle="buttons">
+											<label class="btn btn-success btn-sm {% if onepagecheckout_manage['shopping_cart']['shopping_cart_status'] == 1  %} active {% endif %}" >	
+												<input type="radio"  name="onepagecheckout_manage[shopping_cart][shopping_cart_status]" {% if onepagecheckout_manage['shopping_cart']['shopping_cart_status'] == 1  %} checked="checked" {% endif %} value="1" autocomplete="off">{{text_yes}}
+											</label>
+											
+											<label class="btn btn-success btn-sm {% if onepagecheckout_manage['shopping_cart']['shopping_cart_status'] == 0  %} active {% endif %}">
+												<input type="radio"  name="onepagecheckout_manage[shopping_cart][shopping_cart_status]" {% if onepagecheckout_manage['shopping_cart']['shopping_cart_status'] == 0  %} checked="checked" {% endif %} value="0" autocomplete="off">{{text_no}}
+											</label>
+										</div>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-2 control-label" for="input-weight"><span  data-toggle="tooltip" title="{{entry_show_weight}}" >{{show_weight}}</span></label>
+									<div class="col-sm-10">
+										<div class="btn-group" data-toggle="buttons">
+											<label class="btn btn-success btn-sm {% if onepagecheckout_manage['shopping_cart']['show_product_weight'] == 1  %} active {% endif %}" >	
+												<input type="radio"  name="onepagecheckout_manage[shopping_cart][show_product_weight]" {% if onepagecheckout_manage['shopping_cart']['show_product_weight'] == 1  %} checked="checked" {% endif %}  value="1" autocomplete="off">{{text_yes}}
+											</label>
+											
+											<label class="btn btn-success btn-sm  {% if onepagecheckout_manage['shopping_cart']['show_product_weight'] == 0  %} active {% endif %} ">
+												<input type="radio"  name="onepagecheckout_manage[shopping_cart][show_product_weight]" {% if onepagecheckout_manage['shopping_cart']['show_product_weight'] == 0  %} checked="checked" {% endif %} value="0" autocomplete="off">{{text_no}}
+											</label>
+										</div>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-2 control-label" for="input-qnty_update"><span  data-toggle="tooltip" title="{{entry_show_qnty_update}}">{{show_qnty_update}}</span></label>
+									<div class="col-sm-10">
+										
+										<div class="btn-group" data-toggle="buttons">
+											<label class="btn btn-success btn-sm {% if onepagecheckout_manage['shopping_cart']['show_product_qnty_update'] == 1  %} active {% endif %}" >	
+												<input type="radio"  name="onepagecheckout_manage[shopping_cart][show_product_qnty_update]" {% if onepagecheckout_manage['shopping_cart']['show_product_qnty_update'] == 1  %} checked=checked {% endif %} value="1" autocomplete="off"> {{text_yes}}
+											</label>
+											
+											<label class="btn btn-success btn-sm {% if onepagecheckout_manage['shopping_cart']['show_product_qnty_update'] == 0  %} active {% endif %}">
+												<input type="radio"  name="onepagecheckout_manage[shopping_cart][show_product_qnty_update]" {% if onepagecheckout_manage['shopping_cart']['show_product_qnty_update'] == 0  %} checked="checked" {% endif %} value="0" autocomplete="off"> {{text_no}}
+											</label>
+										</div>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-2 control-label" for="input-image_width">{{show_image_width}}</label>
+									<div class="col-sm-3">
+										<input type="text"  value="{{onepagecheckout_manage['shopping_cart']['show_product_image_width'] ? onepagecheckout_manage['shopping_cart']['show_product_image_width'] : 100}}"  name="onepagecheckout_manage[shopping_cart][show_product_image_width]" class="form-control" Placeholder="{{entry_width}}"; >
+									</div>
+									<div class="col-sm-3">
+										<input type="text"  value="{{onepagecheckout_manage['shopping_cart']['show_product_image_height'] ? onepagecheckout_manage['shopping_cart']['show_product_image_height'] : 100}}"  name="onepagecheckout_manage[shopping_cart][show_product_image_height]" class="form-control" Placeholder="{{entry_height}}"; >
+									</div>
+								</div>
+								<h3>Desktop View</h3>
+								<table class="table table-bordered">
+									<thead>
+										<tr>
+											<th class="text-left">{{entry_show_image}}</th>
+											<th class="text-center">{{entry_show_product_name}}</th>
+											<th class="text-center">{{entry_show_model}}</th>
+											<th class="text-center">{{entry_show_quantity}}</th>
+											<th class="text-center">{{entry_show_unit_price}}</th>
+											<th class="text-right">{{entry_show_total_price}}</th>
+											<th class="text-center hide">Colspan</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td class="text-left">
+												<div class="col-sm-12">
+													<div class="btn-group" data-toggle="buttons">
+														<label class="btn btn-success btn-sm {% if onepagecheckout_manage['shopping_cart']['show_product_image'] == 1  %} active {% endif %}" >	
+															<input type="radio"  name="onepagecheckout_manage[shopping_cart][show_product_image]" {% if onepagecheckout_manage['shopping_cart']['show_product_image'] == 1  %} checked="checked" {% endif %} value="1" autocomplete="off">{{text_yes}}
+														</label>
+														
+														<label class="btn btn-success btn-sm  {% if onepagecheckout_manage['shopping_cart']['show_product_image'] == 0  %} active {% endif %}">
+															<input type="radio" name="onepagecheckout_manage[shopping_cart][show_product_image]" {% if onepagecheckout_manage['shopping_cart']['show_product_image'] == 0  %} checked="checked" {% endif %}  value="0" autocomplete="off">{{text_no}}
+														</label>
+													</div>
+												</div>
+											</td>
+											<td class="text-center">
+												<div class="col-sm-12">
+													<div class="btn-group" data-toggle="buttons">
+														<label class="btn btn-success btn-sm {% if onepagecheckout_manage['shopping_cart']['show_product_title'] == 1  %} active {% endif %}" >	
+															<input type="radio"  name="onepagecheckout_manage[shopping_cart][show_product_title]" {% if onepagecheckout_manage['shopping_cart']['show_product_title'] == 1  %} checked="checked" {% endif %}  value="1" autocomplete="off">{{text_yes}}
+														</label>
+														
+														<label class="btn btn-success btn-sm  {% if onepagecheckout_manage['shopping_cart']['show_product_title'] == 0  %} active {% endif %}">
+															<input type="radio"  name="onepagecheckout_manage[shopping_cart][show_product_title]" {% if onepagecheckout_manage['shopping_cart']['show_product_title'] == 0  %} checked="checked" {% endif %}  value="0" autocomplete="off">{{text_no}}
+														</label>
+													</div>
+												</div>
+											</td>
+											<td class="text-center">
+												<div class="col-sm-12">
+													<div class="btn-group" data-toggle="buttons">
+														<label class="btn btn-success btn-sm {% if onepagecheckout_manage['shopping_cart']['show_product_model'] == 1  %} active {% endif %} " >	
+															<input type="radio"  name="onepagecheckout_manage[shopping_cart][show_product_model]" {% if onepagecheckout_manage['shopping_cart']['show_product_model'] == 1  %} checked="checked" {% endif %}  value="1" autocomplete="off">{{text_yes}}
+														</label>
+														
+														<label class="btn btn-success btn-sm  {% if onepagecheckout_manage['shopping_cart']['show_product_model'] == 0  %} active {% endif %}">
+															<input type="radio"  name="onepagecheckout_manage[shopping_cart][show_product_model]" {% if onepagecheckout_manage['shopping_cart']['show_product_model'] == 0  %} checked="checked" {% endif %} value="0" autocomplete="off">{{text_no}}
+														</label>
+													</div>
+												</div>
+											</td>
+											<td class="text-center">
+												<div class="col-sm-12">
+													<div class="btn-group" data-toggle="buttons">
+														<label class="btn btn-success btn-sm {% if onepagecheckout_manage['shopping_cart']['show_product_quantity'] == 1  %} active {% endif %}" >	
+															<input type="radio"  name="onepagecheckout_manage[shopping_cart][show_product_quantity]" {% if onepagecheckout_manage['shopping_cart']['show_product_quantity'] == 1  %} checked="checked" {% endif %}  value="1" autocomplete="off">{{text_yes}}
+														</label>
+														
+														<label class="btn btn-success btn-sm  {% if onepagecheckout_manage['shopping_cart']['show_product_quantity'] == 0  %} active {% endif %}">
+															<input type="radio"  name="onepagecheckout_manage[shopping_cart][show_product_quantity]" {% if onepagecheckout_manage['shopping_cart']['show_product_quantity'] == 0  %} checked="checked" {% endif %} value="0" autocomplete="off">{{text_no}}
+														</label>
+													</div>
+												</div>
+											</td>
+											<td class="text-center">
+												<div class="col-sm-12">
+													<div class="btn-group" data-toggle="buttons">
+														<label class="btn btn-success btn-sm {% if onepagecheckout_manage['shopping_cart']['show_product_unit'] == 1  %} active {% endif %}" >	
+															<input type="radio"  name="onepagecheckout_manage[shopping_cart][show_product_unit]" {% if onepagecheckout_manage['shopping_cart']['show_product_unit'] == 1  %} checked="checked" {% endif %}  value="1" autocomplete="off">{{text_yes}}
+														</label>
+														
+														<label class="btn btn-success btn-sm  {% if onepagecheckout_manage['shopping_cart']['show_product_unit'] == 0  %} active {% endif %}">
+															<input type="radio"  name="onepagecheckout_manage[shopping_cart][show_product_unit]" {% if onepagecheckout_manage['shopping_cart']['show_product_unit'] == 0  %} checked="checked" {% endif %} value="0" autocomplete="off">{{text_no}}
+														</label>
+													</div>
+												</div>
+											</td>
+											<td class="text-right">
+												<div class="col-sm-12">
+													<div class="btn-group" data-toggle="buttons">
+														<label class="btn btn-success btn-sm {% if onepagecheckout_manage['shopping_cart']['show_product_total_price'] == 1  %} active {% endif %}" >	
+															<input type="radio"  name="onepagecheckout_manage[shopping_cart][show_product_total_price]" {% if onepagecheckout_manage['shopping_cart']['show_product_total_price'] == 1  %} checked="checked" {% endif %}  value="1" autocomplete="off">{{text_yes}}
+														</label>
+														
+														<label class="btn btn-success btn-sm  {% if onepagecheckout_manage['shopping_cart']['show_product_total_price'] == 0  %} active {% endif %}">
+															<input type="radio"  name="onepagecheckout_manage[shopping_cart][show_product_total_price]" {% if onepagecheckout_manage['shopping_cart']['show_product_total_price'] == 0  %} checked="checked" {% endif %} value="0" autocomplete="off">{{text_no}}
+														</label>
+													</div>
+												</div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</fieldset>
+							<fieldset>
+								<table class="table table-bordered">
+									<thead>
+										<tr>
+											<td class="text-left">{{enty_module_name}}</td>
+											<th class="text-center">{{entry_logged}}</th>
+											<th class="text-center">{{entry_register_account}}</th>
+											<th class="text-right">{{entry_guest_order}}</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td class="text-left">{{entry_coupon}}</td>
+											<td class="text-center">
+												<div class="col-sm-12">
+												
+													<div class="btn-group" data-toggle="buttons">
+														<label class="btn btn-success btn-sm {% if onepagecheckout_manage['shopping_cart']['coupon_login_status'] == 1  %} active {% endif %}" >	
+															<input type="radio"  name="onepagecheckout_manage[shopping_cart][coupon_login_status]" {% if onepagecheckout_manage['shopping_cart']['coupon_login_status'] == 1  %} checked="checked" {% endif %}   value="1" autocomplete="off">{{text_yes}}
+														</label>
+														
+														<label class="btn btn-success btn-sm {% if onepagecheckout_manage['shopping_cart']['coupon_login_status'] == 0  %} active {% endif %}">
+															<input type="radio" name="onepagecheckout_manage[shopping_cart][coupon_login_status]" {% if onepagecheckout_manage['shopping_cart']['coupon_login_status'] == 0  %} checked="checked" {% endif %} value="0" autocomplete="off">{{text_no}}
+														</label>
+													</div>
+												</div>
+											</td>
+											<td class="text-center">
+												<div class="col-sm-12">
+												
+													<div class="btn-group" data-toggle="buttons">
+														<label class="btn btn-success btn-sm {% if onepagecheckout_manage['shopping_cart']['coupon_register_status'] == 1  %} active {% endif %}" >	
+															<input type="radio"  name="onepagecheckout_manage[shopping_cart][coupon_register_status]" {% if onepagecheckout_manage['shopping_cart']['coupon_register_status'] == 1  %} checked="checked" {% endif %}   value="1" autocomplete="off">{{text_yes}}
+														</label>
+														
+														<label class="btn btn-success btn-sm {% if onepagecheckout_manage['shopping_cart']['coupon_register_status'] == 0  %} active {% endif %}">
+															<input type="radio" name="onepagecheckout_manage[shopping_cart][coupon_register_status]" {% if onepagecheckout_manage['shopping_cart']['coupon_register_status'] == 0  %} checked="checked" {% endif %} value="0" autocomplete="off">{{text_no}}
+														</label>
+													</div>
+												</div>
+											</td>
+											<td class="text-right">
+												<div class="col-sm-12">
+												
+													<div class="btn-group" data-toggle="buttons">
+														<label class="btn btn-success btn-sm {% if onepagecheckout_manage['shopping_cart']['coupon_guest_status'] == 1  %} active {% endif %}" >	
+															<input type="radio"  name="onepagecheckout_manage[shopping_cart][coupon_guest_status]" {% if onepagecheckout_manage['shopping_cart']['coupon_guest_status'] == 1  %} checked="checked" {% endif %}   value="1" autocomplete="off">{{text_yes}}
+														</label>
+														
+														<label class="btn btn-success btn-sm {% if onepagecheckout_manage['shopping_cart']['coupon_guest_status'] == 0  %} active {% endif %}">
+															<input type="radio" name="onepagecheckout_manage[shopping_cart][coupon_guest_status]" {% if onepagecheckout_manage['shopping_cart']['coupon_guest_status'] == 0  %} checked="checked" {% endif %} value="0" autocomplete="off">{{text_no}}
+														</label>
+													</div>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td class="text-left">{{entry_reward}}</td>
+											<td class="text-center">
+												<div class="col-sm-12">
+												
+													<div class="btn-group" data-toggle="buttons">
+														<label class="btn btn-success btn-sm {% if onepagecheckout_manage['shopping_cart']['reward_login_status'] == 1  %} active {% endif %}" >	
+															<input type="radio"  name="onepagecheckout_manage[shopping_cart][reward_login_status]" {% if onepagecheckout_manage['shopping_cart']['reward_login_status'] == 1  %} checked="checked" {% endif %}   value="1" autocomplete="off">{{text_yes}}
+														</label>
+														
+														<label class="btn btn-success btn-sm {% if onepagecheckout_manage['shopping_cart']['reward_login_status'] == 0  %} active {% endif %}">
+															<input type="radio" name="onepagecheckout_manage[shopping_cart][reward_login_status]" {% if onepagecheckout_manage['shopping_cart']['reward_login_status'] == 0  %} checked="checked" {% endif %} value="0" autocomplete="off">{{text_no}}
+														</label>
+													</div>
+												</div>
+											</td>	
+											<td class="text-center">
+												<div class="col-sm-12">
+												
+													<div class="btn-group" data-toggle="buttons">
+														<label class="btn btn-success btn-sm {% if onepagecheckout_manage['shopping_cart']['reward_register_status'] == 1  %} active {% endif %}" >	
+															<input type="radio"  name="onepagecheckout_manage[shopping_cart][reward_register_status]" {% if onepagecheckout_manage['shopping_cart']['reward_register_status'] == 1  %} checked="checked" {% endif %}   value="1" autocomplete="off">{{text_yes}}
+														</label>
+														
+														<label class="btn btn-success btn-sm {% if onepagecheckout_manage['shopping_cart']['reward_register_status'] == 0  %} active {% endif %}">
+															<input type="radio" name="onepagecheckout_manage[shopping_cart][reward_register_status]" {% if onepagecheckout_manage['shopping_cart']['reward_register_status'] == 0  %} checked="checked" {% endif %} value="0" autocomplete="off">{{text_no}}
+														</label>
+													</div>
+												</div>
+											</td>
+											<td class="text-right">
+												<div class="col-sm-12">
+												
+													<div class="btn-group" data-toggle="buttons">
+														<label class="btn btn-success btn-sm {% if onepagecheckout_manage['shopping_cart']['reward_guest_status'] == 1  %} active {% endif %}" >	
+															<input type="radio"  name="onepagecheckout_manage[shopping_cart][reward_guest_status]" {% if onepagecheckout_manage['shopping_cart']['reward_guest_status'] == 1  %} checked="checked" {% endif %}   value="1" autocomplete="off">{{text_yes}}
+														</label>
+														
+														<label class="btn btn-success btn-sm {% if onepagecheckout_manage['shopping_cart']['reward_guest_status'] == 0  %} active {% endif %}">
+															<input type="radio" name="onepagecheckout_manage[shopping_cart][reward_guest_status]" {% if onepagecheckout_manage['shopping_cart']['reward_guest_status'] == 0  %} checked="checked" {% endif %} value="0" autocomplete="off">{{text_no}}
+														</label>
+													</div>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td class="text-left">{{entry_voucher}}</td>
+											<td class="text-center">
+												<div class="col-sm-12">
+													<div class="btn-group" data-toggle="buttons">
+														<label class="btn btn-success btn-sm {% if onepagecheckout_manage['shopping_cart']['voucher_login_status'] == 1  %} active {% endif %}" >	
+															<input type="radio"  name="onepagecheckout_manage[shopping_cart][voucher_login_status]" {% if onepagecheckout_manage['shopping_cart']['voucher_login_status'] == 1  %} checked="checked" {% endif %}   value="1" autocomplete="off">{{text_yes}}
+														</label>
+														
+														<label class="btn btn-success btn-sm {% if onepagecheckout_manage['shopping_cart']['voucher_login_status'] == 0  %} active {% endif %}">
+															<input type="radio" name="onepagecheckout_manage[shopping_cart][voucher_login_status]" {% if onepagecheckout_manage['shopping_cart']['voucher_login_status'] == 0  %} checked="checked" {% endif %} value="0" autocomplete="off">{{text_no}}
+														</label>
+													</div>
+												</div>
+											</td>
+											<td class="text-center">
+												<div class="col-sm-12">
+													<div class="btn-group" data-toggle="buttons">
+														<label class="btn btn-success btn-sm {% if onepagecheckout_manage['shopping_cart']['voucher_register_status'] == 1  %} active {% endif %}" >	
+															<input type="radio"  name="onepagecheckout_manage[shopping_cart][voucher_register_status]" {% if onepagecheckout_manage['shopping_cart']['voucher_register_status'] == 1  %} checked="checked" {% endif %}   value="1" autocomplete="off">{{text_yes}}
+														</label>
+														
+														<label class="btn btn-success btn-sm {% if onepagecheckout_manage['shopping_cart']['voucher_register_status'] == 0  %} active {% endif %}">
+															<input type="radio" name="onepagecheckout_manage[shopping_cart][voucher_register_status]" {% if onepagecheckout_manage['shopping_cart']['voucher_register_status'] == 0  %} checked="checked" {% endif %} value="0" autocomplete="off">{{text_no}}
+														</label>
+													</div>
+												</div>
+											</td>
+											<td class="text-right">
+												<div class="col-sm-12">
+													<div class="btn-group" data-toggle="buttons">
+														<label class="btn btn-success btn-sm {% if onepagecheckout_manage['shopping_cart']['voucher_guest_status'] == 1  %} active {% endif %}" >	
+															<input type="radio"  name="onepagecheckout_manage[shopping_cart][voucher_guest_status]" {% if onepagecheckout_manage['shopping_cart']['voucher_guest_status'] == 1  %} checked="checked" {% endif %}   value="1" autocomplete="off">{{text_yes}}
+														</label>
+														
+														<label class="btn btn-success btn-sm {% if onepagecheckout_manage['shopping_cart']['voucher_guest_status'] == 0  %} active {% endif %}">
+															<input type="radio" name="onepagecheckout_manage[shopping_cart][voucher_guest_status]" {% if onepagecheckout_manage['shopping_cart']['voucher_guest_status'] == 0  %} checked="checked" {% endif %} value="0" autocomplete="off">{{text_no}}
+														</label>
+													</div>
+												</div>
+											</td>											
+										</tr>
+									</tbody>
+								</table>
+								
+								<h3>Mobile View</h3>
+								<table class="table table-bordered">
+									<thead>
+										<tr>
+											<th class="text-left">{{entry_show_image}}</th>
+											<th class="text-center">{{entry_show_product_name}}</th>
+											<th class="text-center">{{entry_show_model}}</th>
+											<th class="text-center">{{entry_show_quantity}}</th>
+											<th class="text-center">{{entry_show_unit_price}}</th>
+											<th class="text-right">{{entry_show_total_price}}</th>
+											<th class="text-center hide">Colspan</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td class="text-left">
+												<div class="col-sm-12">
+													<div class="btn-group" data-toggle="buttons">
+														<label class="btn btn-success btn-sm {% if onepagecheckout_manage['shopping_cart_mb']['show_product_image'] == 1  %} active {% endif %}" >	
+															<input type="radio"  name="onepagecheckout_manage[shopping_cart_mb][show_product_image]" {% if onepagecheckout_manage['shopping_cart_mb']['show_product_image'] == 1  %} checked="checked" {% endif %} value="1" autocomplete="off">{{text_yes}}
+														</label>
+														
+														<label class="btn btn-success btn-sm  {% if onepagecheckout_manage['shopping_cart_mb']['show_product_image'] == 0  %} active {% endif %}">
+															<input type="radio" name="onepagecheckout_manage[shopping_cart_mb][show_product_image]" {% if onepagecheckout_manage['shopping_cart_mb']['show_product_image'] == 0  %} checked="checked" {% endif %}  value="0" autocomplete="off">{{text_no}}
+														</label>
+													</div>
+												</div>
+											</td>
+											<td class="text-center">
+												<div class="col-sm-12">
+													<div class="btn-group" data-toggle="buttons">
+														<label class="btn btn-success btn-sm {% if onepagecheckout_manage['shopping_cart_mb']['show_product_title'] == 1  %} active {% endif %}" >	
+															<input type="radio"  name="onepagecheckout_manage[shopping_cart_mb][show_product_title]" {% if onepagecheckout_manage['shopping_cart_mb']['show_product_title'] == 1  %} checked="checked" {% endif %}  value="1" autocomplete="off">{{text_yes}}
+														</label>
+														
+														<label class="btn btn-success btn-sm  {% if onepagecheckout_manage['shopping_cart_mb']['show_product_title'] == 0  %} active {% endif %}">
+															<input type="radio"  name="onepagecheckout_manage[shopping_cart_mb][show_product_title]" {% if onepagecheckout_manage['shopping_cart_mb']['show_product_title'] == 0  %} checked="checked" {% endif %}  value="0" autocomplete="off">{{text_no}}
+														</label>
+													</div>
+												</div>
+											</td>
+											<td class="text-center">
+												<div class="col-sm-12">
+													<div class="btn-group" data-toggle="buttons">
+														<label class="btn btn-success btn-sm {% if onepagecheckout_manage['shopping_cart_mb']['show_product_model'] == 1  %} active {% endif %} " >	
+															<input type="radio"  name="onepagecheckout_manage[shopping_cart_mb][show_product_model]" {% if onepagecheckout_manage['shopping_cart_mb']['show_product_model'] == 1  %} checked="checked" {% endif %}  value="1" autocomplete="off">{{text_yes}}
+														</label>
+														
+														<label class="btn btn-success btn-sm  {% if onepagecheckout_manage['shopping_cart_mb']['show_product_model'] == 0  %} active {% endif %}">
+															<input type="radio"  name="onepagecheckout_manage[shopping_cart_mb][show_product_model]" {% if onepagecheckout_manage['shopping_cart_mb']['show_product_model'] == 0  %} checked="checked" {% endif %} value="0" autocomplete="off">{{text_no}}
+														</label>
+													</div>
+												</div>
+											</td>
+											<td class="text-center">
+												<div class="col-sm-12">
+													<div class="btn-group" data-toggle="buttons">
+														<label class="btn btn-success btn-sm {% if onepagecheckout_manage['shopping_cart_mb']['show_product_quantity'] == 1  %} active {% endif %}" >	
+															<input type="radio"  name="onepagecheckout_manage[shopping_cart_mb][show_product_quantity]" {% if onepagecheckout_manage['shopping_cart_mb']['show_product_quantity'] == 1  %} checked="checked" {% endif %}  value="1" autocomplete="off">{{text_yes}}
+														</label>
+														
+														<label class="btn btn-success btn-sm  {% if onepagecheckout_manage['shopping_cart_mb']['show_product_quantity'] == 0  %} active {% endif %}">
+															<input type="radio"  name="onepagecheckout_manage[shopping_cart_mb][show_product_quantity]" {% if onepagecheckout_manage['shopping_cart_mb']['show_product_quantity'] == 0  %} checked="checked" {% endif %} value="0" autocomplete="off">{{text_no}}
+														</label>
+													</div>
+												</div>
+											</td>
+											<td class="text-center">
+												<div class="col-sm-12">
+													<div class="btn-group" data-toggle="buttons">
+														<label class="btn btn-success btn-sm {% if onepagecheckout_manage['shopping_cart_mb']['show_product_unit'] == 1  %} active {% endif %}" >	
+															<input type="radio"  name="onepagecheckout_manage[shopping_cart_mb][show_product_unit]" {% if onepagecheckout_manage['shopping_cart_mb']['show_product_unit'] == 1  %} checked="checked" {% endif %}  value="1" autocomplete="off">{{text_yes}}
+														</label>
+														
+														<label class="btn btn-success btn-sm  {% if onepagecheckout_manage['shopping_cart_mb']['show_product_unit'] == 0  %} active {% endif %}">
+															<input type="radio"  name="onepagecheckout_manage[shopping_cart_mb][show_product_unit]" {% if onepagecheckout_manage['shopping_cart_mb']['show_product_unit'] == 0  %} checked="checked" {% endif %} value="0" autocomplete="off">{{text_no}}
+														</label>
+													</div>
+												</div>
+											</td>
+											<td class="text-right">
+												<div class="col-sm-12">
+													<div class="btn-group" data-toggle="buttons">
+														<label class="btn btn-success btn-sm {% if onepagecheckout_manage['shopping_cart_mb']['show_product_total_price'] == 1  %} active {% endif %}" >	
+															<input type="radio"  name="onepagecheckout_manage[shopping_cart_mb][show_product_total_price]" {% if onepagecheckout_manage['shopping_cart_mb']['show_product_total_price'] == 1  %} checked="checked" {% endif %}  value="1" autocomplete="off">{{text_yes}}
+														</label>
+														
+														<label class="btn btn-success btn-sm  {% if onepagecheckout_manage['shopping_cart_mb']['show_product_total_price'] == 0  %} active {% endif %}">
+															<input type="radio"  name="onepagecheckout_manage[shopping_cart_mb][show_product_total_price]" {% if onepagecheckout_manage['shopping_cart_mb']['show_product_total_price'] == 0  %} checked="checked" {% endif %} value="0" autocomplete="off">{{text_no}}
+														</label>
+													</div>
+												</div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</fieldset>
+						</div>
+						<div class="tab-pane" id="tab-personaldetails-setting">
+							<fieldset>
+								<legend>{{entry_personaldetails}}</legend>
+								
+								<div class="form-group register_newsletter">
+									<label class="col-sm-2 control-label" for="input-newsletter">{{entry_newsletter}}</label>
+									<div class="col-sm-10">
+										<div class="btn-group" data-toggle="buttons">
+											<label class="btn btn-success btn-sm {% if onepagecheckout_manage['personaldetails']['newsletter_status'] == 1  %} active {% endif %}">	
+												<input type="radio"  name="onepagecheckout_manage[personaldetails][newsletter_status]" {% if onepagecheckout_manage['personaldetails']['newsletter_status'] == 1  %} checked="checked" {% endif %} value="1" autocomplete="off">{{text_yes}}
+											</label>											
+											<label class="btn btn-success btn-sm {% if onepagecheckout_manage['personaldetails']['newsletter_status'] == 0  %} active {% endif %}">
+												<input type="radio" name="onepagecheckout_manage[personaldetails][newsletter_status]" {% if onepagecheckout_manage['personaldetails']['newsletter_status'] == 0  %} checked="checked" {% endif %} value="0" autocomplete="off">{{text_no}}
+											</label>
+										</div>
+									</div>
+								</div>
+								<div class="form-group">	
+									<label class="col-sm-2 control-label " for="input-terms"><span data-toggle="tooltip" title="" data-original-title="Forces people to agree to terms before an account can be created.">Account Terms</span></label>
+									<div class="col-sm-3">
+										<select name="onepagecheckout_manage[personaldetails][terms]" class="form-control">
+											<option value="0">{{text_none}}</option>
+											{% for information in informations %}
+											{% if information.information_id == onepagecheckout_manage['personaldetails']['terms'] %}
+											<option value="{{information.information_id}}" selected="selected">{{information.title}}</option>
+											{% else %}
+											<option value="{{information.information_id}}">{{information.title}}</option>
+											{% endif %}
+											{% endfor %}
+										</select>
+									</div>
+								</div>
+								<div class="form-group register_newsletter">
+									<label class="col-sm-2 control-label" for="input-checkout-term-auto"><span data-toggle="tooltip" title="" data-original-title="Auto Checked account Terms">Auto Checked </span></label>
+									<div class="col-sm-10">
+										<div class="btn-group" data-toggle="buttons">
+											<label class="btn btn-success btn-sm {% if onepagecheckout_manage['personaldetails']['account_terms'] == 1  %} active {% endif %}">	
+												<input type="radio"  name="onepagecheckout_manage[personaldetails][account_terms]" {% if onepagecheckout_manage['personaldetails']['account_terms'] == 1  %} checked="checked" {% endif %} value="1" autocomplete="off">{{text_yes}}
+											</label>											
+											<label class="btn btn-success btn-sm {% if onepagecheckout_manage['personaldetails']['account_terms'] == 0  %} active {% endif %}">
+												<input type="radio" name="onepagecheckout_manage[personaldetails][account_terms]" {% if onepagecheckout_manage['personaldetails']['account_terms'] == 0  %} checked="checked" {% endif %} value="0" autocomplete="off">{{text_no}}
+											</label>
+										</div>
+									</div>
+								</div>
+								<div class="table-responsive">
+									<table id="table-personal" class="table table-bordered table-hover">
+										<thead>
+											<tr>
+												<th class="text-left">{{entry_field_name}}</th>
+												<th class="text-right">{{entry_status}}</th>
+											</tr>
+										</thead>
+										<tbody>
+											{% for key, fields in onepagecheckout_manage['personaldetails']['fields'] %}
+											<tr class="row-group">
+												<td class="text-left">
+													<i class="fa fa-arrows" aria-hidden="true"></i>
+													<span>{{onepagecheckout_manage['personaldetails']['fields'][key]['label']}}</span>
+													<input type="hidden" name="onepagecheckout_manage[personaldetails][fields][{{key}}][sort_order]" value="{{onepagecheckout_manage['personaldetails']['fields'][key]['sort_order'] ? onepagecheckout_manage['personaldetails']['fields'][key]['sort_order'] : 0}}" class="form-control mydragsort" />
+													<input type="hidden" name="onepagecheckout_manage[personaldetails][fields][{{key}}][label]" value="{{onepagecheckout_manage['personaldetails']['fields'][key]['label'] ? onepagecheckout_manage['personaldetails']['fields'][key]['label'] : 0}}" class="form-control" />
+												</td>
+												<td class="text-right">
+													<div class="btn-group" data-toggle="buttons">	
+														<label class="btn btn-success btn-sm {% if onepagecheckout_manage['personaldetails']['fields'][key]['show'] == 1  %} active {% endif %}">
+														<input type="radio" name="onepagecheckout_manage[personaldetails][fields][{{key}}][show]" {% if onepagecheckout_manage['personaldetails']['fields'][key]['show'] == 1  %} checked="checked" {% endif %} value="1" autocomplete="off" />{{text_yes}}
+														</label>
+														<label class="btn btn-success btn-sm {% if onepagecheckout_manage['personaldetails']['fields'][key]['show'] == 2  %} active {% endif %}">
+														<input type="radio" name="onepagecheckout_manage[personaldetails][fields][{{key}}][show]" {% if onepagecheckout_manage['personaldetails']['fields'][key]['show'] == 2  %} checked="checked" {% endif %}  value="2" autocomplete="off" />{{entry_and_required}}
+														</label>
+													
+														<label class="btn btn-success btn-sm {% if onepagecheckout_manage['personaldetails']['fields'][key]['show'] == 0  %} active {% endif %}">
+														<input type="radio" name="onepagecheckout_manage[personaldetails][fields][{{key}}][show]" {% if onepagecheckout_manage['personaldetails']['fields'][key]['show'] == 0  %} checked="checked" {% endif %}   value="0" autocomplete="off" />{{text_no}}
+														</label>
+														
+													</div>
+												</td>
+											</tr>
+											{% endfor %}
+										</tbody>
+									</table>
+								</div>
+							</fieldset>
+						</div>
+						<div class="tab-pane" id="tab-payment-setting">
+							<fieldset>
+								<legend>{{entry_payment_details_setting}}</legend>
+								<div class="form-group hide">
+									<label class="col-sm-2 control-label" for="input-status"><span  data-toggle="tooltip" title="{{entry_payment_details_order}}">{{entry_status}}</span></label>
+									<div class="col-sm-10">
+										<div class="btn-group" data-toggle="buttons">
+											<label class="btn btn-success btn-sm {% if onepagecheckout_manage['payment_details']['payment_details_status'] == 1  %} active {% endif %}" >	
+												<input type="radio"  name="onepagecheckout_manage[payment_details][payment_details_status]" {% if onepagecheckout_manage['payment_details']['payment_details_status'] == 1  %} checked="checked" {% endif %} value="1" autocomplete="off">{{text_yes}}
+											</label>
+											
+											<label class="btn btn-success btn-sm {% if onepagecheckout_manage['payment_details']['payment_details_status'] == 0  %} active {% endif %}">
+												<input type="radio" name="onepagecheckout_manage[payment_details][payment_details_status]" {% if onepagecheckout_manage['payment_details']['payment_details_status'] == 0  %} checked="checked" {% endif %} value="0" autocomplete="off">{{text_no}}
+											</label>
+										</div>
+									</div>
+								</div>
+								<div class="table-responsive">
+									<table id="table-payment_details" class="table table-bordered table-hover">
+										<thead>
+											<tr>
+												<th class="text-left">{{entry_field_name}}</th>
+												<th class="text-right">{{entry_status}}</th>
+											</tr>
+										</thead>
+										<tbody>
+											{% for key, fields in onepagecheckout_manage['payment_details']['fields'] %}
+											<tr class="row-group">
+												<td class="text-left">
+													<i class="fa fa-arrows" aria-hidden="true"></i>
+													<span>{{onepagecheckout_manage['payment_details']['fields'][key]['label']}}</span>
+													<input type="hidden" name="onepagecheckout_manage[payment_details][fields][{{key}}][sort_order]" value="{{onepagecheckout_manage['payment_details']['fields'][key]['sort_order'] ? onepagecheckout_manage['payment_details']['fields'][key]['sort_order'] : 0}}" class="form-control mydragsort" />
+													<input type="hidden" name="onepagecheckout_manage[payment_details][fields][{{key}}][label]" value="{{onepagecheckout_manage['payment_details']['fields'][key]['label'] ? onepagecheckout_manage['payment_details']['fields'][key]['label'] : 0}}" class="form-control" />
+												</td>
+												<td class="text-right">
+													<div class="btn-group" data-toggle="buttons">	
+														<label class="btn btn-success btn-sm {% if onepagecheckout_manage['payment_details']['fields'][key]['show'] == 1  %} active {% endif %}">
+														<input type="radio" name="onepagecheckout_manage[payment_details][fields][{{key}}][show]" {% if onepagecheckout_manage['payment_details']['fields'][key]['show'] == 1  %} checked="checked" {% endif %} value="1" autocomplete="off" />{{text_yes}}
+														</label>
+														<label class="btn btn-success btn-sm {% if onepagecheckout_manage['payment_details']['fields'][key]['show'] == 2  %} active {% endif %}">
+														<input type="radio" name="onepagecheckout_manage[payment_details][fields][{{key}}][show]" {% if onepagecheckout_manage['payment_details']['fields'][key]['show'] == 2  %} checked="checked" {% endif %}  value="2" autocomplete="off" />{{entry_and_required}}
+														</label>
+													
+														<label class="btn btn-success btn-sm {% if onepagecheckout_manage['payment_details']['fields'][key]['show'] == 0  %} active {% endif %}">
+														<input type="radio" name="onepagecheckout_manage[payment_details][fields][{{key}}][show]" {% if onepagecheckout_manage['payment_details']['fields'][key]['show'] == 0  %} checked="checked" {% endif %}   value="0" autocomplete="off" />{{text_no}}
+														</label>
+														
+													</div>
+												</td>
+											</tr>
+											{% endfor %}
+										</tbody>
+									</table>
+								</div>
+							</fieldset>
+						</div>
+						<div class="tab-pane" id="tab-delivery-setting">
+							<fieldset>
+								<legend>{{entry_delivery_setting}}</legend>
+								<div class="form-group">
+									<label class="col-sm-2 control-label" for="input-status"><span  data-toggle="tooltip" title="With this feature, you can enable or disable the delivery address section.<br/> Note: When you will disable the delivery address then payment address and shipping address always same.">Delivery Address</span></label>
+									<div class="col-sm-10">
+										<div class="btn-group" data-toggle="buttons">
+											<label class="btn btn-success btn-sm {% if onepagecheckout_manage['delivery']['delivery_status'] == 1  %} active {% endif %}" >	
+												<input type="radio"  name="onepagecheckout_manage[delivery][delivery_status]" {% if onepagecheckout_manage['delivery']['delivery_status'] == 1  %} checked="checked" {% endif %} value="1" autocomplete="off">{{text_yes}}
+											</label>
+											
+											<label class="btn btn-success btn-sm {% if onepagecheckout_manage['delivery']['delivery_status'] == 0  %} active {% endif %}">
+												<input type="radio" name="onepagecheckout_manage[delivery][delivery_status]" {% if onepagecheckout_manage['delivery']['delivery_status'] == 0  %} checked="checked" {% endif %} value="0" autocomplete="off">{{text_no}}
+											</label>
+										</div>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-2 control-label" for="input-status"><span  data-toggle="tooltip" title="My delivery and billing addresses are the same.">Auto Checked</span></label>
+									<div class="col-sm-10">
+										<div class="btn-group" data-toggle="buttons">
+											<label class="btn btn-success btn-sm {% if onepagecheckout_manage['delivery']['delivery_auto_status'] == 1  %} active {% endif %}" >	
+												<input type="radio"  name="onepagecheckout_manage[delivery][delivery_auto_status]" {% if onepagecheckout_manage['delivery']['delivery_auto_status'] == 1  %} checked="checked" {% endif %} value="1" autocomplete="off">{{text_yes}}
+											</label>
+											
+											<label class="btn btn-success btn-sm {% if onepagecheckout_manage['delivery']['delivery_auto_status'] == 0  %} active {% endif %}">
+												<input type="radio"  name="onepagecheckout_manage[delivery][delivery_auto_status]" {% if onepagecheckout_manage['delivery']['delivery_auto_status'] == 0  %} checked="checked" {% endif %} value="0" autocomplete="off">{{text_no}}
+											</label>
+										</div>
+									</div>
+								</div>
+								
+								<div class="table-responsive">
+									<table id="table-delivery" class="table table-bordered table-hover">
+										<thead>
+											<tr>
+												<th class="text-left">{{entry_field_name}}</th>
+												<th class="text-right">{{entry_status}}</th>
+											</tr>
+										</thead>
+										<tbody>
+											{% for key, fields in onepagecheckout_manage['delivery']['fields'] %}
+											<tr class="row-group">
+												<td class="text-left">
+													<i class="fa fa-arrows" aria-hidden="true"></i>
+													<span>{{onepagecheckout_manage['delivery']['fields'][key]['label']}}</span>
+													<input type="hidden" name="onepagecheckout_manage[delivery][fields][{{key}}][sort_order]" value="{{onepagecheckout_manage['delivery']['fields'][key]['sort_order'] ? onepagecheckout_manage['delivery']['fields'][key]['sort_order'] : 0}}" class="form-control mydragsort" />
+													<input type="hidden" name="onepagecheckout_manage[delivery][fields][{{key}}][label]" value="{{onepagecheckout_manage['delivery']['fields'][key]['label'] ? onepagecheckout_manage['delivery']['fields'][key]['label'] : 0}}" class="form-control" />
+												</td>
+												<td class="text-right">
+													<div class="btn-group" data-toggle="buttons">	
+														<label class="btn btn-success btn-sm {% if onepagecheckout_manage['delivery']['fields'][key]['show'] == 1  %} active {% endif %}">
+														<input type="radio" name="onepagecheckout_manage[delivery][fields][{{key}}][show]" {% if onepagecheckout_manage['delivery']['fields'][key]['show'] == 1  %} checked="checked" {% endif %} value="1" autocomplete="off" />{{text_yes}}
+														</label>
+														<label class="btn btn-success btn-sm {% if onepagecheckout_manage['delivery']['fields'][key]['show'] == 2  %} active {% endif %}">
+														<input type="radio" name="onepagecheckout_manage[delivery][fields][{{key}}][show]" {% if onepagecheckout_manage['delivery']['fields'][key]['show'] == 2  %} checked="checked" {% endif %}  value="2" autocomplete="off" />{{entry_and_required}}
+														</label>
+													
+														<label class="btn btn-success btn-sm {% if onepagecheckout_manage['delivery']['fields'][key]['show'] == 0  %} active {% endif %}">
+														<input type="radio" name="onepagecheckout_manage[delivery][fields][{{key}}][show]" {% if onepagecheckout_manage['delivery']['fields'][key]['show'] == 0  %} checked="checked" {% endif %}   value="0" autocomplete="off" />{{text_no}}
+														</label>
+														
+													</div>
+												</td>
+											</tr>
+											{% endfor %}
+										</tbody>
+									</table>
+								</div>
+							</fieldset>
+						</div>						
+						<div class="tab-pane" id="tab-login-setting">
+							<fieldset>
+								<legend>{{entry_login}}</legend>
+								
+							</fieldset>
+						</div>
+						<div class="tab-pane" id="tab-general-language-setting">
+							<fieldset>
+									<legend>{{entry_general}}</legend>
+							</fieldset>
+							<ul class="nav nav-tabs" id="general-language">
+								{% for language in languages %}
+								 <li><a href="#checkout-language{{ language.language_id }}" data-toggle="tab"><img src="language/{{ language.code }}/{{ language.code }}.png" title="{{ language.name }}" /> {{ language.name }}</a></li>
+								{% endfor %}
+							</ul>
+							<div class="tab-content">
+							{% for language in languages %}
+								<div class="tab-pane" id="checkout-language{{ language.language_id }}">	
+									<div class="form-group ">	
+										<label class="col-sm-2 control-label " for="input-register-tab">
+											Register Tab Name</label>
+											<div class="col-sm-10">
+												<input type="text" class="form-control" name="onepagecheckout_manage[general][register][{{ language.language_id }}]" placeholder="register tab name" value="{{ onepagecheckout_manage['general']['register'][language.language_id] ? onepagecheckout_manage['general']['register'][language.language_id] }}">
+											</div>
+									</div>
+									<div class="form-group ">	
+										<label class="col-sm-2 control-label " for="input-guest">
+											Guest Tab Name</label>
+											<div class="col-sm-10">
+												<input type="text" class="form-control" name="onepagecheckout_manage[general][guest][{{ language.language_id }}]" placeholder="guest tab name" value="{{ onepagecheckout_manage['general']['guest'][language.language_id] ? onepagecheckout_manage['general']['guest'][language.language_id] }}">
+											</div>
+									</div>
+									<div class="form-group">	
+										<label class="col-sm-2 control-label " for="input-login">
+											Login Tab Name</label>
+											<div class="col-sm-10">
+												<input type="text" class="form-control" name="onepagecheckout_manage[general][login][{{ language.language_id }}]" placeholder="login tab name" value="{{ onepagecheckout_manage['general']['login'][language.language_id] ? onepagecheckout_manage['general']['login'][language.language_id] }}">
+											</div>
+									</div>
+									<div class="form-group ">	
+										<label class="col-sm-2 control-label " for="input-heading">
+											{{entry_heading_title}}</label>
+											<div class="col-sm-10">
+												<input type="text" class="form-control" name="onepagecheckout_manage[general][heading_title][{{language.language_id}}]" placeholder="{{placeholder_heading_title}}" value="{{ onepagecheckout_manage['general']['heading_title'][language.language_id] ? onepagecheckout_manage['general']['heading_title'][language.language_id] }}">
+											</div>
+									</div>
+									<div class="form-group ">	
+										<label class="col-sm-2 control-label " for="input-description{{language.language_id}}" >{{entry_description}}</label>
+											<div class="col-sm-10">
+												<textarea class="form-control summernote"  name="onepagecheckout_manage[general][description][{{language.language_id}}]" placeholder="{{entry_description}}" id="input-description{{language.language_id}}" >{{ onepagecheckout_manage['general']['description'][language.language_id] ? onepagecheckout_manage['general']['description'][language.language_id] }}</textarea>
+											</div>
+									</div>
+									<div class="form-group ">	
+										
+											<label class="col-sm-2 control-label " for="input-description_bottom{{language.language_id}}">
+											{{entry_description_bottom}}</label>
+											<div class="col-sm-10">
+												<textarea class="form-control summernote"  name="onepagecheckout_manage[general][description_bottom][{{language.language_id}}]" placeholder="{{entry_description_bottom}}" id="input-description_bottom{{language.language_id}}" >{{onepagecheckout_manage['general']['description_bottom'][language.language_id] ? onepagecheckout_manage['general']['description_bottom'][language.language_id] }}</textarea>
+											</div>
+									</div>
+								</div>
+							 {% endfor %}
+						</div>
+						</div>
+						<div class="tab-pane" id="tab-personaldetails-language-setting">
+							<fieldset>
+								<legend>{{entry_personaldetails}}</legend>
+								<ul class="nav nav-tabs" id="checkout-personals">
+									{% for key, language in languages %}
+									 <li {% if key==0  %} class="active" {% endif %}><a href="#checkout-personal{{ language.language_id }}" data-toggle="tab"><img src="language/{{ language.code }}/{{ language.code }}.png" title="{{ language.name }}" /> {{ language.name }}</a></li>
+									{% endfor %}
+								</ul>	
+								<div class="tab-content">
+									{% for language in languages %}
+									<div class="tab-pane {% if key==0  %} active {% endif %}" id="checkout-personal{{ language.language_id }}">	
+										<div class="form-group">	
+											<label class="col-sm-2 control-label " for="input-heading">{{entry_heading}}</label>
+											<div class="col-sm-10">
+												<input type="text" class="form-control" name="onepagecheckout_manage[register][heading_title][{{ language.language_id }}]" placeholder="{{placeholder_heading}}" value="{{onepagecheckout_manage['register']['heading_title'][language.language_id] ? onepagecheckout_manage['register']['heading_title'][language.language_id] }}">
+											</div>
+										</div>
+										<div class="table-responsive">
+											<table class="table table-bordered table-hover">
+												<thead>
+													<tr>
+														<th class="text-left">{{entry_field_name}}</th>
+														<th class="text-left">{{entry_label}}</th>
+														<th class="text-left">{{entry_placeholder}}</th>
+														<th class="text-left">{{entry_error}}</th>
+													</tr>
+												</thead>
+												<tbody>
+													
+													{% for key, fields in onepagecheckout_manage['personaldetails']['fields'] %}
+													<tr>
+														<td class="text-left">{{onepagecheckout_manage['personaldetails']['fields'][key]['label'] ? onepagecheckout_manage['personaldetails']['fields'][key]['label'] : ''}}</td>
+														<td class="text-left"><input type="text" class="form-control" name="onepagecheckout_manage[register][{{key}}][label][{{language.language_id}}]" placeholder="{{entry_label}}" value="{{onepagecheckout_manage['register'][key]['label'][language.language_id] ? onepagecheckout_manage['register'][key]['label'][language.language_id] : ''}}"></td>
+														<td class="text-left"><input type="text" class="form-control" name="onepagecheckout_manage[register][{{key}}][placeholder][{{language.language_id}}]" placeholder="{{entry_placeholder}}" value="{{onepagecheckout_manage['register'][key]['placeholder'][language.language_id] ? onepagecheckout_manage['register'][key]['placeholder'][language.language_id] : ''}}"></td>
+														<td class="text-left"><input type="text" class="form-control" name="onepagecheckout_manage[register][{{key}}][error][{{language.language_id}}]" placeholder="{{entry_error}}" value="{{onepagecheckout_manage['register'][key]['error'][language.language_id] ? onepagecheckout_manage['register'][key]['error'][language.language_id] : ''}}"></td>
+													</tr>
+													{% endfor %}
+												</tbody>
+											</table>
+										</div>
+									</div>
+									{% endfor %}
+								</div>
+							</fieldset>
+						</div>
+						<div class="tab-pane" id="tab-login-language-setting">
+							<fieldset>
+								<legend>{{entry_login}}</legend>
+								<ul class="nav nav-tabs" id="checkout-language6">
+									{% for key,language in languages %}
+									 <li {% if key==0  %} class="active" {% endif %}><a href="#checkout-language6{{ language.language_id }}" data-toggle="tab"><img src="language/{{ language.code }}/{{ language.code }}.png" title="{{ language.name }}" /> {{ language.name }}</a></li>
+									{% endfor %}
+								</ul>	
+								<div class="tab-content">
+									{% for key,language in languages %}
+									<div class="tab-pane {% if key==0  %} active {% endif %}" id="checkout-language6{{ language.language_id }}">
+										<div class="form-group">	
+											<label class="col-sm-2 control-label " for="input-heading">{{entry_heading}}</label>
+											<div class="col-sm-10">
+												<input type="text" class="form-control" name="onepagecheckout_manage[login][heading_title][{{language.language_id }}]" placeholder="{{placeholder_heading}}" value="{{onepagecheckout_manage['login']['heading_title'][language.language_id] ? onepagecheckout_manage['login']['heading_title'][language.language_id] : ''}}">
+											</div>
+										</div>
+										<div class="form-group">	
+											<label class="col-sm-2 control-label " for="input-heading">{{entry_btn_text}}</label>
+											<div class="col-sm-10">
+												<input type="text" class="form-control" name="onepagecheckout_manage[login][button_text][{{language.language_id}}]" placeholder="{{entry_btn_text}}" value="{{onepagecheckout_manage['login']['button_text'][language.language_id] ? onepagecheckout_manage['login']['button_text'][language.language_id] : ''}}">
+											</div>
+										</div>
+										<div class="form-group">	
+											<label class="col-sm-2 control-label " for="input-heading">{{entry_wrong}}</label>
+											<div class="col-sm-10">
+												<input type="text" class="form-control" name="onepagecheckout_manage[login][wrong_message][{{language.language_id}}]" placeholder="{{entry_wrong}}" value="{{onepagecheckout_manage['login']['wrong_message'][language.language_id] ? onepagecheckout_manage['login']['wrong_message'][language.language_id] : ''}}">
+											</div>
+										</div>
+										<div class="form-group">	
+											<label class="col-sm-2 control-label " for="input-heading">{{entry_approved_message}}</label>
+											<div class="col-sm-10">
+												<input type="text" class="form-control" name="onepagecheckout_manage[login][approved_message][{{language.language_id}}]" placeholder="{{entry_approved_message}}" value="{{onepagecheckout_manage['login']['approved_message'][language.language_id] ? onepagecheckout_manage['login']['approved_message'][language.language_id] : ''}}">
+											</div>
+										</div>
+										<div class="table-responsive">
+											<table class="table table-bordered table-hover">
+												<thead>
+													<tr>
+														<th class="text-left">{{entry_field_name}}</th>
+														<th class="text-left">{{entry_label}}</th>
+														<th class="text-left">{{entry_placeholder}}</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td class="text-left">{{entry_email}}</td>
+														<td class="text-left"><input type="text" class="form-control" name="onepagecheckout_manage[login][email][label][{{language.language_id}}]" placeholder="{{entry_email_label}}" value="{{onepagecheckout_manage['login']['email']['label'][language.language_id] ? onepagecheckout_manage['login']['email']['label'][language.language_id] : ''}}"></td>
+														<td class="text-left"><input type="text" class="form-control" name="onepagecheckout_manage[login][email][placeholder][{{language.language_id}}]" placeholder="{{entry_email_placeholder}}" value="{{onepagecheckout_manage['login']['email']['placeholder'][language.language_id] ? onepagecheckout_manage['login']['email']['placeholder'][language.language_id] : ''}}"></td>
+													</tr>
+													<tr>
+														<td class="text-left">{{entry_password}}</td>
+														<td class="text-left"><input type="text" class="form-control" name="onepagecheckout_manage[login][password][label][{{language.language_id}}]" placeholder="{{entry_password_label}}" value="{{onepagecheckout_manage['login']['password']['label'][language.language_id] ? onepagecheckout_manage['login']['password']['label'][language.language_id] : ''}}"></td>
+														<td class="text-center"><input type="text" class="form-control" name="onepagecheckout_manage[login][password][placeholder][{{language.language_id}}]" placeholder="{{entry_password_placeholder}}" value="{{onepagecheckout_manage['login']['password']['placeholder'][language.language_id] ? onepagecheckout_manage['login']['password']['placeholder'][language.language_id] : ''}}"></td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+									{% endfor %}
+								</div>
+							</fieldset>
+						</div>
+						<div class="tab-pane" id="tab-delivery_detail-language-setting">
+							<fieldset>
+								<legend>{{entry_delivery_setting}}</legend>
+								<ul class="nav nav-tabs" id="checkout-deliverydetail">
+									{% for key,language in languages %}
+									 <li {% if key==0  %} class="active" {% endif %}><a href="#checkout-deliverydetail{{ language.language_id }}" data-toggle="tab"><img src="language/{{ language.code }}/{{ language.code }}.png" title="{{ language.name }}" /> {{ language.name }}</a></li>
+									{% endfor %}
+								</ul>
+								<div class="tab-content">
+									{% for key,language in languages %}
+									<div class="tab-pane {% if key==0  %} active {% endif %}" id="checkout-deliverydetail{{ language.language_id }}">
+										<div class="form-group ">	
+											<label class="col-sm-2 control-label " for="input-heading">{{entry_heading}}</label>
+											<div class="col-sm-10">
+												<input type="text" class="form-control" name="onepagecheckout_manage[delivery_detail][heading_title][{{ language.language_id }}]" placeholder="{{placeholder_heading}}" value="{{onepagecheckout_manage['delivery_detail']['heading_title'][language.language_id] ? onepagecheckout_manage['delivery_detail']['heading_title'][language.language_id] : ''}}">
+											</div>
+										</div>
+										<div class="table-responsive">
+											<table class="table table-bordered table-hover">
+												<thead>
+													<tr>
+														<th class="text-left">{{entry_field_name}}</th>
+														<th class="text-left">{{entry_label}}</th>
+														<th class="text-left">{{entry_placeholder}}</th>
+														<th class="text-left">{{entry_error}}</th>
+													</tr>
+												</thead>
+												<tbody>
+													{% for key, fields in onepagecheckout_manage['delivery']['fields'] %}
+													<tr>
+														<td class="text-left">{{onepagecheckout_manage['delivery']['fields'][key]['label'] ? onepagecheckout_manage['delivery']['fields'][key]['label'] : ''}}</td>
+														<td class="text-left"><input type="text" class="form-control" name="onepagecheckout_manage[delivery_detail][{{key}}][label][{{language.language_id}}]" placeholder="{{entry_label}}" value="{{onepagecheckout_manage['delivery_detail'][key]['label'][language.language_id] ? onepagecheckout_manage['delivery_detail'][key]['label'][language.language_id] : ''}}"></td>
+														<td class="text-left"><input type="text" class="form-control" name="onepagecheckout_manage[delivery_detail][{{key}}][placeholder][{{language.language_id}}]" placeholder="{{entry_placeholder}}" value="{{onepagecheckout_manage['delivery_detail'][key]['placeholder'][language.language_id] ? onepagecheckout_manage['delivery_detail'][key]['placeholder'][language.language_id] : ''}}"></td>
+														<td class="text-left"><input type="text" class="form-control" name="onepagecheckout_manage[delivery_detail][{{key}}][error][{{language.language_id}}]" placeholder="{{entry_error}}" value="{{onepagecheckout_manage['delivery_detail'][key]['error'][language.language_id] ? onepagecheckout_manage['delivery_detail'][key]['error'][language.language_id] : ''}}"></td>
+													</tr>
+													{% endfor %}
+												</tbody>
+											</table>
+										</div>
+									</div>
+									{% endfor %}
+								</div>
+							</fieldset>
+						</div>
+						<div class="tab-pane" id="tab-paymentdetails-language-setting">
+							<fieldset>
+								<legend>{{entry_payment_details_setting}}</legend>
+								<ul class="nav nav-tabs" id="checkout-paymentdetail">
+									{% for key,language in languages %}
+									 <li {% if key==0  %} class="active" {% endif %}><a href="#checkout-paymentdetail{{ language.language_id }}" data-toggle="tab"><img src="language/{{ language.code }}/{{ language.code }}.png" title="{{ language.name }}" /> {{ language.name }}</a></li>
+									{% endfor %}
+								</ul>
+								<div class="tab-content">
+									{% for key,language in languages %}
+									<div class="tab-pane {% if key==0  %} active {% endif %}" id="checkout-paymentdetail{{ language.language_id }}">
+										<div class="form-group ">	
+											<label class="col-sm-2 control-label " for="input-heading">{{entry_heading}}</label>
+											<div class="col-sm-10">
+												<input type="text" class="form-control" name="onepagecheckout_manage[payment_details_language][heading_title][{{ language.language_id }}]" placeholder="{{placeholder_heading}}" value="{{onepagecheckout_manage['payment_details_language']['heading_title'][language.language_id] ? onepagecheckout_manage['payment_details_language']['heading_title'][language.language_id] : ''}}">
+											</div>
+										</div>
+										<div class="table-responsive">
+											<table class="table table-bordered table-hover">
+												<thead>
+													<tr>
+														<th class="text-left">{{entry_field_name}}</th>
+														<th class="text-left">{{entry_label}}</th>
+														<th class="text-left">{{entry_placeholder}}</th>
+														<th class="text-left">{{entry_error}}</th>
+													</tr>
+												</thead>
+												<tbody>
+													{% for key, fields in onepagecheckout_manage['payment_details']['fields'] %}
+													<tr>
+														<td class="text-left">{{onepagecheckout_manage['payment_details']['fields'][key]['label'] ? onepagecheckout_manage['payment_details']['fields'][key]['label'] : ''}}</td>
+														<td class="text-left"><input type="text" class="form-control" name="onepagecheckout_manage[payment_details_language][{{key}}][label][{{language.language_id}}]" placeholder="{{entry_label}}" value="{{onepagecheckout_manage['payment_details_language'][key]['label'][language.language_id] ? onepagecheckout_manage['payment_details_language'][key]['label'][language.language_id] : ''}}"></td>
+														<td class="text-left"><input type="text" class="form-control" name="onepagecheckout_manage[payment_details_language][{{key}}][placeholder][{{language.language_id}}]" placeholder="{{entry_placeholder}}" value="{{onepagecheckout_manage['payment_details_language'][key]['placeholder'][language.language_id] ? onepagecheckout_manage['payment_details_language'][key]['placeholder'][language.language_id] : ''}}"></td>
+														<td class="text-left"><input type="text" class="form-control" name="onepagecheckout_manage[payment_details_language][{{key}}][error][{{language.language_id}}]" placeholder="{{entry_error}}" value="{{onepagecheckout_manage['payment_details_language'][key]['error'][language.language_id] ? onepagecheckout_manage['payment_details_language'][key]['error'][language.language_id] : ''}}"></td>
+													</tr>
+													{% endfor %}
+												</tbody>
+											</table>
+										</div>
+									</div>
+									{% endfor %}
+								</div>
+							</fieldset>
+						</div>
+						<div class="tab-pane" id="tab-delivery_method-language-setting">
+							<fieldset>
+								<legend>{{entry_delivery_method}}</legend>
+								<ul class="nav nav-tabs" id="checkout-language3">
+									{% for key,language in languages %}
+									 <li {% if key==0  %} class="active" {% endif %}><a href="#checkout-language3{{ language.language_id }}" data-toggle="tab"><img src="language/{{ language.code }}/{{ language.code }}.png" title="{{ language.name }}" /> {{ language.name }}</a></li>
+									{% endfor %}
+								</ul>
+								<div class="tab-content">
+								{% for key,language in languages %}
+								<div class="tab-pane {% if key==0  %} active {% endif %}" id="checkout-language3{{language.language_id}}">
+									<div class="form-group">	
+											<label class="col-sm-2 control-label" for="input-heading">{{entry_heading}}</label>
+											<div class="col-sm-10">
+												<input type="text" class="form-control" name="onepagecheckout_manage[delivery_method][heading_title][{{language.language_id}}]" placeholder="{{placeholder_heading}}" value="{{onepagecheckout_manage['delivery_method']['heading_title'][language.language_id] ? onepagecheckout_manage['delivery_method']['heading_title'][language.language_id] : ''}}">
+											</div>
+									</div>
+									{% if delivery_methods %}
+									<table class="table table-bordered">
+										<thead>
+											<tr>
+												<th>{{entry_delivery_method}}</th>
+												<th>{{entry_label}}</th>
+											</tr>
+										</thead>
+										<tbody>
+											{% for delivery_method in  delivery_methods %}
+											<tr>
+												<td>{{delivery_method.title}}</td>
+												<td>
+													<div class="col-md-12">
+														<div class="form-group">
+															<input type="text" class="form-control"  value="{{onepagecheckout_manage['delivery_method'][delivery_method['code']]['label'][language.language_id] ? onepagecheckout_manage['delivery_method'][delivery_method['code']]['label'][language.language_id] : delivery_method.title}}" name="onepagecheckout_manage[delivery_method][{{delivery_method.code}}][label][{{language.language_id}}]" placeholder="{{entry_label}}" >
+														</div>
+													</div>
+												</td>
+											</tr>
+											{% endfor %}
+										</tbody>
+									</table>
+									{% endif %}
+								</div>
+								{% endfor %}
+								</div>
+							</fieldset>
+						</div>
+						<div class="tab-pane" id="tab-delivery-language-date-time">
+							<fieldset>
+								<legend>Estimated Delivery Date</legend>
+							     <ul class="nav nav-tabs" id="checkout-delivery-language-date-time">
+									{% for key,language in languages %}
+									 <li {% if key==0  %} class="active" {% endif %}><a href="#checkout-delivery-language-date-time{{ language.language_id }}" data-toggle="tab"><img src="language/{{ language.code }}/{{ language.code }}.png" title="{{ language.name }}" /> {{ language.name }}</a></li>
+									{% endfor %}
+								</ul>
+								<div class="tab-content">
+									{% for key,language in languages %}
+									<div class="tab-pane {% if key==0  %} active {% endif %}" id="checkout-delivery-language-date-time{{ language.language_id }}">
+										<div class="form-group">	
+											<label class="col-sm-2 control-label " for="input-heading">{{ entry_heading }}</label>
+											<div class="col-sm-10">
+												<input type="text" class="form-control" name="onepagecheckout_manage[delivery][heading_title][{{ language.language_id }}]" placeholder="{{placeholder_heading}}" value="{{onepagecheckout_manage['delivery'][heading_title][language.language_id] ? onepagecheckout_manage['delivery']['heading_title'][language.language_id] : ''}}">
+											</div>
+										</div>
+										<div class="form-group">	
+											<label class="col-sm-2 control-label " for="input-label">{{entry_label}}</label>
+											<div class="col-sm-10">
+												<input type="text" class="form-control" name="onepagecheckout_manage[delivery][label][{{ language.language_id }}]" placeholder="{{placeholder_heading}}" value="{{onepagecheckout_manage['delivery'][label][language.language_id] ? onepagecheckout_manage['delivery']['label'][language.language_id] : ''}}">
+											</div>
+										</div>
+										<div class="form-group">	
+											<label class="col-sm-2 control-label " for="input-required">Error Massege</label>
+											<div class="col-sm-10">
+												<input type="text" class="form-control" name="onepagecheckout_manage[delivery][required][{{ language.language_id }}]" placeholder="Error Massege" value="{{onepagecheckout_manage['delivery'][required][language.language_id] ? onepagecheckout_manage['delivery']['required'][language.language_id] : ''}}">
+											</div>
+										</div>
+									</div>
+									{% endfor %}
+								</div>
+							</fieldset>
+						</div>
+						<div class="tab-pane" id="tab-payment_method-language-setting">
+							<fieldset>
+								<legend>{{entry_payment_method}}</legend>
+								<ul class="nav nav-tabs" id="checkout-language3">
+									{% for key,language in languages %}
+									 <li {% if key==0  %} class="active" {% endif %}><a href="#checkout-paymentmethod{{ language.language_id }}" data-toggle="tab"><img src="language/{{ language.code }}/{{ language.code }}.png" title="{{ language.name }}" /> {{ language.name }}</a></li>
+									{% endfor %}
+								</ul>
+								<div class="tab-content">
+								{% for key,language in languages %}
+								<div class="tab-pane {% if key==0  %} active {% endif %}" id="checkout-paymentmethod{{language.language_id}}">
+									<div class="form-group">	
+											<label class="col-sm-2 control-label" for="input-heading">{{entry_heading}}</label>
+											<div class="col-sm-10">
+												<input type="text" class="form-control" name="onepagecheckout_manage[payment_method][heading_title][{{language.language_id}}]" placeholder="{{placeholder_heading}}" value="{{onepagecheckout_manage['payment_method']['heading_title'][language.language_id] ? onepagecheckout_manage['payment_method']['heading_title'][language.language_id] : ''}}">
+											</div>
+									</div>
+									{% if payment_methods %}
+									<table class="table table-bordered">
+										<thead>
+											<tr>
+												<th>{{entry_delivery_method}}</th>
+												<th>{{entry_label}}</th>
+											</tr>
+										</thead>
+										<tbody>
+											{% for payment_method in  payment_methods %}
+											<tr>
+												<td>{{payment_method.title}}</td>
+												<td>
+													<div class="col-md-12">
+														<div class="form-group">
+															<input type="text" class="form-control"  value="{{onepagecheckout_manage['payment_method'][payment_method['code']]['label'][language.language_id] ? onepagecheckout_manage['payment_method'][payment_method['code']]['label'][language.language_id] : payment_method.title}}" name="onepagecheckout_manage[payment_method][{{payment_method.code}}][label][{{language.language_id}}]" placeholder="{{entry_label}}" >
+														</div>
+													</div>
+												</td>
+											</tr>
+											{% endfor %}
+										</tbody>
+									</table>
+									{% endif %}
+								</div>
+								{% endfor %}
+								</div>
+							</fieldset>
+						</div>
+						<div class="tab-pane" id="tab-confirm_order-language-setting">
+							<fieldset>
+								<legend>{{entry_confirm_order}}</legend>
+								<ul class="nav nav-tabs" id="checkout-confirm">
+									{% for key,language in languages %}
+									 <li {% if key==0  %} class="active" {% endif %}><a href="#checkout-confirm{{ language.language_id }}" data-toggle="tab"><img src="language/{{ language.code }}/{{ language.code }}.png" title="{{ language.name }}" /> {{ language.name }}</a></li>
+									{% endfor %}
+								</ul>
+							<div class="tab-content">
+							{% for key,language in languages %}
+							<div class="tab-pane {% if key==0  %} active {% endif %}" id="checkout-confirm{{language['language_id']}}">
+							<!--XML-->
+							<div class="form-group">	
+								<label class="col-sm-2 control-label " for="input-confirm-comment">Comment Label</label>
+								<div class="col-sm-10">
+									<input type="text" class="form-control" name="onepagecheckout_manage[confirm_order][comment_label][{{language['language_id']}}]" placeholder="Comment Label" value="{{onepagecheckout_manage['confirm_order']['comment_label'][language.language_id] ? onepagecheckout_manage['confirm_order']['comment_label'][language.language_id] : ''}}">
+								</div>
+						    </div>
+							<div class="form-group">	
+								<label class="col-sm-2 control-label " for="input-confirm-comment">Comment Placeholder</label>
+								<div class="col-sm-10">
+									<input type="text" class="form-control" name="onepagecheckout_manage[confirm_order][comment_placeholder][{{language['language_id']}}]" placeholder="Comment Placeholder" value="{{onepagecheckout_manage['confirm_order']['comment_placeholder'][language.language_id] ? onepagecheckout_manage['confirm_order']['comment_placeholder'][language.language_id] : ''}}">
+								</div>
+						    </div>
+							<!--XML-->
+							<div class="form-group ">	
+						
+								<label class="col-sm-2 control-label " for="input-confirm-button">{{entry_confirm_button}}</label>
+								<div class="col-sm-10">
+									<input type="text" class="form-control" name="onepagecheckout_manage[confirm_order][confirm_button][{{language['language_id']}}]" placeholder="{{placeholder_confirm_button}}" value="{{onepagecheckout_manage['confirm_order']['confirm_button'][language.language_id] ? onepagecheckout_manage['confirm_order']['confirm_button'][language.language_id] : ''}}">
+								</div>
+						
+							</div>
+							<div class="form-group ">	
+						
+								<label class="col-sm-2 control-label " for="input-confirm-button">{{entry_comment_error}}</label>
+								<div class="col-sm-10">
+									<input type="text" class="form-control" name="onepagecheckout_manage[confirm_order][comment_error][{{language['language_id']}}]" placeholder="{{entry_comment_error}}" value="{{onepagecheckout_manage['confirm_order']['comment_error'][language.language_id] ? onepagecheckout_manage['confirm_order']['comment_error'][language.language_id] : ''}}">
+								</div>
+							</div>
+							<div class="form-group ">	
+							
+								<label class="col-sm-2 control-label " for="input-shopping-button">{{entry_shopping_button}}</label>
+								<div class="col-sm-10">
+									<input type="text" class="form-control" name="onepagecheckout_manage[confirm_order][shopping_button][{{language['language_id']}}]" placeholder="{{placeholder_shopping_button}}" value="{{onepagecheckout_manage['confirm_order']['shopping_button'][language.language_id] ? onepagecheckout_manage['confirm_order']['shopping_button'][language.language_id] : ''}}">
+								</div>
+					
+							</div>
+							</div>
+							{% endfor %}
+							</div>
+							</fieldset>
+						</div>
+						<div class="tab-pane" id="tab-shopping-cart-language-setting">
+							<fieldset>
+								<legend>{{entry_shopping_cart}}</legend>
+								<ul class="nav nav-tabs" id="checkout-language8">
+									{% for key,language in languages %}
+									 <li {% if key==0  %} class="active" {% endif %}><a href="#checkout-language8{{ language.language_id }}" data-toggle="tab"><img src="language/{{ language.code }}/{{ language.code }}.png" title="{{ language.name }}" /> {{ language.name }}</a></li>
+									{% endfor %}
+								</ul>	
+							<div class="tab-content">
+								{% for key,language in languages %}
+									<div class="tab-pane {% if key==0  %} active {% endif %}" id="checkout-language8{{ language.language_id }}">
+										<div class="form-group ">	
+											<label class="col-sm-2 control-label " for="input-heading">{{entry_heading}}</label>
+											<div class="col-sm-10">
+												<input type="text" class="form-control" name="onepagecheckout_manage[shopping_cart][heading_title][{{language.language_id}}]" placeholder="{{placeholder_heading}}" value="{{onepagecheckout_manage['shopping_cart']['heading_title'][language.language_id] ? onepagecheckout_manage['shopping_cart']['heading_title'][language.language_id]}}">
+											</div>
+										</div>
+									
+									<div class="form-group">	
+										<label class="col-sm-2 control-label " for="input-confirm-comment">Clear cart</label>
+										<div class="col-sm-10">
+											<input type="text" class="form-control" name="onepagecheckout_manage[shopping_cart][clear_cart_text][{{language.language_id}}]" placeholder="Alert Message" value="{{onepagecheckout_manage['shopping_cart']['clear_cart_text'][language.language_id] ? onepagecheckout_manage['shopping_cart']['clear_cart_text'][language.language_id]}}">
+										</div>
+									</div>
+									<div class="form-group">	
+										<label class="col-sm-2 control-label " for="input-confirm-comment">Alert Message</label>
+										<div class="col-sm-10">
+											<input type="text" class="form-control" name="onepagecheckout_manage[shopping_cart][alert_message][{{language.language_id}}]" placeholder="Alert Message" value="{{onepagecheckout_manage['shopping_cart']['alert_message'][language.language_id] ? onepagecheckout_manage['shopping_cart']['alert_message'][language.language_id]}}">
+										</div>
+									</div>
+									</div>
+								{% endfor %}
+							</div>
+							</fieldset>
+						</div>
+						<div class="tab-pane" id="tab-support">
+							<p class="text-center">For Support and Query Feel Free to contact:<br /><strong>extensionsbazaar@gmail.com</strong></p>
+						</div>
+					</div>
+			</div>
+    </div>
+</form>
+</div>
+</div>
+<script type="text/javascript" src="view/javascript/summernote/summernote.js"></script>
+<link href="view/javascript/summernote/summernote.css" rel="stylesheet" />
+<script type="text/javascript" src="view/javascript/summernote/opencart.js"></script>
+<script type="text/javascript">
+$('#general-language a:first').tab('show');
+$('#checkout-language a:first').tab('show');
+$('#checkout-language1 a:first').tab('show');
+$('#checkout-language2 a:first').tab('show');
+$('#checkout-language3 a:first').tab('show');
+$('#checkout-language4 a:first').tab('show');
+$('#checkout-language5 a:first').tab('show');
+$('#checkout-language6 a:first').tab('show');
+$('#checkout-language7 a:first').tab('show');
+$('#checkout-language8 a:first').tab('show');
+$('#checkout-language9 a:first').tab('show');
+$('#checkout-language10 a:first').tab('show');
+$('#checkout-language11 a:first').tab('show');
+$('#checkout-personals a:first').tab('show');
+$('#checkout-deliverydetail a:first').tab('show');
+$('#checkout-paymentdetail a:first').tab('show');
+$('#checkout-deliverymethod a:first').tab('show');
+$('#checkout-paymentmethod a:first').tab('show');
+$('#checkout-confirm a:first').tab('show');
+$('#language a:first').tab('show');
+$('#checkout-delivery-language-date-time a:first').tab('show');
+//--></script>
+<script type="text/javascript">
+// Drag Personal Details
+$(document).ready(function() {
+$("#table-personal tbody").sortable({
+	cursor: "move",
+	stop: function() {
+		$('#table-personal tbody .row-group').each(function() {
+			$(this).find('.mydragsort').val($(this).index());
+		});
+	}
+});
+
+// Drag Delivery Details	
+$("#table-delivery tbody").sortable({
+	cursor: "move",
+	stop: function() {
+		$('#table-delivery tbody .row-group').each(function() {
+			$(this).find('.mydragsort').val($(this).index());
+		});
+	}
+});
+	
+// Drag Payment Details	
+$("#table-payment_details tbody").sortable({
+	cursor: "move",
+	stop: function() {
+		$('#table-payment_details tbody .row-group').each(function() {
+			$(this).find('.mydragsort').val($(this).index());
+		});
+	}
+});
+});
+</script>
+  <script type="text/javascript"><!--
+$('select[name=\'onepagecheckout_country_id\']').on('change', function() {
+	$.ajax({
+		
+		url: 'index.php?route=localisation/country/country&user_token={{user_token}}&country_id=' + this.value,
+		dataType: 'json',
+		beforeSend: function() {
+			$('select[name=\'onepagecheckout_country_id\']').after(' <i class="fa fa-circle-o-notch fa-spin"></i>');
+		},
+		complete: function() {
+			$('.fa-spin').remove();
+		},
+		success: function(json) {
+			html = '<option value="">{{text_select}}</option>';
+
+			if (json['zone'] && json['zone'] != '') {
+				for (i = 0; i < json['zone'].length; i++) {
+          			html += '<option value="' + json['zone'][i]['zone_id'] + '"';
+
+					if (json['zone'][i]['zone_id'] == '{{onepagecheckout_zone_id}}') {
+            			html += ' selected="selected"';
+					}
+
+					html += '>' + json['zone'][i]['name'] + '</option>';
+				}
+			} else {
+				html += '<option value="0" selected="selected">{{text_none}}</option>';
+			}
+
+			$('select[name=\'onepagecheckout_zone_id\']').html(html);
+			
+			$('#button-save').prop('disabled', false);
+		},
+		error: function(xhr, ajaxOptions, thrownError) {
+			alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
+		}
+	});
+});
+
+$('select[name=\'onepagecheckout_country_id\']').trigger('change');
+//--></script>
+<script>
+$('.button-account-type').click(function() {
+	setTimeout(function() {
+		var account_type = $('input[name=\'onepagecheckout_manage[personaldetails][register_status]\']:checked').val();
+		if(account_type == '1') {
+			$('.register_newsletter').removeClass('hide');
+		}else{
+			$('.register_newsletter').addClass('hide');
+		}
+	}, 300);
+});
+$(document).ready(function() {
+	$('.active.button-account-type').trigger('click');
+});
+</script>
+<style>
+.btn-success1{
+    background-color:#8fbb6c;
+    border-color:#7aae50;
+    color:#fff;
+}
+</style>
+{{footer}}
